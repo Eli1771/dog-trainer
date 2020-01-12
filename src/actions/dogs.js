@@ -5,7 +5,9 @@ export const addDog = dog => {
   }
 }
 
-export const deleteDog = dogId => {
-  type: 'DELETE_DOG',
-  action: dogId
+export const removeDog = dogId => {
+  return {
+    type: 'REMOVE_DOG',
+    action: dogId
+  }
 }
