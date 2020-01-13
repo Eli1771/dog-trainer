@@ -1,18 +1,24 @@
+import uuid from 'uuid';
+
 const dogsReducer = (state = {
   dogs: []
 }, action) => {
+
   switch (action.type) {
     case 'ADD_DOG':
+      const dog = {
+        ...action.dog,
+        id: uuid()
+      }
       return {
         ...state,
-        dogs: [ ...state.dogs, action.dog ]
+        dogs: [ ...state.dogs, dog ]
       }
 
     case 'REMOVE_DOG':
-      let idx = state.dogs.findIndex(dog => dog.id === action.dogId);
       return {
         ...state,
-        dogs: [ ...state.dogs.slice(0, idx), ...state.dogs.slice(idx + 1) ]
+        dogs: state.dogs.filter(dog => dog.id !== action.dogId)
       }
 
     default:
