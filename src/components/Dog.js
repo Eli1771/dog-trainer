@@ -1,9 +1,11 @@
 import React from 'react';
 
-export const dog = state => {
+const Dog = state => {
   return(
     <div className="component">
       A Dog
     </div>
   );
 }
+
+export default Dog;

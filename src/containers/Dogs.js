@@ -6,6 +6,12 @@ import DogForm from '../components/DogForm';
 import Dog from '../components/Dog';
 
 class Dogs extends Component {
+  renderDogs = dogs => {
+    return dogs.map((dog, idx) => {
+      return <Dog key={idx} dog={dog} />
+    });
+  }
+
   render() {
     const { dogs, addDog } = this.props;
     console.log('rendering!', dogs);
@@ -13,6 +19,7 @@ class Dogs extends Component {
       <div className="dogs component">
         All dogs
         <DogForm addDog={addDog}/>
+        {this.renderDogs(dogs)}
       </div>
     )
   }
