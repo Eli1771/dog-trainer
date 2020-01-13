@@ -18,17 +18,41 @@ export default class DogForm extends Component {
     e.target.value = this.state[e.target.name];
   }
 
+  handleSubmit = e => {
+    e.preventDefault();
+    console.log(this.state);
+  }
+
   render() {
     const { name, breed, dob } = this.state;
     return (
       <div id="dog-form" className="component">
         <form onSubmit={this.handleSubmit}>
+          <label>Name</label>
           <input
             type="text"
             name="name"
             value={name}
             onChange={this.handleChange}
           />
+
+          <label>Breed</label>
+          <input
+            type="text"
+            name="breed"
+            value={breed}
+            onChange={this.handleChange}
+          />
+
+          <label>Date of Birth</label>
+          <input
+            type="text"
+            name="dob"
+            placeholder="mm-dd-yyyy"
+            value={dob}
+            onChange={this.handleChange}
+          />
+
           <input type="submit" value="Add Dog"/>
         </form>
       </div>
