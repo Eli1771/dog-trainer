@@ -10,6 +10,14 @@ export default class DogForm extends Component {
     }
   }
 
+  handleChange = e => {
+    this.setState({
+      ...this.state,
+      [e.target.name]: e.target.value
+    });
+    e.target.value = this.state[e.target.name];
+  }
+
   render() {
     const { name, breed, dob } = this.state;
     return (
@@ -17,6 +25,7 @@ export default class DogForm extends Component {
         <form onSubmit={this.handleSubmit}>
           <input
             type="text"
+            name="name"
             value={name}
             onChange={this.handleChange}
           />

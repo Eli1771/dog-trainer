@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 export const dog = state => {
-  render() {
-    return(
-      <div className="component">
-        A Dog
-      </div>
-    );
-  }
+  return(
+    <div className="component">
+      A Dog
+    </div>
+  );
 }
