@@ -12,6 +12,7 @@
   display: inline-block;
   position: relative;
   margin: 1%;
+  padding: 1%;
   min-height: max-content;
   min-width: max-content;
 }

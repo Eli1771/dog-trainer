@@ -1,9 +1,11 @@
 import React from 'react';
 
-const Dog = state => {
+const Dog = props => {
+  const { name, breed, dob } = props.dog
   return(
     <div className="component">
-      A Dog
+      <h1>{name}</h1>
+      <p>{dob} - {breed}</p>
     </div>
   );
 }
