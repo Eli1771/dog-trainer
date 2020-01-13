@@ -4,7 +4,7 @@ import DogForm from './DogForm';
 export default class Dogs extends Component {
   render() {
     return(
-      <div className="Dogs">
+      <div className="dogs component">
         All dogs
         <DogForm />
       </div>

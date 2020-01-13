@@ -13,7 +13,7 @@ export default class DogForm extends Component {
   render() {
     const { name, breed, dob } = this.state;
     return (
-      <div id="dog-form">
+      <div id="dog-form" className="component">
         <form onSubmit={this.handleSubmit}>
           <input
             type="text"
