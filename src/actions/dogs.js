@@ -1,13 +1,13 @@
 export const addDog = dog => {
   return {
     type: 'ADD_DOG',
-    action: dog
+    dog: dog
   }
 }
 
 export const removeDog = dogId => {
   return {
     type: 'REMOVE_DOG',
-    action: dogId
+    dogId: dogId
   }
 }

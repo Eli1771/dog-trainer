@@ -20,7 +20,17 @@ export default class DogForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    console.log(this.state);
+    const { name, breed, dob } = this.state;
+    this.props.addDog({
+      name: name,
+      breed: breed,
+      dob: dob
+    });
+    this.setState({
+      name: '',
+      breed: '',
+      dob: ''
+    });
   }
 
   render() {

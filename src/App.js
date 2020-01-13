@@ -1,7 +1,7 @@
 import React from 'react';
 
 import './App.css';
-import Dogs from './components/Dogs';
+import Dogs from './containers/Dogs';
 
 function App() {
 
