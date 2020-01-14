@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { addDog, removeDog } from '../actions/dogs'
+import { addDog, removeDog, fetchDogs } from '../actions/dogs'
 import DogForm from '../components/DogForm';
 import Dog from '../components/Dog';
 
 class Dogs extends Component {
+
+  componentDidMount() {
+    this.props.fetchDogs()
+  }
+
   renderDogs = dogs => {
     return dogs.map(dog => {
       return <Dog key={dog.id} dog={dog} removeDog={this.props.removeDog} />
@@ -14,7 +19,7 @@ class Dogs extends Component {
 
   render() {
     const { dogs, addDog } = this.props;
-    
+
     return(
       <div className="dogs component">
         All dogs
@@ -31,4 +36,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, { addDog, removeDog })(Dogs)
+export default connect(mapStateToProps, { addDog, removeDog, fetchDogs })(Dogs)
