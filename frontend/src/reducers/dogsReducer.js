@@ -1,7 +1,8 @@
 import uuid from 'uuid';
 
 const dogsReducer = (state = {
-  dogs: []
+  dogs: [],
+  loading: false
 }, action) => {
 
   switch (action.type) {
@@ -20,6 +21,13 @@ const dogsReducer = (state = {
         ...state,
         dogs: state.dogs.filter(dog => dog.id !== action.dogId)
       }
+
+    case 'LOADING_DOGS':
+      return { ...state, loading: true }
+
+    case 'ADD_DOGS':
+      console.log(action.dogs);
+      return { ...state, dogs: action.dogs, loading: false }
 
     default:
       return state;

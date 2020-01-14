@@ -11,3 +11,12 @@ export const removeDog = dogId => {
     dogId: dogId
   }
 }
+
+export function fetchDogs() {
+  return dispatch => {
+    dispatch({ type: 'LOADING_DOGS' });
+    fetch('/dogs')
+      .then(resp => resp.json())
+      .then(json => dispatch({ type: 'ADD_DOGS', dogs: json }));
+  }
+}
