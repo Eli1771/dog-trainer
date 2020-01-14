@@ -15,6 +15,11 @@ Plan for routes
 
 find out how to upload images to a server
 
-** create default images for pets without profile image
+upload profile images for each pet
+  ** create default images for pets without profile image
 
 add confirm messages before deletes. Currently throwing a no-restricted-globals error??
+
+remove empty space from the end of inputs to clean up rendering
+
+use calendar input for DOB??

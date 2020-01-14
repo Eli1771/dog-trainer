@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+dogs = [
+  {name: 'Lando', breed: 'Dane x', dob: '09-30-2017'},
+  {name: 'Richie', breed: 'Chih x', dob: '04-01-2019'},
+  {name: 'Joey', breed: 'Puggle', dob: '01-01-2011'}
+]
+
+dogs.each do |dog|
+  Dog.create(dog)
+end
