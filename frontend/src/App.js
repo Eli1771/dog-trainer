@@ -5,7 +5,7 @@ import {
 } from 'react-router-dom';
 
 import './App.css';
-import Dogs from './containers/Dogs';
+import Dogs from './containers/dogs/Dogs';
 import Progress from './containers/Progress';
 import { Home } from './components/Home';
 
@@ -15,7 +15,7 @@ function App() {
     <Router>
       <div className="App">
         <Route exact path='/' component={Home} />
-        <Route path='/dogs' render={routerProps => <Dogs/>} />
+        <Route path='/dogs' render={routerProps => <Dogs {...routerProps}/>} />
         <Route path='/log' render={routerProps => <Progress/>} />
       </div>
     </ Router>

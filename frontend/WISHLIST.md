@@ -23,3 +23,10 @@ add confirm messages before deletes. Currently throwing a no-restricted-globals 
 remove empty space from the end of inputs to clean up rendering
 
 use calendar input for DOB??
+
+render current ages dynamically from dob column
+
+** All fetches need to happen before ANY dog components are rendered
+
+** update server in background when any state changes are made
+  ** show 'flash' style messages at completion of server actions
