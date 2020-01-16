@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
 import Dog from '../../components/dogs/Dog';
-import { DogsSidebar } from './DogsSidebar'
+import { DogsSidebar } from './DogsSidebar';
+import Skills from '../skills/Skills';
 
 export default class DogShow extends Component {
   render() {
@@ -11,6 +12,7 @@ export default class DogShow extends Component {
     return(
       <div>
         <Dog dog={dog} />
+        <Skills dogId={dog.id} />
         <DogsSidebar dogs={dogs} currentDogId={dog.id} />
       </div>
     );
