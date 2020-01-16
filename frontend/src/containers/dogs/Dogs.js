@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Route } from 'react-router-dom';
 
-import { addDog, removeDog, fetchDogs } from '../actions/dogs'
-import DogForm from '../components/DogForm';
-import Dog from '../components/Dog';
+import { addDog, removeDog, fetchDogs } from '../../actions/dogs'
+import DogShow from './DogShow';
+import DogForm from '../../components/dogs/DogForm';
+import Dog from '../../components/dogs/Dog';
 
 class Dogs extends Component {
 
@@ -18,13 +20,13 @@ class Dogs extends Component {
   }
 
   render() {
-    const { dogs, addDog } = this.props;
-
+    const { dogs, addDog, match } = this.props;
     return(
       <div className="dogs component">
-        All dogs
         <DogForm addDog={addDog} />
-        {this.renderDogs(dogs)}
+
+        <Route exact path={match.url} render={() => this.renderDogs(dogs)} />
+        <Route exact path={`${match.url}/:dogId`} render={routerProps => <DogShow {...routerProps} dogs={dogs} />} />
       </div>
     )
   }
