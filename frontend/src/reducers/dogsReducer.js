@@ -2,6 +2,7 @@ import uuid from 'uuid';
 
 const dogsReducer = (state = {
   dogs: [],
+  skills: [],
   loading: false
 }, action) => {
 
