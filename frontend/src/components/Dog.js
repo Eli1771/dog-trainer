@@ -5,7 +5,7 @@ const Dog = props => {
 
   const handleDelete = () => {
     if (window.confirm(`Remove ${name} from your records?`)) {
-      props.removeDog(id)
+      props.removeDog(id);
     }
   }
 
