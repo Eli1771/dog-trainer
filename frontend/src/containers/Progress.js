@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 
+import { NavBar } from '../components/NavBar';
+
 export default class Progress extends Component {
   render() {
     return(
-      <div>Progress Log</div>
+      <div>
+        <NavBar />
+        <div>Progress Log</div>
+      </div>
     );
   }
 }
