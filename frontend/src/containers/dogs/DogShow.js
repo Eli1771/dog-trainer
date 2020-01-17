@@ -7,7 +7,7 @@ import Skills from '../skills/Skills';
 export default class DogShow extends Component {
   render() {
     const { dogs, match } = this.props;
-    const dog = dogs.find(dog => dog.id === parseInt(match.params.dogId));
+    const dog = dogs.find(dog => dog.id.toString() === match.params.dogId.toString());
     console.log('dog: ', dog);
     return(
       <div>
