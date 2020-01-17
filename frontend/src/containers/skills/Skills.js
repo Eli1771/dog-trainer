@@ -9,7 +9,7 @@ class Skills extends Component {
     console.log(filteredSkills)
     return(
       <div>
-        <h3>Skills, dog id: {dogId}</h3>
+        <h3>Skills</h3>
         {filteredSkills.map(skill => <Skill key={skill.id} skill={skill} />)}
       </div>
     );

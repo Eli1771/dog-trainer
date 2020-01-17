@@ -6,6 +6,7 @@ import { addDog, removeDog, fetchDogs } from '../../actions/dogs'
 import DogShow from './DogShow';
 import DogForm from '../../components/dogs/DogForm';
 import Dog from '../../components/dogs/Dog';
+import { NavBar } from '../../components/NavBar';
 
 class Dogs extends Component {
 
@@ -23,6 +24,7 @@ class Dogs extends Component {
     const { dogs, addDog, match } = this.props;
     return(
       <div className="dogs component">
+        <NavBar />
         <DogForm addDog={addDog} />
 
         <Route exact path={match.url} render={() => this.renderDogs(dogs)} />
