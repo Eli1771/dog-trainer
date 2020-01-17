@@ -8,7 +8,10 @@ class Skills extends Component {
     const filteredSkills = skills.filter(s => s.dogId = dogId);
     console.log(filteredSkills)
     return(
-      <div>{}</div>
+      <div>
+        <h3>Skills, dog id: {dogId}</h3>
+        {filteredSkills.map(skill => <Skill key={skill.id} skill={skill} />)}
+      </div>
     );
   }
 }
