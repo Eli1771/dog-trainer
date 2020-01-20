@@ -27,11 +27,11 @@ skills = [
   {name: 'Down', description: 'Dog lays flat', dog_id: dog_ids[0], reward_rate: 4},
   {name: 'Speak', description: 'Dog makes any, not a loud shout', dog_id: dog_ids[0], reward_rate: 2},
   {name: 'Paw', description: 'Place either paw in your hand', dog_id: dog_ids[0], reward_rate: 5},
-  {name: 'Sit', description: 'But on ground, sustained', dog_id: dog_ids[1], reward_rate: 4},
+  {name: 'Down', description: 'Dog lays flat', dog_id: dog_ids[1], reward_rate: 3},
   {name: 'Pretty', dog_id: dog_ids[0], reward_rate: 2},
   {name: 'Come', description: 'Recalls to owner and sits', dog_id: dog_ids[0], reward_rate: 3},
-  {name: 'Sit', description: 'But on ground, sustained', dog_id: dog_ids[1], reward_rate: 4},
-  {name: 'Sit', description: 'But on ground, sustained', dog_id: dog_ids[2], reward_rate: 1}
+  {name: 'Paw', description: 'Place either paw in your hand', dog_id: dog_ids[1], reward_rate: 4},
+  {name: 'Paw', description: 'Place either paw in your hand', dog_id: dog_ids[2], reward_rate: 1}
 ]
 
 skills.each do |skill|
