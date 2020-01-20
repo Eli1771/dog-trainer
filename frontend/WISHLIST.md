@@ -30,3 +30,5 @@ render current ages dynamically from dob column
 
 ** update server in background when any state changes are made
   ** show 'flash' style messages at completion of server actions
+
+placeholder 'cards' for adding new elements so the form isn't displayed all the time

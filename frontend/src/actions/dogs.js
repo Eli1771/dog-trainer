@@ -26,6 +26,6 @@ export function fetchSkills() {
     dispatch({ type: 'LOADING'});
     fetch('/skills')
       .then(resp => resp.json())
-      .then(json => console.log(json));
+      .then(json => dispatch({ type: 'ADD_SKILLS', skills: json }));
   }
 }

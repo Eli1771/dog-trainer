@@ -23,12 +23,15 @@ const dogsReducer = (state = {
         dogs: state.dogs.filter(dog => dog.id !== action.dogId)
       }
 
-    case 'LOADING':
+    case 'LOADINGa':
       return { ...state, loading: true }
 
     case 'ADD_DOGS':
       console.log(action.dogs);
       return { ...state, dogs: action.dogs, loading: false }
+
+    case 'ADD_SKILLS':
+      return { ...state, skills: action.skills, loading: false }
 
     default:
       return state;
