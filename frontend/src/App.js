@@ -3,10 +3,12 @@ import {
   BrowserRouter as Router,
   Route
 } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 import './App.css';
 import Dogs from './containers/dogs/Dogs';
 import Progress from './containers/Progress';
+import { fetchDogs } from './actions/dogs';
 import { Home } from './components/Home';
 
 function App() {
@@ -22,4 +24,4 @@ function App() {
   );
 }
 
-export default App;
+export default connect(null, { fetchDogs })(App);

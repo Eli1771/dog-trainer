@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import Skill from './Skill';
-import { fetchSkills } from '../../actions/dogs';
+import { fetchSkills, fetchDogs } from '../../actions/dogs';
 
 class Skills extends Component {
   componentDidMount() {
@@ -33,7 +33,7 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, { fetchSkills })(Skills);
+export default connect(mapStateToProps, { fetchDogs, fetchSkills })(Skills);
 
 
 // return dogs.map(dog => {

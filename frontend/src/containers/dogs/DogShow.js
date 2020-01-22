@@ -1,10 +1,17 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
+import { fetchDogs } from '../../actions/dogs';
 import Dog from '../../components/dogs/Dog';
 import { DogsSidebar } from './DogsSidebar';
 import Skills from '../skills/Skills';
 
-export default class DogShow extends Component {
+class DogShow extends Component {
+
+  componentDidMount() {
+    this.props.fetchDogs()
+  }
+
   render() {
     const { dogs, match } = this.props;
     const dog = dogs.find(dog => dog.id.toString() === match.params.dogId.toString());
@@ -18,3 +25,5 @@ export default class DogShow extends Component {
     );
   }
 }
+
+export default connect(null, { fetchDogs })(DogShow);
