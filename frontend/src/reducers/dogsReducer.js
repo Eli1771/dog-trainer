@@ -31,6 +31,7 @@ const dogsReducer = (state = {
       return { ...state, dogs: action.dogs, loading: false }
 
     case 'ADD_SKILLS':
+      console.log(action.skills);
       return { ...state, skills: action.skills, loading: false }
 
     default:
