@@ -1,0 +1,371 @@
+--- !ruby/object:ActiveRecord::ConnectionAdapters::SchemaCache
+columns:
+  schema_migrations:
+  - &1 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: version
+    table_name: schema_migrations
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: varchar
+      type: :string
+      limit: 
+      precision: 
+      scale: 
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  ar_internal_metadata:
+  - &2 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: key
+    table_name: ar_internal_metadata
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: varchar
+      type: :string
+      limit: 
+      precision: 
+      scale: 
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &3 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: value
+    table_name: ar_internal_metadata
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: varchar
+      type: :string
+      limit: 
+      precision: 
+      scale: 
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &4 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: created_at
+    table_name: ar_internal_metadata
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: datetime
+      type: :datetime
+      limit: 
+      precision: 
+      scale: 
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &5 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: updated_at
+    table_name: ar_internal_metadata
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: datetime
+      type: :datetime
+      limit: 
+      precision: 
+      scale: 
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  notes:
+  - &6 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: id
+    table_name: notes
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: integer
+      type: :integer
+      limit: 
+      precision: 
+      scale: 
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &7 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: dogId
+    table_name: notes
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: integer
+      type: :integer
+      limit: 
+      precision: 
+      scale: 
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &8 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: content
+    table_name: notes
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: varchar
+      type: :string
+      limit: 
+      precision: 
+      scale: 
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &9 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: created_at
+    table_name: notes
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: datetime
+      type: :datetime
+      limit: 
+      precision: 
+      scale: 
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &10 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: updated_at
+    table_name: notes
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: datetime
+      type: :datetime
+      limit: 
+      precision: 
+      scale: 
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  skills:
+  - &11 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: id
+    table_name: skills
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: integer
+      type: :integer
+      limit: 
+      precision: 
+      scale: 
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &12 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: dog_id
+    table_name: skills
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: integer
+      type: :integer
+      limit: 
+      precision: 
+      scale: 
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &13 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: name
+    table_name: skills
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: varchar
+      type: :string
+      limit: 
+      precision: 
+      scale: 
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &14 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: description
+    table_name: skills
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: varchar
+      type: :string
+      limit: 
+      precision: 
+      scale: 
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &15 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: reward_rate
+    table_name: skills
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: integer
+      type: :integer
+      limit: 
+      precision: 
+      scale: 
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &16 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: created_at
+    table_name: skills
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: datetime
+      type: :datetime
+      limit: 
+      precision: 
+      scale: 
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &17 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: updated_at
+    table_name: skills
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: datetime
+      type: :datetime
+      limit: 
+      precision: 
+      scale: 
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  dogs:
+  - &18 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: id
+    table_name: dogs
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: integer
+      type: :integer
+      limit: 
+      precision: 
+      scale: 
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &19 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: name
+    table_name: dogs
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: varchar
+      type: :string
+      limit: 
+      precision: 
+      scale: 
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &20 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: dob
+    table_name: dogs
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: varchar
+      type: :string
+      limit: 
+      precision: 
+      scale: 
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &21 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: breed
+    table_name: dogs
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: varchar
+      type: :string
+      limit: 
+      precision: 
+      scale: 
+    'null': true
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &22 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: created_at
+    table_name: dogs
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: datetime
+      type: :datetime
+      limit: 
+      precision: 
+      scale: 
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+  - &23 !ruby/object:ActiveRecord::ConnectionAdapters::Column
+    name: updated_at
+    table_name: dogs
+    sql_type_metadata: !ruby/object:ActiveRecord::ConnectionAdapters::SqlTypeMetadata
+      sql_type: datetime
+      type: :datetime
+      limit: 
+      precision: 
+      scale: 
+    'null': false
+    default: 
+    default_function: 
+    collation: 
+    comment: 
+columns_hash:
+  schema_migrations:
+    version: *1
+  ar_internal_metadata:
+    key: *2
+    value: *3
+    created_at: *4
+    updated_at: *5
+  notes:
+    id: *6
+    dogId: *7
+    content: *8
+    created_at: *9
+    updated_at: *10
+  skills:
+    id: *11
+    dog_id: *12
+    name: *13
+    description: *14
+    reward_rate: *15
+    created_at: *16
+    updated_at: *17
+  dogs:
+    id: *18
+    name: *19
+    dob: *20
+    breed: *21
+    created_at: *22
+    updated_at: *23
+primary_keys:
+  schema_migrations: version
+  ar_internal_metadata: key
+  notes: id
+  skills: id
+  dogs: id
+data_sources:
+  schema_migrations: true
+  ar_internal_metadata: true
+  notes: true
+  skills: true
+  dogs: true
+version: 20200114163558

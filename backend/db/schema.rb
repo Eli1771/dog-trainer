@@ -21,17 +21,17 @@ ActiveRecord::Schema.define(version: 2020_01_14_163558) do
   end
 
   create_table "notes", force: :cascade do |t|
-    t.integer "dogId"
+    t.integer "dog_id"
     t.string "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
   create_table "skills", force: :cascade do |t|
-    t.integer "dogId"
+    t.integer "dog_id"
     t.string "name"
     t.string "description"
-    t.integer "rewardRate"
+    t.integer "reward_rate"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
