@@ -6,7 +6,8 @@ class Skills extends Component {
   render() {
     const { skills, dogId } = this.props
     const filteredSkills = skills.filter(s => s.dogId = dogId);
-    console.log(filteredSkills)
+    console.log('all skills: ', skills);
+    console.log(filteredSkills);
     return(
       <div>
         <h3>Skills</h3>

@@ -23,7 +23,7 @@ const dogsReducer = (state = {
         dogs: state.dogs.filter(dog => dog.id !== action.dogId)
       }
 
-    case 'LOADING_DOGS':
+    case 'LOADING':
       return { ...state, loading: true }
 
     case 'ADD_DOGS':

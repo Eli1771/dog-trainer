@@ -14,9 +14,15 @@ export const removeDog = dogId => {
 
 export function fetchDogs() {
   return dispatch => {
-    dispatch({ type: 'LOADING_DOGS' });
+    dispatch({ type: 'LOADING' });
     fetch('/dogs')
       .then(resp => resp.json())
       .then(json => dispatch({ type: 'ADD_DOGS', dogs: json }));
+  }
+}
+
+export function fetchSkills() {
+  return dispatch => {
+    dispatch({ type: 'LOADING'})
   }
 }
