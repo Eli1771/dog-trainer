@@ -23,6 +23,9 @@ export function fetchDogs() {
 
 export function fetchSkills() {
   return dispatch => {
-    dispatch({ type: 'LOADING'})
+    dispatch({ type: 'LOADING'});
+    fetch('/skills')
+      .then(resp => resp.json())
+      .then(json => console.log(json));
   }
 }
