@@ -3,11 +3,15 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, combineReducers } from 'redux';
 import thunk from 'redux-thunk';
 
 import './index.css';
 import dogsReducer from './reducers/dogsReducer';
+
+const rootReducer = combineReducers({
+  dogs: dogsReducer
+});
 
 const store = createStore(dogsReducer, applyMiddleware(thunk));
 
