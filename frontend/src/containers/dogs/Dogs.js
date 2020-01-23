@@ -2,9 +2,16 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Route } from 'react-router-dom';
 
-import { addDog, removeDog, fetchDogs } from '../../actions/dogs'
+import {
+  addDog,
+  removeDog,
+  fetchDogs,
+  showDogForm,
+  hideDogForm
+} from '../../actions/dogs'
 import DogShow from './DogShow';
 import DogForm from '../../components/dogs/DogForm';
+import DogFormButton from '../../components/dogs/DogFormButton';
 import Dog from '../../components/dogs/Dog';
 import { NavBar } from '../../components/NavBar';
 
@@ -36,8 +43,15 @@ class Dogs extends Component {
 
 const mapStateToProps = state => {
   return {
-    dogs: state.dogs
+    dogs: state.dogs,
+    dogFormShowing: state.dogFormShowing
   }
 }
 
-export default connect(mapStateToProps, { addDog, removeDog, fetchDogs })(Dogs)
+export default connect(mapStateToProps, {
+  addDog,
+  removeDog,
+  fetchDogs,
+  hideDogForm,
+  showDogForm
+})(Dogs)
