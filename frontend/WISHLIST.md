@@ -13,12 +13,14 @@ Plan for routes
 
 ** - PRIMARY
 
+** add and remove Skills
+
+** change reward_rate in state from dogshow view in each skill window
+
 find out how to upload images to a server
 
 upload profile images for each pet
   ** create default images for pets without profile image
-
-add confirm messages before deletes. Currently throwing a no-restricted-globals error??
 
 remove empty space from the end of inputs to clean up rendering
 
@@ -32,3 +34,9 @@ render current ages dynamically from dob column
   ** show 'flash' style messages at completion of server actions
 
 placeholder 'cards' for adding new elements so the form isn't displayed all the time
+
+show svg graphics for dogs' progress
+
+show superlatives in the root/progress view, i.e. last-trained, most-recently-trained most improved etc.
+
+persist state w/ redux-persist
