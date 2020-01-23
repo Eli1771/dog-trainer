@@ -27,14 +27,31 @@ class Dogs extends Component {
     });
   }
 
+  renderDogForm = () => {
+    return this.props.dogFormShowing ?
+      <DogForm addDog={this.props.addDog} /> :
+      <DogFormButton toggleDogForm={this.toggleDogForm} />
+  }
+
+  toggleDogForm = dogFormShowing => {
+    return dogFormShowing ? this.props.hideDogForm() : this.props.showDogForm()
+  }
+
   render() {
-    const { dogs, addDog, match } = this.props;
+    const { dogs, match } = this.props;
     return(
       <div className="dogs component">
         <NavBar />
-        <DogForm addDog={addDog} />
 
-        <Route exact path={match.url} render={() => this.renderDogs(dogs)} />
+        <Route exact path={match.url} render={() => {
+          return(
+            <div className="dog-cards-container">
+              {this.renderDogForm()}
+              {this.renderDogs(dogs)}
+            </div>
+          );
+        }} />
+
         <Route exact path={`${match.url}/:dogId`} render={routerProps => <DogShow {...routerProps} dogs={dogs} />} />
       </div>
     )
