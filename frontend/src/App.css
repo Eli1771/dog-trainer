@@ -43,11 +43,33 @@ body {
   justify-content: center;
 }
 
+.dog-show {
+  display: grid;
+  grid-template-columns: 35% [skills-end log-start] 35% [log-end header-end sidebar-start] 28% auto;
+  grid-template-rows: 20% [header-end body-start] auto;
+
   position: relative;
-  margin: 1%;
-  padding: 1%;
-  min-height: max-content;
-  min-width: max-content;
+  top: 7vh;
+}
+
+.dog-header {
+  grid-column-start: 1;
+  grid-column-end: header-end;
+  grid-row-end: header-end;
+}
+
+.skills-container {
+  grid-column-start: 1;
+  grid-column-end: skills-end;
+  grid-row-start: body-start;
+}
+
+.dogs-sidebar {
+  grid-column-start: sidebar-start;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
 .dog-card {
   border: 1px solid black;
   border-radius: 21px;
