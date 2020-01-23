@@ -3,7 +3,8 @@ import uuid from 'uuid';
 const dogsReducer = (state = {
   dogs: [],
   skills: [],
-  loading: false
+  loading: false,
+  dogFormShowing: false
 }, action) => {
 
   switch (action.type) {
@@ -14,7 +15,8 @@ const dogsReducer = (state = {
       }
       return {
         ...state,
-        dogs: [ ...state.dogs, dog ]
+        dogs: [ ...state.dogs, dog ],
+        dogFormShowing: false
       }
 
     case 'REMOVE_DOG':
@@ -23,8 +25,14 @@ const dogsReducer = (state = {
         dogs: state.dogs.filter(dog => dog.id !== action.dogId)
       }
 
-    case 'LOADINGa':
+    case 'LOADING':
       return { ...state, loading: true }
+
+    case 'SHOW_DOG_FORM':
+      return { ...state, dogFormShowing: true }
+
+    case 'HIDE_DOG_FORM':
+      return { ...state, dogFormShowing: false }
 
     case 'ADD_DOGS':
       console.log(action.dogs);
