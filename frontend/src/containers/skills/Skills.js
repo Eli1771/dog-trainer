@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import Skill from './Skill';
-import { fetchSkills, fetchDogs } from '../../actions/dogs';
+import { fetchDogs } from '../../actions/dogs';
+import { fetchSkills } from '../../actions/skills';
 
 class Skills extends Component {
   componentDidMount() {
