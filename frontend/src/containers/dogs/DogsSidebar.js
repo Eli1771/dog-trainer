@@ -6,7 +6,7 @@ export const DogsSidebar = props => {
   const { dogs, currentDogId } = props;
   const filteredDogs = dogs.filter(dog => dog.id !== currentDogId);
   return(
-    <div>
+    <div className="dogs-sidebar">
       {filteredDogs.map(dog => <Dog key={dog.id} dog={dog} />)}
     </div>
   );

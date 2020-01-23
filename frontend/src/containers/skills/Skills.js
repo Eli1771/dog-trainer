@@ -6,6 +6,7 @@ import { fetchSkills, fetchDogs } from '../../actions/dogs';
 
 class Skills extends Component {
   componentDidMount() {
+    // this.props.fetchDogs();
     this.props.fetchSkills();
   }
 
@@ -19,7 +20,7 @@ class Skills extends Component {
     const { skills, dogId } = this.props
     const filteredSkills = skills.filter(s => s.dog_id === dogId);
     return(
-      <div>
+      <div className="skills-container">
         <h3>Skills</h3>
         {this.renderSkills(filteredSkills)}
       </div>
