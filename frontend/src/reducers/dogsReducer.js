@@ -2,7 +2,6 @@ import uuid from 'uuid';
 
 const dogsReducer = (state = {
   dogs: [],
-  skills: [],
   loading: false,
   dogFormShowing: false
 }, action) => {
@@ -37,10 +36,6 @@ const dogsReducer = (state = {
     case 'ADD_DOGS':
       console.log(action.dogs);
       return { ...state, dogs: action.dogs, loading: false }
-
-    case 'ADD_SKILLS':
-      console.log(action.skills);
-      return { ...state, skills: action.skills, loading: false }
 
     default:
       return state;

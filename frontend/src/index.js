@@ -8,12 +8,14 @@ import thunk from 'redux-thunk';
 
 import './index.css';
 import dogsReducer from './reducers/dogsReducer';
+import skillsReducer from './reducers/skillsReducer';
 
 const rootReducer = combineReducers({
-  dogs: dogsReducer
+  dogs: dogsReducer,
+  skills: skillsReducer
 });
 
-const store = createStore(dogsReducer, applyMiddleware(thunk));
+const store = createStore(rootReducer, applyMiddleware(thunk));
 
 ReactDOM.render(
   <Provider store={store}>
