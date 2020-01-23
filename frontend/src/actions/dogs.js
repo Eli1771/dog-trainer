@@ -12,6 +12,18 @@ export const removeDog = dogId => {
   }
 }
 
+export const showDogForm = () => {
+  return {
+    type: 'SHOW_DOG_FORM'
+  }
+}
+
+export const hideDogForm = () => {
+  return {
+    type: 'HIDE_DOG_FORM'
+  }
+}
+
 export function fetchDogs() {
   return dispatch => {
     dispatch({ type: 'LOADING' });
