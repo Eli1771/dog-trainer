@@ -1,6 +1,28 @@
 .App {
   text-align: center;
   display: inline-block;
+#navbar {
+  width: 94vw;
+  height: 7vh;
+  position: fixed;
+  display: flex;
+  border-bottom: 1px solid black;
+  background: black;
+  color: white;
+}
+
+#navbar a {
+  margin: auto;
+  text-decoration: none;
+}
+
+#navbar a:link {
+  color: white;
+}
+
+#navbar a:visited {
+  color: white;
+}
 }
 
   position: relative;
