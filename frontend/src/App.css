@@ -77,4 +77,8 @@ body {
   height: 263px;
   margin: 11px;
 }
+
+.skill {
+  text-align: left;
+  padding: 2vw;
 }
