@@ -19,9 +19,7 @@ import { NavBar } from '../../components/NavBar';
 class Dogs extends Component {
 
   componentDidMount() {
-    console.log('no dogs? ', !this.props.dogs.length)
     if (!this.props.dogs.length) {
-      console.log('fetching dogs...');
       this.props.fetchDogs()
     }
   }

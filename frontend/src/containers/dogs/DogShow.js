@@ -9,16 +9,12 @@ import Skills from '../skills/Skills';
 class DogShow extends Component {
 
   renderShowComponents = () => {
-    console.log('load state in render fx: ', this.props.loading)
     if (this.props.loading && !this.props.dogs.length) {
-      console.log('dogshow loading');
       return <h3>Loading...</h3>
     } else {
 
       const { dogs, match } = this.props;
-      console.log('all dogs:', dogs);
       const dog = dogs.find(dog => dog.id.toString() === match.params.dogId.toString());
-      console.log('dog:', dog);
       return(
         <>
           <DogHeader dog={dog} />
@@ -30,7 +26,6 @@ class DogShow extends Component {
   }
 
   render() {
-    console.log('load state at initial attemp to render: ', this.props.loading)
     return(
       <div className="dog-show">
         {this.renderShowComponents()}

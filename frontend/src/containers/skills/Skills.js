@@ -7,9 +7,7 @@ import { fetchSkills } from '../../actions/skills';
 
 class Skills extends Component {
   componentDidMount() {
-    console.log('no skills? ', !this.props.skills.length);
     if (!this.props.skills.length) {
-      console.log('fetching skills');
       this.props.fetchSkills();
     }
   }

@@ -25,7 +25,6 @@ const dogsReducer = (state = {
       }
 
     case 'LOADING':
-      console.log('initial load action recieved by reducer!');
       return { ...state, loading: true }
 
     case 'SHOW_DOG_FORM':
@@ -35,7 +34,6 @@ const dogsReducer = (state = {
       return { ...state, dogFormShowing: false }
 
     case 'ADD_DOGS':
-      console.log('add dogs action sent to reducer: ', action.dogs);
       return { ...state, dogs: action.dogs, loading: false }
 
     default:
