@@ -12,6 +12,10 @@ body {
   overflow: scroll;
 }
 
+.hidden {
+  display: none;
+}
+
 #navbar {
   width: 94vw;
   height: 7vh;
