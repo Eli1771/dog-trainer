@@ -25,7 +25,7 @@ class Dogs extends Component {
   }
 
   renderDogs = dogs => {
-    if (this.props.loading) {
+    if (this.props.loading && !this.props.dogs.length) {
       return <h3>Loading...</h3>
     } else {
       return dogs.map(dog => {
