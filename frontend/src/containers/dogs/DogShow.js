@@ -8,22 +8,42 @@ import Skills from '../skills/Skills';
 
 class DogShow extends Component {
 
-  // componentDidMount() {
-  //   this.props.fetchDogs()
-  // }
+  renderShowComponents = () => {
+    console.log('load state in render fx: ', this.props.loading)
+    if (this.props.loading && !this.props.dogs.length) {
+      console.log('dogshow loading');
+      return <h3>Loading...</h3>
+    } else {
+
+      const { dogs, match } = this.props;
+      console.log('all dogs:', dogs);
+      const dog = dogs.find(dog => dog.id.toString() === match.params.dogId.toString());
+      console.log('dog:', dog);
+      return(
+        <>
+          <DogHeader dog={dog} />
+          <Skills dogId={dog.id} />
+          <DogsSidebar dogs={dogs} currentDogId={dog.id} />
+        </>
+      );
+    }
+  }
 
   render() {
-    const { dogs, match } = this.props;
-    const dog = dogs.find(dog => dog.id.toString() === match.params.dogId.toString());
-    console.log('dog: ', dog);
+    console.log('load state at initial attemp to render: ', this.props.loading)
     return(
       <div className="dog-show">
-        <DogHeader dog={dog} />
-        <Skills dogId={dog.id} />
-        <DogsSidebar dogs={dogs} currentDogId={dog.id} />
+        {this.renderShowComponents()}
       </div>
     );
   }
 }
 
-export default connect(null, { fetchDogs })(DogShow);
+const mapStateToProps = state => {
+  return {
+    dogs: state.dogs.dogs,
+    loading: state.dogs.loading
+  }
+}
+
+export default connect(mapStateToProps, { fetchDogs })(DogShow);
