@@ -8,7 +8,8 @@ import {
   fetchDogs,
   showDogForm,
   hideDogForm
-} from '../../actions/dogs'
+} from '../../actions/dogs';
+import { fetchSkills } from '../../actions/skills';
 import DogShow from './DogShow';
 import DogForm from '../../components/dogs/DogForm';
 import DogFormButton from '../../components/dogs/DogFormButton';
@@ -18,13 +19,21 @@ import { NavBar } from '../../components/NavBar';
 class Dogs extends Component {
 
   componentDidMount() {
-    this.props.fetchDogs()
+    console.log('no dogs? ', !this.props.dogs.length)
+    if (!this.props.dogs.length) {
+      console.log('fetching dogs...');
+      this.props.fetchDogs()
+    }
   }
 
   renderDogs = dogs => {
-    return dogs.map(dog => {
-      return <Dog key={dog.id} dog={dog} removeDog={this.props.removeDog} />
-    });
+    if (this.props.loading) {
+      return <h3>Loading...</h3>
+    } else {
+      return dogs.map(dog => {
+        return <Dog key={dog.id} dog={dog} removeDog={this.props.removeDog} />
+      });
+    }
   }
 
   renderDogForm = () => {
@@ -52,7 +61,7 @@ class Dogs extends Component {
           );
         }} />
 
-        <Route exact path={`${match.url}/:dogId`} render={routerProps => <DogShow {...routerProps} dogs={dogs} />} />
+        <Route exact path={`${match.url}/:dogId`} render={routerProps => <DogShow {...routerProps} />} />
       </div>
     )
   }
@@ -60,8 +69,9 @@ class Dogs extends Component {
 
 const mapStateToProps = state => {
   return {
-    dogs: state.dogs,
-    dogFormShowing: state.dogFormShowing
+    dogs: state.dogs.dogs,
+    dogFormShowing: state.dogs.dogFormShowing,
+    loading: state.dogs.loading
   }
 }
 
@@ -69,6 +79,7 @@ export default connect(mapStateToProps, {
   addDog,
   removeDog,
   fetchDogs,
+  fetchSkills,
   hideDogForm,
   showDogForm
 })(Dogs)

@@ -7,8 +7,11 @@ import { fetchSkills } from '../../actions/skills';
 
 class Skills extends Component {
   componentDidMount() {
-    // this.props.fetchDogs();
-    this.props.fetchSkills();
+    console.log('no skills? ', !this.props.skills.length);
+    if (!this.props.skills.length) {
+      console.log('fetching skills');
+      this.props.fetchSkills();
+    }
   }
 
   renderSkills = skills => {
@@ -31,7 +34,8 @@ class Skills extends Component {
 
 const mapStateToProps = state => {
   return {
-    skills: state.skills
+    skills: state.skills.skills,
+    loading: state.dogs.loading
   }
 }
 
