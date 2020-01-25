@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import Skill from './Skill';
+import SkillForm from '../../components/skills/SkillForm';
 import { fetchDogs } from '../../actions/dogs';
-import { fetchSkills } from '../../actions/skills';
+import { addSkill, fetchSkills } from '../../actions/skills';
 
 class Skills extends Component {
   componentDidMount() {
@@ -23,6 +24,7 @@ class Skills extends Component {
     const filteredSkills = skills.filter(s => s.dog_id === dogId);
     return(
       <div className="skills-container">
+        <SkillForm addSkill={this.props.addSkill} />
         <h3>Skills</h3>
         {this.renderSkills(filteredSkills)}
       </div>
@@ -37,7 +39,7 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, { fetchDogs, fetchSkills })(Skills);
+export default connect(mapStateToProps, { fetchDogs, addSkill, fetchSkills })(Skills);
 
 
 // return dogs.map(dog => {
