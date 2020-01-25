@@ -13,7 +13,32 @@ export default class SkillForm extends Component {
     return (
       <div id="skill-form" className="component dog-card">
         <form onSubmit={this.handleSubmit}>
-          <input type="submit" value="Add Dog"/>
+          <label>Name</label>
+          <input
+            type="text"
+            name="name"
+            value={name}
+            onChange={this.handleChange}
+          />
+
+          <label>Description</label>
+          <input
+            type="text"
+            name="description"
+            value={description}
+            placeholder="optional"
+            onChange={this.handleChange}
+          />
+
+          <label>Reward Rate</label>
+          <input
+            type="text"
+            name="rewardRate"
+            value={rewardRate}
+            onChange={this.handleChange}
+          />
+
+          <input type="submit" value="Add Skill"/>
         </form>
       </div>
     );
