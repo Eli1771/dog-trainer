@@ -2,8 +2,13 @@ import React, { Component } from 'react';
 
 export default class Skill extends Component {
 
+  rewardRates = ['Every Time', 'Every Other Time', 'Every third Time', 'Every Several Times', 'Seldom/Randomly'];
 
-  editRate = e => {
+  renderRewardOptions = () => {
+    return this.rewardRates.map((rate, idx) => {
+      return <option value={idx + 1}>{rate}</option>
+    });
+  }
 
   }
 
