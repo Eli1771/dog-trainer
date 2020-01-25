@@ -24,7 +24,7 @@ export const hideDogForm = () => {
   }
 }
 
-export function fetchDogs() {
+export const fetchDogs = () => {
   return dispatch => {
     dispatch({ type: 'LOADING' });
     fetch('/dogs')

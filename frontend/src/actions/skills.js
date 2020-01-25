@@ -1,4 +1,4 @@
-export function fetchSkills() {
+export const fetchSkills = () => {
   return dispatch => {
     dispatch({ type: 'LOADING'});
     fetch('/skills')
