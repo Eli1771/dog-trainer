@@ -18,17 +18,17 @@ export default class Skill extends Component {
       <div className="skill">
         <h2>{skill.name}</h2>
         <p>{skill.description}</p>
-        <p>{skill.reward_rate}</p>
+        <p>{this.rewardRates[skill.reward_rate - 1]}</p>
         <button
+          className={`_${skill.id} edit-rate`}
           onClick={this.editRate}
         >Change</button>
-        <select className="hidden">
-          <option value="1">Every Time</option>
-          <option value="2">Every Other Time</option>
+        <select className={`_${skill.id} select-rate hidden`}>
+          {this.renderRewardOptions()}
         </select>
         <button
           onclick={this.updateRate}
-          className="hidden"
+          className={`_${skill.id} update-rate hidden`}
         >Save</button>
       </div>
     )
