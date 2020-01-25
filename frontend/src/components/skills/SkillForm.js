@@ -9,7 +9,32 @@ export default class SkillForm extends Component {
       rewardRate: ''
     }
   }
+
+  handleChange = e => {
+    this.setState({
+      ...this.state,
+      [e.target.name]: e.target.value
+    });
+    e.target.value = this.state[e.target.name];
+  }
+
+  handleSubmit = e => {
+    e.preventDefault();
+    const { name, description, rewardRate } = this.state;
+    this.props.addSkill({
+      name: name,
+      description: description,
+      rewardRate: rewardRate
+    });
+    this.setState({
+      name: '',
+      description: '',
+      rewardRate: ''
+    });
+  }
+
   render() {
+    const { name, description, rewardRate } = this.state;
     return (
       <div id="skill-form" className="component dog-card">
         <form onSubmit={this.handleSubmit}>
