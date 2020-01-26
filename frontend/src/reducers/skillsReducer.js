@@ -36,6 +36,7 @@ const skillsReducer = (state = {
       }
 
     case 'ADD_SKILLS':
+      console.log(action.skills);
       return { ...state, skills: action.skills, loading: false }
 
     default:
