@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_14_163558) do
+ActiveRecord::Schema.define(version: 2020_01_26_134125) do
 
   create_table "dogs", force: :cascade do |t|
     t.string "name"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2020_01_14_163558) do
     t.string "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "timestamp"
   end
 
   create_table "skills", force: :cascade do |t|
