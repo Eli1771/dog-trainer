@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import Skill from './Skill';
+import Skill from '../../components/skills/Skill';
 import SkillForm from '../../components/skills/SkillForm';
 import { fetchDogs } from '../../actions/dogs';
 import { addSkill, editSkill, removeSkill, fetchSkills } from '../../actions/skills';
