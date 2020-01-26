@@ -12,13 +12,14 @@ export default class Skill extends Component {
   }
 
   updateRate = e => {
+    console.log('updating!');
     e.target.classList.add('hidden');
     document.querySelector(`._${this.skillId}.select-rate`).classList.add('hidden');
     document.querySelector(`._${this.skillId}.edit-rate`).classList.remove('hidden');
 
-    if (!e.target.value === 0) {
+    if (!e.target.value !== 0) {
       console.log('attempting to update state!');
-      //send callback prop to update state
+      this.props.editSkill(e.target.value);
     }
   }
 

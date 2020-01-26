@@ -32,6 +32,7 @@ class Skills extends Component {
     const filteredSkills = skills.filter(s => s.dog_id === dogId);
     return(
       <div className="skills-container">
+        <h3>Add a new skill!</h3>
         <SkillForm
           addSkill={this.props.addSkill}
           dogId={dogId}
@@ -51,8 +52,3 @@ const mapStateToProps = state => {
 }
 
 export default connect(mapStateToProps, { fetchDogs, addSkill, fetchSkills })(Skills);
-
-
-// return dogs.map(dog => {
-//   return <Dog key={dog.id} dog={dog} removeDog={this.props.removeDog} />
-// });

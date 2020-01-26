@@ -40,3 +40,5 @@ show svg graphics for dogs' progress
 show superlatives in the root/progress view, i.e. last-trained, most-recently-trained most improved etc.
 
 persist state w/ redux-persist
+
+** delete unnecessary imports!
