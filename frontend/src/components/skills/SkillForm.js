@@ -57,12 +57,12 @@ export default class SkillForm extends Component {
           />
 
           <label>Reward Rate</label>
-          <input
-            type="text"
+          <select
             name="rewardRate"
             value={rewardRate}
-            onChange={this.handleChange}
-          />
+            onChange={this.handleChange}>
+            {this.props.renderRewardRates()}
+          </select>
 
           <input type="submit" value="Add Skill"/>
         </form>
