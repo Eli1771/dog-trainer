@@ -5,6 +5,7 @@ import { fetchDogs } from '../../actions/dogs';
 import DogHeader from '../../components/dogs/DogHeader';
 import { DogsSidebar } from './DogsSidebar';
 import Skills from '../skills/Skills';
+import Notes from '../notes/Notes';
 
 class DogShow extends Component {
 
@@ -19,6 +20,7 @@ class DogShow extends Component {
         <>
           <DogHeader dog={dog} />
           <Skills dogId={dog.id} />
+          <Notes dogId={dog.id} />
           <DogsSidebar dogs={dogs} currentDogId={dog.id} />
         </>
       );

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class Notes extends Component {
   render() {
     return(
-      <div>Notes</div>
+      <div className="notes-container">Notes</div>
     )
   }
 }

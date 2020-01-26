@@ -68,6 +68,14 @@ body {
   grid-row-start: body-start;
 }
 
+.notes-container {
+  grid-column-start: log-start;
+  grid-column-end: log-end;
+  grid-row-start: body-start;
+
+  border: 1px solid gray;
+}
+
 .dogs-sidebar {
   grid-column-start: sidebar-start;
   grid-row-start: 1;
