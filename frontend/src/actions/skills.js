@@ -5,6 +5,14 @@ export const addSkill = skill => {
   }
 }
 
+export const editSkill = (skill, rewardRate) => {
+  return {
+    type: 'EDIT_SKILL',
+    skill: skill,
+    reward_rate: rewardRate
+  }
+}
+
 export const fetchSkills = () => {
   return dispatch => {
     dispatch({ type: 'LOADING'});

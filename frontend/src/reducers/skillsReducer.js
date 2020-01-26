@@ -10,7 +10,6 @@ const skillsReducer = (state = {
         ...action.skill,
         id: uuid()
       }
-      console.log('new skill obj: ', skill);
       return {
         ...state,
         skills: [ ...state.skills, skill ]
@@ -22,8 +21,21 @@ const skillsReducer = (state = {
         skills: state.skills.filter(skill => skill.id !== action.skillId)
       }
 
+    case 'EDIT_SKILL':
+      const idx = state.skills.findIndex(s => s.id === action.skill.id);
+      return {
+        ...state,
+        skills: [
+          ...state.skills.slice(0, idx),
+          {
+            ...state.skills[idx],
+            reward_rate: action.reward_rate
+          },
+          ...state.skills.slice(idx + 1)
+        ]
+      }
+
     case 'ADD_SKILLS':
-      console.log(action.skills);
       return { ...state, skills: action.skills, loading: false }
 
     default:

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import Skill from './Skill';
 import SkillForm from '../../components/skills/SkillForm';
 import { fetchDogs } from '../../actions/dogs';
-import { addSkill, fetchSkills } from '../../actions/skills';
+import { addSkill, editSkill, fetchSkills } from '../../actions/skills';
 
 class Skills extends Component {
   componentDidMount() {
@@ -15,7 +15,11 @@ class Skills extends Component {
 
   renderSkills = skills => {
     return skills.map(skill => {
-      return <Skill key={skill.id} skill={skill} renderRewardRates={this.renderRewardRates}/>
+      return <Skill
+        key={skill.id}
+        skill={skill}
+        renderRewardRates={this.renderRewardRates}
+        editSkill={this.props.editSkill}/>
     });
   }
 
@@ -27,7 +31,6 @@ class Skills extends Component {
   }
 
   render() {
-    console.log('current skills list: ', this.props.skills);
     const { skills, dogId } = this.props
     const filteredSkills = skills.filter(s => s.dog_id === dogId);
     return(
@@ -51,4 +54,9 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, { fetchDogs, addSkill, fetchSkills })(Skills);
+export default connect(mapStateToProps, {
+  fetchDogs,
+  addSkill,
+  editSkill,
+  fetchSkills
+})(Skills);
