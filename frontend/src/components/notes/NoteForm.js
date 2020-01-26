@@ -22,10 +22,10 @@ export default class NoteForm extends Component {
     const content = this.state.content;
     const timeStamp = moment().format('ddd, MMM Do - h:mm a');
     console.log('timestamp: ', timeStamp)
-    // this.props.addNote({
-    //   content: content,
-    //   time_stamp: timeStamp
-    // });
+    this.props.addNote({
+      content: content,
+      time_stamp: timeStamp
+    });
     this.setState({
       content: ''
     });

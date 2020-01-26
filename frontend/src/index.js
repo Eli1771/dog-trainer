@@ -9,10 +9,12 @@ import thunk from 'redux-thunk';
 import './index.css';
 import dogsReducer from './reducers/dogsReducer';
 import skillsReducer from './reducers/skillsReducer';
+import notesReducer from './reducers/notesReducer';
 
 const rootReducer = combineReducers({
   dogs: dogsReducer,
-  skills: skillsReducer
+  skills: skillsReducer,
+  notes: notesReducer
 });
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
