@@ -29,7 +29,7 @@ const skillsReducer = (state = {
           ...state.skills.slice(0, idx),
           {
             ...state.skills[idx],
-            reward_rate: action.reward_rate
+            reward_rate: action.rewardRate
           },
           ...state.skills.slice(idx + 1)
         ]
