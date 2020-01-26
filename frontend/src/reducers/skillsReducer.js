@@ -10,6 +10,7 @@ const skillsReducer = (state = {
         ...action.skill,
         id: uuid()
       }
+      console.log('new skill obj: ', skill);
       return {
         ...state,
         skills: [ ...state.skills, skill ]

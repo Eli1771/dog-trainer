@@ -24,7 +24,8 @@ export default class SkillForm extends Component {
     this.props.addSkill({
       name: name,
       description: description,
-      rewardRate: rewardRate
+      reward_rate: rewardRate,
+      dog_id: this.props.dogId
     });
     this.setState({
       name: '',
