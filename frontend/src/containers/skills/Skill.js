@@ -1,16 +1,9 @@
 import React, { Component } from 'react';
 
 export default class Skill extends Component {
-
   rewardRates = ['-','Every Time', 'Every Other Time', 'Every third Time', 'Every Several Times', 'Seldom/Randomly'];
 
   skillId = this.props.skill.id;
-
-  renderRewardOptions = () => {
-    return this.rewardRates.map((rate, idx) => {
-      return <option key={idx} value={idx}>{rate}</option>
-    });
-  }
 
   editRate = e => {
     e.target.classList.add('hidden');
@@ -41,7 +34,7 @@ export default class Skill extends Component {
           onClick={this.editRate}
         >Change</button>
         <select className={`_${skill.id} select-rate hidden`}>
-          {this.renderRewardOptions()}
+          {this.props.renderRewardRates()}
         </select>
         <button
           onClick={this.updateRate}

@@ -15,7 +15,14 @@ class Skills extends Component {
 
   renderSkills = skills => {
     return skills.map(skill => {
-      return <Skill key={skill.id} skill={skill} />
+      return <Skill key={skill.id} skill={skill} renderRewardRates={this.renderRewardRates}/>
+    });
+  }
+
+  renderRewardRates = () => {
+    const rewardRates = ['-','Every Time', 'Every Other Time', 'Every third Time', 'Every Several Times', 'Seldom/Randomly'];
+    return rewardRates.map((rate, idx) => {
+      return <option key={idx} value={idx}>{rate}</option>
     });
   }
 
@@ -25,7 +32,10 @@ class Skills extends Component {
     const filteredSkills = skills.filter(s => s.dog_id === dogId);
     return(
       <div className="skills-container">
-        <SkillForm addSkill={this.props.addSkill} dogId={dogId}/>
+        <SkillForm
+          addSkill={this.props.addSkill}
+          dogId={dogId}
+          renderRewardRates={this.renderRewardRates}/>
         <h3>Skills</h3>
         {this.renderSkills(filteredSkills)}
       </div>
