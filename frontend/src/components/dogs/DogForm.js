@@ -10,6 +10,10 @@ export default class DogForm extends Component {
     }
   }
 
+  handleCancel = () => {
+    this.props.toggleDogForm();
+  }
+
   handleChange = e => {
     this.setState({
       ...this.state,
@@ -64,6 +68,12 @@ export default class DogForm extends Component {
           />
 
           <input type="submit" value="Add Dog"/>
+
+          <input
+            type="button"
+            value="cancel"
+            onClick={this.handleCancel}
+          />
         </form>
       </div>
     );

@@ -36,7 +36,7 @@ class Dogs extends Component {
 
   renderDogForm = () => {
     return this.props.dogFormShowing ?
-      <DogForm addDog={this.props.addDog} /> :
+      <DogForm addDog={this.props.addDog} toggleDogForm={() => this.toggleDogForm(true)}/> :
       <DogFormButton toggleDogForm={this.toggleDogForm} />
   }
 
