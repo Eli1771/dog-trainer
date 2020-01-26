@@ -5,11 +5,18 @@ export const addSkill = skill => {
   }
 }
 
+export const removeSkill = skillId => {
+  return {
+    type: 'REMOVE_SKILL',
+    skillId: skillId
+  }
+}
+
 export const editSkill = (skill, rewardRate) => {
   return {
     type: 'EDIT_SKILL',
     skill: skill,
-    reward_rate: rewardRate
+    rewardRate: rewardRate
   }
 }
 

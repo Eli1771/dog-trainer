@@ -7,6 +7,7 @@ export default class Skill extends Component {
 
   editRate = e => {
     e.target.classList.add('hidden');
+    document.querySelector(`._${this.skillId}.remove-skill`).classList.add('hidden');
     document.querySelector(`._${this.skillId}.select-rate`).classList.remove('hidden');
     document.querySelector(`._${this.skillId}.update-rate`).classList.remove('hidden');
   }
@@ -16,10 +17,18 @@ export default class Skill extends Component {
     e.target.classList.add('hidden');
     document.querySelector(`._${this.skillId}.select-rate`).classList.add('hidden');
     document.querySelector(`._${this.skillId}.edit-rate`).classList.remove('hidden');
+    document.querySelector(`._${this.skillId}.remove-skill`).classList.remove('hidden');
 
     const newRate = document.querySelector(`._${this.skillId}.select-rate`).value;
-    if (e.target.value !== 0) {
+    if (newRate !== '0') {
       this.props.editSkill(this.props.skill, newRate);
+    }
+  }
+
+  handleDelete = e => {
+    e.preventDefault();
+    if (window.confirm('Delete skill?')) {
+      this.props.removeSkill(this.props.skill.id);
     }
   }
 
@@ -41,6 +50,10 @@ export default class Skill extends Component {
           onClick={this.updateRate}
           className={`_${skill.id} update-rate hidden`}
         >Save</button>
+        <button
+          className={`_${skill.id} remove-skill`}
+          onClick={this.handleDelete}
+        >Delete</button>
       </div>
     )
   }
