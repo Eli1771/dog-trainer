@@ -22,6 +22,10 @@ const notesReducer = (state = {
         notes: [ ...state.notes, note ]
       }
 
+    case 'AUTO_ADD_NOTE':
+      console.log('received by reducer!');
+      return state;
+
     case 'REMOVE_NOTE':
       return {
         ...state,
