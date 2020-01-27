@@ -50,7 +50,7 @@ body {
 .dog-show {
   display: grid;
   grid-template-columns: 35% [skills-end log-start] 35% [log-end header-end sidebar-start] 28% auto;
-  grid-template-rows: 20% [header-end body-start] auto;
+  grid-template-rows: 13% [header-end body-start] auto;
 
   position: relative;
   top: 7vh;
@@ -74,6 +74,11 @@ body {
   grid-row-start: body-start;
 
   border: 1px solid gray;
+  text-align: left;
+}
+
+.notes-container h3 {
+  text-align: center;
 }
 
 .dogs-sidebar {

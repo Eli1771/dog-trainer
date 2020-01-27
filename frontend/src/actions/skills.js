@@ -1,7 +1,8 @@
-export const addSkill = skill => {
+export const addSkill = (skill, dogName) => {
   return {
     type: 'ADD_SKILL',
-    skill: skill
+    skill: skill,
+    dogName: dogName
   }
 }
 
