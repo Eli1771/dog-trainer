@@ -5,10 +5,10 @@ const Note = props => {
   console.log('props for this note: ', props);
 
   return(
-    <li className="note">
+    <div className="note">
       <p>{props.note.timestamp}</p>
       <p>{props.note.content}</p>
-    </li>
+    </div>
   )
 }
 

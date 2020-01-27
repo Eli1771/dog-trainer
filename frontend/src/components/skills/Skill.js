@@ -21,7 +21,8 @@ export default class Skill extends Component {
 
     const newRate = document.querySelector(`._${this.skillId}.select-rate`).value;
     if (newRate !== '0') {
-      this.props.editSkill(this.props.skill, newRate);
+      const rateString = this.rewardRates[newRate];
+      this.props.editSkill(this.props.skill, newRate, this.props.dogName, rateString);
     }
   }
 

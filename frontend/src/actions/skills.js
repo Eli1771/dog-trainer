@@ -13,11 +13,13 @@ export const removeSkill = skillId => {
   }
 }
 
-export const editSkill = (skill, rewardRate) => {
+export const editSkill = (skill, rewardRate, dogName, rateString) => {
   return {
     type: 'EDIT_SKILL',
     skill: skill,
-    rewardRate: rewardRate
+    rewardRate: rewardRate,
+    dogName: dogName,
+    rateString: rateString
   }
 }
 
