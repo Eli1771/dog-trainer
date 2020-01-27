@@ -13,7 +13,6 @@ export default class Skill extends Component {
   }
 
   updateRate = e => {
-    console.log('updating!');
     e.target.classList.add('hidden');
     document.querySelector(`._${this.skillId}.select-rate`).classList.add('hidden');
     document.querySelector(`._${this.skillId}.edit-rate`).classList.remove('hidden');
@@ -27,7 +26,6 @@ export default class Skill extends Component {
   }
 
   handlePractice = e => {
-    console.log(`practicing ${this.props.skill.name}!`);
     this.props.autoAddNote(this.props.dog, this.props.skill.name);
   }
 

@@ -1,17 +1,29 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import { NavBar } from '../components/NavBar';
+import Note from '../components/notes/Note';
 
 class Progress extends Component {
+
+  renderNoteLinks = notes => {
+    return notes.map(note => {
+      return(
+        <Link to={`/dogs/${note.dog_id}`}>
+          <Note key={note.id} note={note} />
+        </Link>
+      )
+    });
+  }
+
   render() {
-    console.log(this.props.notes);
     return(
       <div>
         <NavBar />
         <div>Progress Log</div>
         <div className='note-links-container'>
-
+          {this.renderNoteLinks(this.props.notes)}
         </div>
       </div>
     );
@@ -24,4 +36,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect()(Progress);
+export default connect(mapStateToProps)(Progress);
