@@ -32,14 +32,14 @@ class Skills extends Component {
   }
 
   render() {
-    const { skills, dogId } = this.props
-    const filteredSkills = skills.filter(s => s.dog_id === dogId);
+    const { skills, dog } = this.props
+    const filteredSkills = skills.filter(s => s.dog_id === dog.id);
     return(
       <div className="skills-container">
         <h3>Add a new skill!</h3>
         <SkillForm
           addSkill={this.props.addSkill}
-          dogId={dogId}
+          dog={dog}
           renderRewardRates={this.renderRewardRates}/>
         <h3>Skills</h3>
         {this.renderSkills(filteredSkills)}

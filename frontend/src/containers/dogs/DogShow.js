@@ -19,7 +19,7 @@ class DogShow extends Component {
       return(
         <>
           <DogHeader dog={dog} />
-          <Skills dogId={dog.id} />
+          <Skills dog={dog} />
           <Notes dogId={dog.id} />
           <DogsSidebar dogs={dogs} currentDogId={dog.id} />
         </>

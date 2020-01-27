@@ -21,12 +21,14 @@ export default class SkillForm extends Component {
   handleSubmit = e => {
     e.preventDefault();
     const { name, description, rewardRate } = this.state;
-    this.props.addSkill({
-      name: name,
-      description: description,
-      reward_rate: rewardRate,
-      dog_id: this.props.dogId
-    });
+    this.props.addSkill(
+      {
+        name: name,
+        description: description,
+        reward_rate: rewardRate,
+        dog_id: this.props.dog.id
+      }, this.props.dog.name
+    );
     this.setState({
       name: '',
       description: '',
