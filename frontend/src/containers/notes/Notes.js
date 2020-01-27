@@ -7,9 +7,9 @@ import { addNote } from '../../actions/notes';
 
 class Notes extends Component {
   renderNotes = notes => {
-    // filteredNotes =
+    const filteredNotes = notes.filter(n => n.dog_id === this.props.dogId)
     console.log('attempting to render notes!')
-    return notes.map(note => {
+    return filteredNotes.map(note => {
       return <Note key={note.id} note={note} />
     })
   }
