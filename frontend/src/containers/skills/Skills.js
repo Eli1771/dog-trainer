@@ -19,9 +19,14 @@ class Skills extends Component {
     }
   }
 
-  revealForm = e => {
-    e.target.classList.add('hidden');
+  revealForm = () => {
+    document.querySelector('.skill-form-button').classList.add('hidden');
     document.querySelector('.skill-form').classList.remove('hidden');
+  }
+
+  hideForm = () => {
+    document.querySelector('.skill-form').classList.add('hidden');
+    document.querySelector('.skill-form-button').classList.remove('hidden');
   }
 
   renderSkills = skills => {
@@ -58,6 +63,7 @@ class Skills extends Component {
             addSkill={this.props.addSkill}
             dog={dog}
             renderRewardRates={this.renderRewardRates}
+            hideForm={this.hideForm}
           />
         </div>
         {this.renderSkills(filteredSkills)}

@@ -36,6 +36,10 @@ export default class SkillForm extends Component {
     });
   }
 
+  handleCancel = () => {
+    this.props.hideForm()
+  }
+
   render() {
     const { name, description, rewardRate } = this.state;
     return (
@@ -67,6 +71,9 @@ export default class SkillForm extends Component {
           </select>
 
           <input type="submit" value="Add Skill"/>
+
+          <button onClick={this.handleCancel}>Cancel</button>
+
         </form>
       </div>
     );
