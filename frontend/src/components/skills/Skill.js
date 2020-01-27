@@ -26,6 +26,11 @@ export default class Skill extends Component {
     }
   }
 
+  handlePractice = e => {
+    console.log(`practicing ${this.props.skill.name}!`);
+    // this.props.autoAddNote(this.props.dogName, this.props.skill.name);
+  }
+
   handleDelete = e => {
     e.preventDefault();
     if (window.confirm('Delete skill?')) {
@@ -40,6 +45,10 @@ export default class Skill extends Component {
         <h2>{skill.name}</h2>
         <p>{skill.description}</p>
         <p>{this.rewardRates[skill.reward_rate]}</p>
+        <button
+          className='practice-skill'
+          onClick={this.handlePractice}
+        >Practice {skill.name}!</button>
         <button
           className={`_${skill.id} edit-rate`}
           onClick={this.editRate}
