@@ -23,8 +23,13 @@ const notesReducer = (state = {
       }
 
     case 'AUTO_ADD_NOTE':
-      console.log('received by reducer!');
-      return state;
+      content = `Worked on ${action.skillName} with ${action.dogName}.`;
+      timestamp = moment().format(formatTimestamp);
+      note = {
+        content: content,
+        timestamp: timestamp
+      }
+      return { ...state, notes: [ ...state.notes, note ] }
 
     case 'REMOVE_NOTE':
       return {
