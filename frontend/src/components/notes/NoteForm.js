@@ -18,8 +18,11 @@ export default class NoteForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    const content = this.state.content;
-    this.props.addNote(content);
+    const note = {
+      content: this.state.content,
+      dog_id: this.props.dogId
+    }
+    this.props.addNote(note);
     this.setState({
       content: ''
     });

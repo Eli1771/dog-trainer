@@ -7,6 +7,7 @@ import { addNote } from '../../actions/notes';
 
 class Notes extends Component {
   renderNotes = notes => {
+    // filteredNotes =
     console.log('attempting to render notes!')
     return notes.map(note => {
       return <Note key={note.id} note={note} />
@@ -19,7 +20,7 @@ class Notes extends Component {
       <div className="notes-container">
         <h3>Progress Log</h3>
         {this.renderNotes(this.props.notes)}
-        <NoteForm addNote={this.props.addNote} />
+        <NoteForm addNote={this.props.addNote} dogId={this.props.dogId} />
       </div>
     );
   }

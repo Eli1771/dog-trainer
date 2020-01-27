@@ -13,7 +13,7 @@ const notesReducer = (state = {
 
     case 'ADD_NOTE':
       note = {
-        content: action.content,
+        ...action.note,
         timestamp: moment().format(formatTimestamp),
         id: uuid()
       }
