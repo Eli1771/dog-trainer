@@ -7,6 +7,7 @@ import { addNote } from '../../actions/notes';
 
 class Notes extends Component {
   renderNotes = notes => {
+    console.log('attempting to render notes!')
     return notes.map(note => {
       return <Note key={note.id} note={note} />
     })

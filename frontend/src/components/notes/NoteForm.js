@@ -20,11 +20,11 @@ export default class NoteForm extends Component {
   handleSubmit = e => {
     e.preventDefault();
     const content = this.state.content;
-    const timeStamp = moment().format('ddd, MMM Do - h:mm a');
-    console.log('timestamp: ', timeStamp)
+    const timestamp = moment().format('ddd, MMM Do - h:mm a');
+    console.log('timestamp: ', timestamp)
     this.props.addNote({
       content: content,
-      time_stamp: timeStamp
+      timestamp: timestamp
     });
     this.setState({
       content: ''
