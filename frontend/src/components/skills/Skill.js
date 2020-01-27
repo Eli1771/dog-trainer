@@ -28,7 +28,7 @@ export default class Skill extends Component {
 
   handlePractice = e => {
     console.log(`practicing ${this.props.skill.name}!`);
-    this.props.autoAddNote(this.props.dogName, this.props.skill.name);
+    this.props.autoAddNote(this.props.dog, this.props.skill.name);
   }
 
   handleDelete = e => {

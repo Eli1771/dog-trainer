@@ -37,7 +37,7 @@ class Skills extends Component {
         renderRewardRates={this.renderRewardRates}
         editSkill={this.props.editSkill}
         removeSkill={this.props.removeSkill}
-        dogName={this.props.dog.name}
+        dog={this.props.dog}
         autoAddNote={this.props.autoAddNote}/>
     });
   }

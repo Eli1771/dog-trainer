@@ -23,11 +23,12 @@ const notesReducer = (state = {
       }
 
     case 'AUTO_ADD_NOTE':
-      content = `Worked on ${action.skillName} with ${action.dogName}.`;
+      content = `Worked on ${action.skillName} with ${action.dog.name}.`;
       timestamp = moment().format(formatTimestamp);
       note = {
         content: content,
         timestamp: timestamp,
+        dog_id: action.dog.id,
         id: uuid()
       }
       return { ...state, notes: [ ...state.notes, note ] }

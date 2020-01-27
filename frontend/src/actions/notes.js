@@ -5,10 +5,10 @@ export const addNote = note => {
   }
 }
 
-export const autoAddNote = (dogName, skillName) => {
+export const autoAddNote = (dog, skillName) => {
   return {
     type: 'AUTO_ADD_NOTE',
-    dogName: dogName,
+    dog: dog,
     skillName: skillName
   }
 }
