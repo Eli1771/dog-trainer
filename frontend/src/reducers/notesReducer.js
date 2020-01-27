@@ -5,12 +5,14 @@ const notesReducer = (state = {
   notes: []
 }, action) => {
   let note;
+  const formatTimestamp = 'ddd, MMM Do - h:mm a';
 
   switch (action.type) {
 
     case 'ADD_NOTE':
       note = {
-        ...action.note,
+        content: action.content,
+        timestamp: moment().format(formatTimestamp),
         id: uuid()
       }
       return {
@@ -31,7 +33,7 @@ const notesReducer = (state = {
     case 'ADD_SKILL':
       console.log('add skill received by notesReducer');
       const content = `${action.dogName} started learning ${action.skill.name}`;
-      const timestamp = moment().format('ddd, MMM Do - h:mm a');
+      const timestamp = moment().format(formatTimestamp);
       note = {
         content: content,
         timestamp: timestamp

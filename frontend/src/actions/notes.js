@@ -1,6 +1,6 @@
-export const addNote = note => {
+export const addNote = content => {
   return {
     type: 'ADD_NOTE',
-    note: note
+    content: content
   }
 }

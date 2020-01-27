@@ -34,3 +34,5 @@ show superlatives in the root/progress view, i.e. last-trained, most-recently-tr
 ** delete unnecessary imports!
 
 autofill feature when creating skills that other dogs have
+
+add a 'we worked this skill' button to each skill that would log your training activity 

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import moment from 'moment';
 
 export default class NoteForm extends Component {
   constructor() {
@@ -20,12 +19,7 @@ export default class NoteForm extends Component {
   handleSubmit = e => {
     e.preventDefault();
     const content = this.state.content;
-    const timestamp = moment().format('ddd, MMM Do - h:mm a');
-    console.log('timestamp: ', timestamp)
-    this.props.addNote({
-      content: content,
-      timestamp: timestamp
-    });
+    this.props.addNote(content);
     this.setState({
       content: ''
     });
