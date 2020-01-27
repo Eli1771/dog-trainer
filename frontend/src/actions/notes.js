@@ -4,3 +4,7 @@ export const addNote = content => {
     content: content
   }
 }
+
+export const autoAddNote = (dogName, skillName) => {
+  console.log('action firing!');
+}

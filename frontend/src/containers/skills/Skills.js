@@ -4,7 +4,13 @@ import { connect } from 'react-redux';
 import Skill from '../../components/skills/Skill';
 import SkillForm from '../../components/skills/SkillForm';
 import { fetchDogs } from '../../actions/dogs';
-import { addSkill, editSkill, removeSkill, fetchSkills } from '../../actions/skills';
+import { autoAddNote } from '../../actions/notes';
+import {
+  addSkill,
+  editSkill,
+  removeSkill,
+  fetchSkills,
+} from '../../actions/skills';
 
 class Skills extends Component {
   componentDidMount() {
@@ -21,7 +27,8 @@ class Skills extends Component {
         renderRewardRates={this.renderRewardRates}
         editSkill={this.props.editSkill}
         removeSkill={this.props.removeSkill}
-        dogName={this.props.dog.name} />
+        dogName={this.props.dog.name}
+        autoAddNote={this.props.autoAddNote}/>
     });
   }
 
@@ -61,5 +68,6 @@ export default connect(mapStateToProps, {
   addSkill,
   editSkill,
   removeSkill,
-  fetchSkills
+  fetchSkills,
+  autoAddNote
 })(Skills);
