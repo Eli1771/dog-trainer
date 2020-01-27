@@ -27,7 +27,8 @@ const notesReducer = (state = {
       timestamp = moment().format(formatTimestamp);
       note = {
         content: content,
-        timestamp: timestamp
+        timestamp: timestamp,
+        id: uuid()
       }
       return { ...state, notes: [ ...state.notes, note ] }
 
@@ -45,7 +46,8 @@ const notesReducer = (state = {
       timestamp = moment().format(formatTimestamp);
       note = {
         content: content,
-        timestamp: timestamp
+        timestamp: timestamp,
+        id: uuid()
       }
       return { ...state, notes: [ ...state.notes, note ] }
 
@@ -54,7 +56,8 @@ const notesReducer = (state = {
       timestamp = moment().format(formatTimestamp);
       note = {
         content: content,
-        timestamp: timestamp
+        timestamp: timestamp,
+        id: uuid()
       }
       return { ...state, notes: [ ...state.notes, note ] }
 

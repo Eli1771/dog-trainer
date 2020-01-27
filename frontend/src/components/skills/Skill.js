@@ -52,7 +52,7 @@ export default class Skill extends Component {
         <button
           className={`_${skill.id} edit-rate`}
           onClick={this.editRate}
-        >Change</button>
+        >Change Rate</button>
         <select className={`_${skill.id} select-rate hidden`}>
           {this.props.renderRewardRates()}
         </select>
