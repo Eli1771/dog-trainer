@@ -43,21 +43,23 @@ const notesReducer = (state = {
       return { ...state, notes: action.notes, loading: false }
 
     case 'ADD_SKILL':
-      content = `${action.dogName} started learning ${action.skill.name}.`;
+      content = `${action.dog.name} started learning ${action.skill.name}.`;
       timestamp = moment().format(formatTimestamp);
       note = {
         content: content,
         timestamp: timestamp,
+        dog_id: action.dog.id,
         id: uuid()
       }
       return { ...state, notes: [ ...state.notes, note ] }
 
     case 'EDIT_SKILL':
-      content = `${action.dogName} now receives reinforcement for ${action.skill.name} ${action.rateString} when successful.`;
+      content = `${action.dog.name} now receives reinforcement for ${action.skill.name} ${action.rateString} when successful.`;
       timestamp = moment().format(formatTimestamp);
       note = {
         content: content,
         timestamp: timestamp,
+        dog_id: action.dog.id,
         id: uuid()
       }
       return { ...state, notes: [ ...state.notes, note ] }

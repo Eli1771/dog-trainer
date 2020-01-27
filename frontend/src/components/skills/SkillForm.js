@@ -27,7 +27,7 @@ export default class SkillForm extends Component {
         description: description,
         reward_rate: rewardRate,
         dog_id: this.props.dog.id
-      }, this.props.dog.name
+      }, this.props.dog
     );
     this.setState({
       name: '',
@@ -36,8 +36,9 @@ export default class SkillForm extends Component {
     });
   }
 
-  handleCancel = () => {
-    this.props.hideForm()
+  handleCancel = e => {
+    e.preventDefault();
+    this.props.hideForm();
   }
 
   render() {
