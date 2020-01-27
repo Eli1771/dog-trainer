@@ -19,6 +19,11 @@ class Skills extends Component {
     }
   }
 
+  revealForm = e => {
+    e.target.classList.add('hidden');
+    document.querySelector('.skill-form').classList.remove('hidden');
+  }
+
   renderSkills = skills => {
     return skills.map(skill => {
       return <Skill
@@ -44,12 +49,17 @@ class Skills extends Component {
     const filteredSkills = skills.filter(s => s.dog_id === dog.id);
     return(
       <div className="skills-container">
-        <h3>Add a new skill!</h3>
-        <SkillForm
-          addSkill={this.props.addSkill}
-          dog={dog}
-          renderRewardRates={this.renderRewardRates}/>
         <h3>Skills</h3>
+        <div className="skill-form-button" onClick={this.revealForm}>
+          <p>Add a new skill!</p>
+        </div>
+        <div className="skill-form dog-card hidden">
+          <SkillForm
+            addSkill={this.props.addSkill}
+            dog={dog}
+            renderRewardRates={this.renderRewardRates}
+          />
+        </div>
         {this.renderSkills(filteredSkills)}
       </div>
     );

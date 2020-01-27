@@ -39,7 +39,7 @@ export default class SkillForm extends Component {
   render() {
     const { name, description, rewardRate } = this.state;
     return (
-      <div id="skill-form" className="component dog-card">
+      <div id="skill-form" className="component">
         <form onSubmit={this.handleSubmit}>
           <label>Name</label>
           <input

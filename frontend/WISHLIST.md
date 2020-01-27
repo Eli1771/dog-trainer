@@ -18,6 +18,8 @@ find out how to upload images to a server
 upload profile images for each pet
   ** create default images for pets without profile image
 
+** filter skills to only render for proper dogs
+
 remove empty space from the end of inputs to clean up rendering
 
 use calendar input for DOB??
@@ -35,4 +37,4 @@ show superlatives in the root/progress view, i.e. last-trained, most-recently-tr
 
 autofill feature when creating skills that other dogs have
 
-add a 'we worked this skill' button to each skill that would log your training activity 
+add a 'we worked this skill' button to each skill that would log your training activity
