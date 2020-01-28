@@ -29,6 +29,7 @@ export default class SkillForm extends Component {
         dog_id: this.props.dog.id
       }, this.props.dog
     );
+    this.props.hideForm();
     this.setState({
       name: '',
       description: '',
