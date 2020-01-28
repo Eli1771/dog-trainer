@@ -8,4 +8,10 @@ class DogsController < ApplicationController
     dog = Dog.find_by(id: params[:id])
     render json: dog
   end
+
+  def create
+    binding.pry
+    dog = Dog.create(params)
+    render json: dog
+  end
 end

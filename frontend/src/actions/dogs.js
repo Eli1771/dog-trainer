@@ -1,7 +1,18 @@
 export const addDog = dog => {
-  return {
-    type: 'ADD_DOG',
-    dog: dog
+  return dispatch => {
+    dispatch({
+      type: 'ADD_DOG',
+      dog: dog
+    });
+    fetch('/dogs', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(dog)
+    }).then(resp => resp.json())
+      .then(json => console.log('added dog i think?', json));
   }
 }
 
