@@ -23,3 +23,12 @@ export const autoAddNote = (dog, skillName) => {
     skillName: skillName
   }
 }
+
+export const fetchNotes = () =>{
+  return dispatch => {
+    dispatch({ type: 'LOADING' });
+    fetch('/notes')
+      .then(resp => resp.json())
+      .then(json => dispatch({ type: 'ADD_NOTES', notes: json }));
+  }
+}
