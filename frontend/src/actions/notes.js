@@ -1,7 +1,18 @@
 export const addNote = note => {
-  return {
-    type: 'ADD_NOTE',
-    note: note
+  return dispatch => {
+    dispatch({
+      type: 'ADD_NOTE',
+      note: note
+    });
+    fetch('/notes', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(note)
+    }).then(resp => resp.json())
+      .then(json => console.log('added note to db!', json));
   }
 }
 

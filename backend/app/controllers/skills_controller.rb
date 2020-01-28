@@ -14,9 +14,15 @@ class SkillsController < ApplicationController
     render json: skill
   end
 
+  def destroy
+    skill = Skill.find_by(id: params[:id])
+    skill.destroy
+    render json: skill
+  end
+
   private
 
   def skill_params
-    params.require(:skill).permit(:name, :description, :reward_rate)
-  end 
+    params.require(:skill).permit(:name, :description, :reward_rate, :dog_id)
+  end
 end

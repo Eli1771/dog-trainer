@@ -31,6 +31,6 @@ show svg graphics for dogs' progress
 
 show superlatives in the root/progress view, i.e. last-trained, most-recently-trained most improved etc.
 
-** delete unnecessary imports!
+** delete unnecessary imports, routes and controllers!
 
 autofill feature when creating skills that other dogs have
