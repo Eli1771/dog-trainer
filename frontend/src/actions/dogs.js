@@ -22,7 +22,7 @@ export const removeDog = dogId => {
       type: 'REMOVE_DOG',
       dogId: dogId
     });
-  }
+  console.log('running full action OOOOOOO');
   fetch(`/dogs/${dogId}`, {
     method: 'DELETE',
     headers: {
@@ -32,6 +32,7 @@ export const removeDog = dogId => {
     body: JSON.stringify(dogId)
   }).then(resp => resp.json())
     .then(json => console.log('deleted dog?', json));
+  }
 }
 
 export const showDogForm = () => {
