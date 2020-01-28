@@ -11,7 +11,13 @@ class DogsController < ApplicationController
 
   def create
     binding.pry
-    dog = Dog.create(params)
+    dog = Dog.create(dog_params)
     render json: dog
+  end
+
+  private
+
+  def dog_params
+    params.require(:dog).permit(:name, :breed, :dob)
   end
 end
