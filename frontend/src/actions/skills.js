@@ -1,15 +1,37 @@
 export const addSkill = (skill, dog) => {
-  return {
-    type: 'ADD_SKILL',
-    skill: skill,
-    dog: dog
+  return dispatch => {
+    dispatch({
+      type: 'ADD_SKILL',
+      skill: skill,
+      dog: dog
+    });
+    fetch('/skills', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(skill)
+    }).then(resp => resp.json())
+      .then(json => console.log('added skill to db!', json));
   }
 }
 
 export const removeSkill = skillId => {
-  return {
-    type: 'REMOVE_SKILL',
-    skillId: skillId
+  return dispatch => {
+    dispatch({
+      type: 'REMOVE_SKILL',
+      skillId: skillId
+    });
+    fetch(`/skills/${skillId}`, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(skillId)
+    }).then(resp => resp.json())
+      .then(json => console.log('deleted skill from db!', json));
   }
 }
 

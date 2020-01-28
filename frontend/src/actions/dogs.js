@@ -12,7 +12,7 @@ export const addDog = dog => {
       },
       body: JSON.stringify(dog)
     }).then(resp => resp.json())
-      .then(json => console.log('added dog i think?', json));
+      .then(json => console.log('added dog to db!', json));
   }
 }
 
@@ -22,7 +22,6 @@ export const removeDog = dogId => {
       type: 'REMOVE_DOG',
       dogId: dogId
     });
-  console.log('running full action OOOOOOO');
   fetch(`/dogs/${dogId}`, {
     method: 'DELETE',
     headers: {
@@ -31,7 +30,7 @@ export const removeDog = dogId => {
     },
     body: JSON.stringify(dogId)
   }).then(resp => resp.json())
-    .then(json => console.log('deleted dog?', json));
+    .then(json => console.log('deleted dog from db!', json));
   }
 }
 
