@@ -17,10 +17,21 @@ export const addDog = dog => {
 }
 
 export const removeDog = dogId => {
-  return {
-    type: 'REMOVE_DOG',
-    dogId: dogId
+  return dispatch => {
+    dispatch({
+      type: 'REMOVE_DOG',
+      dogId: dogId
+    });
   }
+  fetch(`/dogs/${dogId}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json'
+    },
+    body: JSON.stringify(dogId)
+  }).then(resp => resp.json())
+    .then(json => console.log('deleted dog?', json));
 }
 
 export const showDogForm = () => {
