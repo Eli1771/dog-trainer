@@ -17,10 +17,27 @@ export const addNote = note => {
 }
 
 export const autoAddNote = (dog, skillName) => {
-  return {
-    type: 'AUTO_ADD_NOTE',
-    dog: dog,
-    skillName: skillName
+  let content = `Worked on ${skillName} with ${dog.name}.`;
+  let timestamp = moment().format(formatTimestamp);
+  let note = {
+    content: content,
+    timestamp: timestamp,
+    dog_id: dog.id,
+  }
+  return dispatch => {
+    dispatch({
+      type: 'ADD_NOTE',
+      note: note
+    });
+    fetch('/notes', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(note)
+    }).then(resp => resp.json())
+      .then(json => console.log('added note to db!', json));
   }
 }
 
