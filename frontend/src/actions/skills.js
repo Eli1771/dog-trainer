@@ -93,6 +93,16 @@ export const editSkill = (skill, rewardRate, dog, rateString) => {
       body: JSON.stringify({reward_rate: rewardRate})
     }).then(resp => resp.json())
       .then(json => console.log('edited skill in db!', json));
+
+    fetch('/notes/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(note)
+    }).then(resp => resp.json())
+      .then(json => console.log('added note in db!', json));
   }
 }
 
