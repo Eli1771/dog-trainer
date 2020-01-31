@@ -1,16 +1,28 @@
+import moment from 'moment';
+
+const formatTimestamp = 'ddd, MMM Do - h:mm a';
+
 export const addNote = note => {
+  let timestamp = moment().format(formatTimestamp);
+  console.log('timestamp for addNote', timestamp);
+  let timedNote = {
+    ...note,
+    timestamp: timestamp
+  }
+  console.log('full note for dispatch', timedNote);
   return dispatch => {
     dispatch({
       type: 'ADD_NOTE',
-      note: note
+      note: timedNote
     });
+    console.log('running full async notes action 000000000')
     fetch('/notes', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
       },
-      body: JSON.stringify(note)
+      body: JSON.stringify(timedNote)
     }).then(resp => resp.json())
       .then(json => console.log('added note to db!', json));
   }
