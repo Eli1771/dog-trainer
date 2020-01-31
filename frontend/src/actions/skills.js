@@ -31,6 +31,15 @@ export const addSkill = (skill, dog) => {
       body: JSON.stringify(skill)
     }).then(resp => resp.json())
       .then(json => console.log('added skill to db!', json));
+    fetch('/notes', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(note)
+    }).then(resp => resp.json())
+      .then(json => console.log('added note to db!', json));
   }
 }
 
