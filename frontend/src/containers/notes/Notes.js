@@ -19,7 +19,6 @@ class Notes extends Component {
   }
 
   render() {
-    console.log('all notes: ', this.props.notes);
     return(
       <div className="notes-container">
         <h3>Progress Log</h3>

@@ -1,13 +1,9 @@
 import uuid from 'uuid';
-import moment from 'moment';
 
 const notesReducer = (state = {
   notes: []
 }, action) => {
   let note;
-  let content;
-  let timestamp;
-  const formatTimestamp = 'ddd, MMM Do - h:mm a';
 
   switch (action.type) {
 

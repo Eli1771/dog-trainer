@@ -4,18 +4,15 @@ const formatTimestamp = 'ddd, MMM Do - h:mm a';
 
 export const addNote = note => {
   let timestamp = moment().format(formatTimestamp);
-  console.log('timestamp for addNote', timestamp);
   let timedNote = {
     ...note,
     timestamp: timestamp
   }
-  console.log('full note for dispatch', timedNote);
   return dispatch => {
     dispatch({
       type: 'ADD_NOTE',
       note: timedNote
     });
-    console.log('running full async notes action 000000000')
     fetch('/notes', {
       method: 'POST',
       headers: {
