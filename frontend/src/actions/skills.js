@@ -78,6 +78,12 @@ export const editSkill = (skill, rewardRate, dog, rateString) => {
       skill: skill,
       rewardRate: rewardRate
     });
+
+    dispatch({
+      type: 'ADD_NOTE',
+      note: note
+    });
+
   }
 }
 
