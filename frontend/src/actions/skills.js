@@ -62,12 +62,22 @@ export const removeSkill = skillId => {
 }
 
 export const editSkill = (skill, rewardRate, dog, rateString) => {
-  return {
-    type: 'EDIT_SKILL',
-    skill: skill,
-    rewardRate: rewardRate,
-    dog: dog,
-    rateString: rateString
+
+  let content = `${dog.name} now receives reinforcement for ${skill.name} ${rateString} when successful.`;
+  let timestamp = moment().format(formatTimestamp);
+  let note = {
+    content: content,
+    timestamp: timestamp,
+    dog_id: dog.id
+  }
+
+  return dispatch => {
+
+    dispatch({
+      type: 'EDIT_SKILL',
+      skill: skill,
+      rewardRate: rewardRate
+    });
   }
 }
 
