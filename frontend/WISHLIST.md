@@ -34,3 +34,5 @@ show superlatives in the root/progress view, i.e. last-trained, most-recently-tr
 ** delete unnecessary imports, routes and controllers!
 
 autofill feature when creating skills that other dogs have
+
+** fix timestamp attribute persistence

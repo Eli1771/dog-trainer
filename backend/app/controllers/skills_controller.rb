@@ -14,6 +14,12 @@ class SkillsController < ApplicationController
     render json: skill
   end
 
+  def update
+    skill = Skill.find_by(id: params[:id])
+    skill.update(reward_rate: params[:reward_rate])
+    render json: skill
+  end
+
   def destroy
     skill = Skill.find_by(id: params[:id])
     skill.destroy
