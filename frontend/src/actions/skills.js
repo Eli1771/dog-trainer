@@ -1,9 +1,26 @@
+import moment from 'moment';
+
+const formatTimestamp = 'ddd, MMM Do - h:mm a';
+
 export const addSkill = (skill, dog) => {
+
+  let content = `${dog.name} started learning ${skill.name}.`;
+  let timestamp = moment().format(formatTimestamp);
+  let note = {
+    content: content,
+    timestamp: timestamp,
+    dog_id: dog.id
+  }
+
+
   return dispatch => {
     dispatch({
       type: 'ADD_SKILL',
       skill: skill,
-      dog: dog
+    });
+    dispatch({
+      type: 'ADD_NOTE',
+      note: note
     });
     fetch('/skills', {
       method: 'POST',
