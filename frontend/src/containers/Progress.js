@@ -4,8 +4,15 @@ import { Link } from 'react-router-dom';
 
 import { NavBar } from '../components/NavBar';
 import Note from '../components/notes/Note';
+import { fetchNotes } from '../actions/notes';
 
 class Progress extends Component {
+
+  componentDidMount() {
+    if (!this.props.notes.length) {
+      this.props.fetchNotes();
+    }
+  }
 
   renderNoteLinks = notes => {
     return notes.map(note => {
@@ -36,4 +43,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps)(Progress);
+export default connect(mapStateToProps, { fetchNotes })(Progress);

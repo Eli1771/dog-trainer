@@ -3,9 +3,14 @@ import { connect } from 'react-redux';
 
 import NoteForm from '../../components/notes/NoteForm';
 import Note from '../../components/notes/Note';
-import { addNote } from '../../actions/notes';
+import { addNote, fetchNotes } from '../../actions/notes';
 
 class Notes extends Component {
+  componentDidMount() {
+    if (!this.props.notes.length) {
+      this.props.fetchNotes()
+    }
+  }
   renderNotes = notes => {
     const filteredNotes = notes.filter(n => n.dog_id === this.props.dogId)
     return filteredNotes.map(note => {
@@ -31,4 +36,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, { addNote })(Notes);
+export default connect(mapStateToProps, { addNote, fetchNotes })(Notes);
