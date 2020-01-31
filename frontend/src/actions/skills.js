@@ -84,6 +84,15 @@ export const editSkill = (skill, rewardRate, dog, rateString) => {
       note: note
     });
 
+    fetch(`/skills/${skill.id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify({reward_rate: rewardRate})
+    }).then(resp => resp.json())
+      .then(json => console.log('edited skill in db!', json));
   }
 }
 
