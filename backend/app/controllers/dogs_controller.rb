@@ -4,11 +4,6 @@ class DogsController < ApplicationController
     render json: dogs
   end
 
-  def show
-    dog = Dog.find_by(id: params[:id])
-    render json: dog
-  end
-
   def create
     dog = Dog.create(dog_params)
     render json: dog

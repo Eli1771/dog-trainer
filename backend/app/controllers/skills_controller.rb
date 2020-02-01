@@ -4,11 +4,6 @@ class SkillsController < ApplicationController
     render json: skills
   end
 
-  def show
-    skill = Skill.find(params[:id])
-    render json: skill
-  end
-
   def create
     skill = Skill.create(skill_params)
     render json: skill

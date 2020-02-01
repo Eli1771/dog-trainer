@@ -24,8 +24,8 @@ use calendar input for DOB??
 
 render current ages dynamically from dob column
 
-** update server in background when any state changes are made
-  show 'flash' style messages at completion of server actions
+
+show 'flash' style messages at completion of server actions
 
 show svg graphics for dogs' progress
 
@@ -35,4 +35,6 @@ show superlatives in the root/progress view, i.e. last-trained, most-recently-tr
 
 autofill feature when creating skills that other dogs have
 
-** fix timestamp attribute persistence
+start w/ a light mobile optimization
+
+** move dogsSidebar into components folder
