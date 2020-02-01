@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { fetchDogs } from '../../actions/dogs';
 import DogHeader from '../../components/dogs/DogHeader';
 import { DogsSidebar } from './DogsSidebar';
 import Skills from '../skills/Skills';
@@ -43,4 +42,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, { fetchDogs })(DogShow);
+export default connect(mapStateToProps)(DogShow);

@@ -17,8 +17,8 @@ class Progress extends Component {
   renderNoteLinks = notes => {
     return notes.map(note => {
       return(
-        <Link to={`/dogs/${note.dog_id}`}>
-          <Note key={note.id} note={note} />
+        <Link key={note.id} to={`/dogs/${note.dog_id}`}>
+          <Note note={note} />
         </Link>
       )
     });

@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 
 import Skill from '../../components/skills/Skill';
 import SkillForm from '../../components/skills/SkillForm';
-import { fetchDogs } from '../../actions/dogs';
 import { autoAddNote } from '../../actions/notes';
 import {
   addSkill,
@@ -80,7 +79,6 @@ const mapStateToProps = state => {
 }
 
 export default connect(mapStateToProps, {
-  fetchDogs,
   addSkill,
   editSkill,
   removeSkill,

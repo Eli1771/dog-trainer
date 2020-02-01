@@ -9,7 +9,6 @@ import {
   showDogForm,
   hideDogForm
 } from '../../actions/dogs';
-import { fetchSkills } from '../../actions/skills';
 import DogShow from './DogShow';
 import DogForm from '../../components/dogs/DogForm';
 import DogFormButton from '../../components/dogs/DogFormButton';
@@ -77,7 +76,6 @@ export default connect(mapStateToProps, {
   addDog,
   removeDog,
   fetchDogs,
-  fetchSkills,
   hideDogForm,
   showDogForm
 })(Dogs)
