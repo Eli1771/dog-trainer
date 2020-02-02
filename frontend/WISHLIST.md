@@ -37,4 +37,4 @@ autofill feature when creating skills that other dogs have
 
 start w/ a light mobile optimization
 
-** move dogsSidebar into components folder
+** styling!

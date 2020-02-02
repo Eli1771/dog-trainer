@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import DogHeader from '../../components/dogs/DogHeader';
-import { DogsSidebar } from './DogsSidebar';
+import { DogsSidebar } from '../../components/dogs/DogsSidebar';
 import Skills from '../skills/Skills';
 import Notes from '../notes/Notes';
 
