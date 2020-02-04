@@ -1,18 +1,12 @@
-import uuid from 'uuid';
-
 const skillsReducer = (state = {
   skills: []
 }, action) => {
   switch (action.type) {
 
     case 'ADD_SKILL':
-      const skill = {
-        ...action.skill,
-        id: uuid()
-      }
       return {
         ...state,
-        skills: [ ...state.skills, skill ]
+        skills: [ ...state.skills, action.skill ]
       }
 
     case 'REMOVE_SKILL':

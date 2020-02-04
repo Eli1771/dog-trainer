@@ -1,4 +1,5 @@
 import moment from 'moment';
+import uuid from 'uuid';
 
 const formatTimestamp = 'ddd, MMM Do - h:mm a';
 
@@ -14,14 +15,6 @@ export const addSkill = (skill, dog) => {
 
 
   return dispatch => {
-    dispatch({
-      type: 'ADD_SKILL',
-      skill: skill,
-    });
-    dispatch({
-      type: 'ADD_NOTE',
-      note: note
-    });
     fetch('/skills', {
       method: 'POST',
       headers: {
@@ -30,7 +23,8 @@ export const addSkill = (skill, dog) => {
       },
       body: JSON.stringify(skill)
     }).then(resp => resp.json())
-      .then(json => console.log('added skill to db!', json));
+      .then(json => dispatch({type: 'ADD_SKILL', skill: json}));
+
     fetch('/notes', {
       method: 'POST',
       headers: {
@@ -39,7 +33,7 @@ export const addSkill = (skill, dog) => {
       },
       body: JSON.stringify(note)
     }).then(resp => resp.json())
-      .then(json => console.log('added note to db!', json));
+      .then(json => dispatch({type: 'ADD_NOTE', note: json}));
   }
 }
 
@@ -75,7 +69,7 @@ export const editSkill = (skill, rewardRate, dog, rateString) => {
 
     dispatch({
       type: 'EDIT_SKILL',
-      skill: skill,
+      skill: skill, 
       rewardRate: rewardRate
     });
 
