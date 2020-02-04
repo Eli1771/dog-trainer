@@ -73,7 +73,7 @@ export const editSkill = (skill, rewardRate, dog, rateString) => {
       rewardRate: rewardRate
     });
 
-    const skillResp = await fetch(`/skills/${skill.id}`, {
+    await fetch(`/skills/${skill.id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
