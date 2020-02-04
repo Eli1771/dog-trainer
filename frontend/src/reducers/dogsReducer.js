@@ -1,5 +1,3 @@
-import uuid from 'uuid';
-
 const dogsReducer = (state = {
   dogs: [],
   loading: true,
@@ -8,13 +6,9 @@ const dogsReducer = (state = {
 
   switch (action.type) {
     case 'ADD_DOG':
-      const dog = {
-        ...action.dog,
-        id: uuid()
-      }
       return {
         ...state,
-        dogs: [ ...state.dogs, dog ],
+        dogs: [ ...state.dogs, action.dog ],
         dogFormShowing: false
       }
 

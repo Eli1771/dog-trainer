@@ -1,9 +1,7 @@
+import uuid from 'uuid';
+
 export const addDog = dog => {
   return dispatch => {
-    dispatch({
-      type: 'ADD_DOG',
-      dog: dog
-    });
     fetch('/dogs', {
       method: 'POST',
       headers: {
@@ -12,7 +10,7 @@ export const addDog = dog => {
       },
       body: JSON.stringify(dog)
     }).then(resp => resp.json())
-      .then(json => console.log('added dog to db!', json));
+      .then(json => dispatch({type: 'ADD_DOG', dog: json}));
   }
 }
 
