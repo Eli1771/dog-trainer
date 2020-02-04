@@ -1,20 +1,12 @@
-import uuid from 'uuid';
-
 const notesReducer = (state = {
   notes: []
 }, action) => {
-  let note;
-
   switch (action.type) {
 
     case 'ADD_NOTE':
-      note = {
-        ...action.note,
-        id: uuid()
-      }
       return {
         ...state,
-        notes: [ ...state.notes, note ]
+        notes: [ ...state.notes, action.note ]
       }
 
     case 'REMOVE_NOTE':

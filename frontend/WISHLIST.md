@@ -24,7 +24,6 @@ use calendar input for DOB??
 
 render current ages dynamically from dob column
 
-
 show 'flash' style messages at completion of server actions
 
 show svg graphics for dogs' progress
@@ -38,3 +37,20 @@ autofill feature when creating skills that other dogs have
 start w/ a light mobile optimization
 
 ** styling!
+
+** write readme
+
+** only render notes for dogs that exist
+
+** implement async/await pattern for actions w/ multiple fetch requests
+
+FAVORITES:
+
+pawgress
+attaboy
+barkie
+training buddy
+pocket trainer
+sitstay
+pawsitive
+working dog

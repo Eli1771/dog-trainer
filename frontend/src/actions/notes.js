@@ -1,4 +1,5 @@
 import moment from 'moment';
+import uuid from 'uuid';
 
 const formatTimestamp = 'ddd, MMM Do - h:mm a';
 
@@ -8,11 +9,9 @@ export const addNote = note => {
     ...note,
     timestamp: timestamp
   }
+
+  console.log('note to fetch: ', timedNote)
   return dispatch => {
-    dispatch({
-      type: 'ADD_NOTE',
-      note: timedNote
-    });
     fetch('/notes', {
       method: 'POST',
       headers: {
@@ -21,7 +20,7 @@ export const addNote = note => {
       },
       body: JSON.stringify(timedNote)
     }).then(resp => resp.json())
-      .then(json => console.log('added note to db!', json));
+      .then(json => dispatch({type: 'ADD_NOTE', note: json}));
   }
 }
 
