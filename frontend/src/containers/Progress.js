@@ -20,9 +20,7 @@ class Progress extends Component {
 
   renderNoteLinks = notes => {
     const dogIds = this.props.dogs.map(d => d.id);
-    console.log('dog ids: ', dogIds);
     const filteredNotes = notes.filter(n => dogIds.includes(n.dog_id));
-    console.log('filtered...', filteredNotes);
     return filteredNotes.map(note => {
       return(
         <Link key={note.id} to={`/dogs/${note.dog_id}`}>
