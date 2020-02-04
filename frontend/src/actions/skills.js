@@ -14,26 +14,35 @@ export const addSkill = (skill, dog) => {
   }
 
 
-  return dispatch => {
-    fetch('/skills', {
+  return async dispatch => {
+    const skillResp = await fetch('/skills', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
       },
       body: JSON.stringify(skill)
-    }).then(resp => resp.json())
-      .then(json => dispatch({type: 'ADD_SKILL', skill: json}));
+    });
+    const skillJson = await skillResp.json();
+    await dispatch({type: 'ADD_SKILL', skill: skillJson});
 
-    fetch('/notes', {
+
+    // .then(resp => resp.json())
+    //   .then(json => dispatch({type: 'ADD_SKILL', skill: json}));
+
+    const noteResp = await fetch('/notes', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
       },
       body: JSON.stringify(note)
-    }).then(resp => resp.json())
-      .then(json => dispatch({type: 'ADD_NOTE', note: json}));
+    });
+    const noteJson = await noteResp.json();
+    await dispatch({type: 'ADD_NOTE', note: noteJson});
+
+    // .then(resp => resp.json())
+    //   .then(json => dispatch({type: 'ADD_NOTE', note: json}));
   }
 }
 
@@ -69,7 +78,7 @@ export const editSkill = (skill, rewardRate, dog, rateString) => {
 
     dispatch({
       type: 'EDIT_SKILL',
-      skill: skill, 
+      skill: skill,
       rewardRate: rewardRate
     });
 
