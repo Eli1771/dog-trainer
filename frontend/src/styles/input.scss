@@ -5,10 +5,9 @@ body {
 .App {
   text-align: center;
   display: inline-block;
-  margin: 0 3%;
   height: 100vh;
-  width: 94%;
-  background: white;
+  width: 100%;
+  background: #F0F1F0;
   overflow: scroll;
 }
 
@@ -17,12 +16,12 @@ body {
 }
 
 #navbar {
-  width: 94vw;
-  height: 7vh;
+  width: 100vw;
+  height: 9vh;
   position: fixed;
   display: flex;
   border-bottom: 1px solid black;
-  background: black;
+  background: #4EB47A;
   color: white;
 
   a {
@@ -40,7 +39,7 @@ body {
 .dog-cards-container {
   position: relative;
   display: flex;
-  top: 7vh;
+  top: 9vh;
   flex-flow: wrap;
   justify-content: center;
 }
@@ -86,6 +85,7 @@ body {
 }
 
 .dog-card {
+  background: white;
   border: 1px solid black;
   border-radius: 21px;
   width: 155px;
