@@ -1,5 +1,4 @@
 import moment from 'moment';
-import uuid from 'uuid';
 
 const formatTimestamp = 'ddd, MMM Do - h:mm a';
 

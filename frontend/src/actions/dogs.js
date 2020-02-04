@@ -1,5 +1,3 @@
-import uuid from 'uuid';
-
 export const addDog = dog => {
   return dispatch => {
     fetch('/dogs', {
