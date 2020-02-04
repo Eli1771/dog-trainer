@@ -1,7 +1,5 @@
-$blue: #5555ff;
-
 body {
-  background: $blue;
+  background: lightgray;
 }
 
 .App {
@@ -26,19 +24,17 @@ body {
   border-bottom: 1px solid black;
   background: black;
   color: white;
-}
 
-#navbar a {
-  margin: auto;
-  text-decoration: none;
-}
-
-#navbar a:link {
-  color: white;
-}
-
-#navbar a:visited {
-  color: white;
+  a {
+    margin: auto;
+    text-decoration: none;
+  }
+  a:link {
+    color: white;
+  }
+  a:visited {
+    color: white;
+  }
 }
 
 .dog-cards-container {
@@ -77,10 +73,10 @@ body {
 
   border: 1px solid gray;
   text-align: left;
-}
 
-.notes-container h3 {
-  text-align: center;
+  h3 {
+    text-align: center;
+  }
 }
 
 .dogs-sidebar {

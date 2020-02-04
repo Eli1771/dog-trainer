@@ -1,5 +1,5 @@
 body {
-  background: #5555ff; }
+  background: lightgray; }
 
 .App {
   text-align: center;
@@ -21,16 +21,13 @@ body {
   border-bottom: 1px solid black;
   background: black;
   color: white; }
-
-#navbar a {
-  margin: auto;
-  text-decoration: none; }
-
-#navbar a:link {
-  color: white; }
-
-#navbar a:visited {
-  color: white; }
+  #navbar a {
+    margin: auto;
+    text-decoration: none; }
+  #navbar a:link {
+    color: white; }
+  #navbar a:visited {
+    color: white; }
 
 .dog-cards-container {
   position: relative;
@@ -62,9 +59,8 @@ body {
   grid-row-start: body-start;
   border: 1px solid gray;
   text-align: left; }
-
-.notes-container h3 {
-  text-align: center; }
+  .notes-container h3 {
+    text-align: center; }
 
 .dogs-sidebar {
   grid-column-start: sidebar-start;
