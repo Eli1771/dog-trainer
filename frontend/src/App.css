@@ -23,10 +23,10 @@ body {
   #navbar a {
     margin: auto;
     text-decoration: none; }
-  #navbar a:link {
-    color: white; }
-  #navbar a:visited {
-    color: white; }
+    #navbar a:link {
+      color: white; }
+    #navbar a:visited {
+      color: white; }
 
 .welcome {
   border: 1px solid black;
@@ -35,18 +35,33 @@ body {
   background: #4EB47A;
   color: white; }
   .welcome h1 {
-    font-size: 3em;
+    font-size: 3.8em;
     background: #F0F1F0;
     color: #4EB47A;
     margin: 0;
     padding: 2em; }
   .welcome a, .welcome a:link, .welcome a:visited, .welcome a:hover {
-    font-size: 1.5em;
+    position: relative;
+    font-size: 1.4em;
     color: white;
     text-decoration: none;
-    margin: 2vh 6vw; }
-  .welcome a:hover {
-    text-decoration: underline; }
+    margin: 6vw;
+    top: 5vh; }
+  .welcome a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    top: 1.5em;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0; }
+  .welcome a:hover:after {
+    width: 100%;
+    left: 0; }
 
 .dog-cards-container {
   position: relative;

@@ -32,12 +32,13 @@ body {
   a {
     margin: auto;
     text-decoration: none;
-  }
-  a:link {
-    color: white;
-  }
-  a:visited {
-    color: white;
+
+    &:link {
+      color: white;
+    }
+    &:visited {
+      color: white;
+    }
   }
 }
 
@@ -49,7 +50,7 @@ body {
   color: white;
 
   h1 {
-    font-size: 3em;
+    font-size: 3.8em;
     background: $background-gray;
     color: $green;
     margin: 0;
@@ -57,15 +58,31 @@ body {
   }
 
   a, a:link, a:visited, a:hover {
-    font-size: 1.5em;
+    position: relative;
+    font-size: 1.4em;
     color: white;
     text-decoration: none;
-    margin: 2vh 6vw;
+    margin: 6vw;
+    top: 5vh
+  }
+  a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    top: 1.5em;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+  }
+  a:hover:after {
+    width: 100%;
+    left: 0;
   }
 
-  a:hover {
-    text-decoration: underline;
-  }
 }
 
 .dog-cards-container {

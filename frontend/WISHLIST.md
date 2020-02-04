@@ -42,6 +42,7 @@ FAVORITES:
 
 pawgress
 attaboy
+good dog
 barkie
 training buddy
 pocket trainer
