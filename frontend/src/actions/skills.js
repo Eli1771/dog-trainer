@@ -13,7 +13,6 @@ export const addSkill = (skill, dog) => {
     dog_id: dog.id
   }
 
-
   return async dispatch => {
     const skillResp = await fetch('/skills', {
       method: 'POST',
@@ -26,10 +25,6 @@ export const addSkill = (skill, dog) => {
     const skillJson = await skillResp.json();
     await dispatch({type: 'ADD_SKILL', skill: skillJson});
 
-
-    // .then(resp => resp.json())
-    //   .then(json => dispatch({type: 'ADD_SKILL', skill: json}));
-
     const noteResp = await fetch('/notes', {
       method: 'POST',
       headers: {
@@ -40,9 +35,6 @@ export const addSkill = (skill, dog) => {
     });
     const noteJson = await noteResp.json();
     await dispatch({type: 'ADD_NOTE', note: noteJson});
-
-    // .then(resp => resp.json())
-    //   .then(json => dispatch({type: 'ADD_NOTE', note: json}));
   }
 }
 
@@ -74,7 +66,7 @@ export const editSkill = (skill, rewardRate, dog, rateString) => {
     dog_id: dog.id
   }
 
-  return dispatch => {
+  return async dispatch => {
 
     dispatch({
       type: 'EDIT_SKILL',
@@ -82,30 +74,36 @@ export const editSkill = (skill, rewardRate, dog, rateString) => {
       rewardRate: rewardRate
     });
 
-    dispatch({
-      type: 'ADD_NOTE',
-      note: note
-    });
+    // dispatch({
+    //   type: 'ADD_NOTE',
+    //   note: note
+    // });
 
-    fetch(`/skills/${skill.id}`, {
+    const skillResp = await fetch(`/skills/${skill.id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
       },
       body: JSON.stringify({reward_rate: rewardRate})
-    }).then(resp => resp.json())
-      .then(json => console.log('edited skill in db!', json));
+    });
 
-    fetch('/notes/', {
+    // .then(resp => resp.json())
+    //   .then(json => console.log('edited skill in db!', json));
+
+    const noteResp = await fetch('/notes/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
       },
       body: JSON.stringify(note)
-    }).then(resp => resp.json())
-      .then(json => console.log('added note in db!', json));
+    });
+    const noteJson = await noteResp.json();
+    await dispatch({type: 'ADD_NOTE', note: noteJson});
+
+    // .then(resp => resp.json())
+    //   .then(json => console.log('added note in db!', json));
   }
 }
 
