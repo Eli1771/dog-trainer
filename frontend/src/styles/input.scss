@@ -1,3 +1,8 @@
+// COLOR SCHEME
+
+$green: #4EB47A;
+$background-gray: #F0F1F0;
+
 body {
   background: lightgray;
 }
@@ -7,7 +12,7 @@ body {
   display: inline-block;
   height: 100vh;
   width: 100%;
-  background: #F0F1F0;
+  background: $background-gray;
   overflow: scroll;
 }
 
@@ -21,7 +26,7 @@ body {
   position: fixed;
   display: flex;
   border-bottom: 1px solid black;
-  background: #4EB47A;
+  background: $green;
   color: white;
 
   a {
@@ -33,6 +38,33 @@ body {
   }
   a:visited {
     color: white;
+  }
+}
+
+.welcome {
+  border: 1px solid black;
+  width: 100%;
+  height: 100vh;
+  background: $green;
+  color: white;
+
+  h1 {
+    font-size: 3em;
+    background: $background-gray;
+    color: $green;
+    margin: 0;
+    padding: 2em;
+  }
+
+  a, a:link, a:visited, a:hover {
+    font-size: 1.5em;
+    color: white;
+    text-decoration: none;
+    margin: 2vh 6vw;
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 }
 

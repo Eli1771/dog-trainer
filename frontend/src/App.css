@@ -28,6 +28,26 @@ body {
   #navbar a:visited {
     color: white; }
 
+.welcome {
+  border: 1px solid black;
+  width: 100%;
+  height: 100vh;
+  background: #4EB47A;
+  color: white; }
+  .welcome h1 {
+    font-size: 3em;
+    background: #F0F1F0;
+    color: #4EB47A;
+    margin: 0;
+    padding: 2em; }
+  .welcome a, .welcome a:link, .welcome a:visited, .welcome a:hover {
+    font-size: 1.5em;
+    color: white;
+    text-decoration: none;
+    margin: 2vh 6vw; }
+  .welcome a:hover {
+    text-decoration: underline; }
+
 .dog-cards-container {
   position: relative;
   display: flex;
