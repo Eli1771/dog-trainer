@@ -28,7 +28,7 @@ show 'flash' style messages at completion of server actions
 
 show svg graphics for dogs' progress
 
-show superlatives in the root/progress view, i.e. last-trained, most-recently-trained most improved etc.
+show superlatives in the root/progress view, i.e. last-trained, most-recently-trained, most improved etc.
 
 ** delete unnecessary imports, routes and controllers!
 
@@ -41,8 +41,6 @@ start w/ a light mobile optimization
 ** write readme
 
 ** only render notes for dogs that exist
-
-** implement async/await pattern for actions w/ multiple fetch requests
 
 FAVORITES:
 
