@@ -30,13 +30,9 @@ export const autoAddNote = (dog, skillName) => {
   let note = {
     content: content,
     timestamp: timestamp,
-    dog_id: dog.id,
+    dog_id: dog.id
   }
   return dispatch => {
-    dispatch({
-      type: 'ADD_NOTE',
-      note: note
-    });
     fetch('/notes', {
       method: 'POST',
       headers: {
@@ -45,7 +41,7 @@ export const autoAddNote = (dog, skillName) => {
       },
       body: JSON.stringify(note)
     }).then(resp => resp.json())
-      .then(json => console.log('added note to db!', json));
+      .then(json => dispatch({type: 'ADD_NOTE', note: json}));
   }
 }
 
