@@ -5,12 +5,16 @@ import { Link } from 'react-router-dom';
 import { NavBar } from '../components/NavBar';
 import Note from '../components/notes/Note';
 import { fetchNotes } from '../actions/notes';
+import { fetchDogs } from '../actions/dogs';
 
 class Progress extends Component {
 
   componentDidMount() {
     if (!this.props.notes.length) {
       this.props.fetchNotes();
+    }
+    if (!this.props.dogs.length) {
+      this.props.fetchDogs();
     }
   }
 
@@ -48,4 +52,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, { fetchNotes })(Progress);
+export default connect(mapStateToProps, { fetchNotes, fetchDogs })(Progress);
