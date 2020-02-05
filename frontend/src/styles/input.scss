@@ -4,6 +4,7 @@ $green: #4EB47A;
 $background-gray: #F0F1F0;
 $dark-gray: #424342;
 $blue: #21354A;
+$red: #AE2D49;
 
 // OTHER CONSTANTS
 
@@ -124,7 +125,7 @@ body {
   grid-column-end: skills-end;
   grid-row-start: body-start;
 
-  max-height: 76vh;
+  height: 76vh;
   overflow: scroll;
 }
 
@@ -133,7 +134,7 @@ body {
   grid-column-end: log-end;
   grid-row-start: body-start;
 
-  max-height: 70vh;
+  height: 70vh;
   overflow: scroll;
   background: white;
   border-radius: $default-radius;
@@ -152,7 +153,7 @@ body {
   justify-self: end;
   align-content: center;
 
-  max-height: 91vh;
+  height: 70vh;
   overflow: scroll;
   border-left: 1px solid gray;
   padding: 2em;
@@ -198,13 +199,39 @@ body {
   text-align: left;
   margin: 5%;
   padding: 1vw;
+
+  .skill-buttons button {
+    border: none;
+    color: white;
+    font-size: .9em;
+    padding: .5em;
+
+    &.practice-skill {
+      background: $blue;
+      border-top-left-radius: $default-radius;
+      border-bottom-left-radius: $default-radius;
+    }
+    &.edit-rate {
+      background: $green;
+    }
+    &.remove-skill {
+      background: $red;
+      border-top-right-radius: $default-radius;
+      border-bottom-right-radius: $default-radius;
+    }
+    &.update-rate {
+      background: $green;
+      border-top-right-radius: $default-radius;
+      border-bottom-right-radius: $default-radius;
+    }
+  }
 }
 
 .skill-form-button {
   overflow: auto;
 }
 
-button {
+button.light, input.light {
   border: 1px solid $background-gray;
   color: gray;
 
@@ -213,6 +240,11 @@ button {
     border: 1px solid gray;
     cursor: pointer;
   }
+}
+
+button, input {
+  border: 1px solid black;
+  color: gray;
 }
 
 .plus-sign {

@@ -12,7 +12,7 @@ const Dog = props => {
   }
 
   const renderDelete = () => {
-    return !!props.removeDog ? <button onClick={handleDelete}>Delete</button> : null
+    return !!props.removeDog ? <button className="light" onClick={handleDelete}>Delete</button> : null
   }
 
   return(

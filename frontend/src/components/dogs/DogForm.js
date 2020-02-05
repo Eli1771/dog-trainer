@@ -70,6 +70,7 @@ export default class DogForm extends Component {
           <input type="submit" value="Add Dog"/>
 
           <input
+            className="light"
             type="button"
             value="cancel"
             onClick={this.handleCancel}

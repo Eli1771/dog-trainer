@@ -44,25 +44,27 @@ export default class Skill extends Component {
         <h2>{skill.name}</h2>
         <p>{skill.description}</p>
         <p>Receives reinforcement {this.rewardRates[skill.reward_rate].toLowerCase()}</p>
-        <button
-          className='practice-skill'
-          onClick={this.handlePractice}
-        >Practice {skill.name}!</button>
-        <button
-          className={`_${skill.id} edit-rate`}
-          onClick={this.editRate}
-        >Change Rate</button>
-        <select className={`_${skill.id} select-rate hidden`}>
-          {this.props.renderRewardRates()}
-        </select>
-        <button
-          onClick={this.updateRate}
-          className={`_${skill.id} update-rate hidden`}
-        >Save</button>
-        <button
-          className={`_${skill.id} remove-skill`}
-          onClick={this.handleDelete}
-        >Delete</button>
+        <div className="skill-buttons">
+          <button
+            className='practice-skill'
+            onClick={this.handlePractice}
+          >Practice {skill.name}!</button>
+          <button
+            className={`_${skill.id} edit-rate`}
+            onClick={this.editRate}
+          >Change Rate</button>
+          <select className={`_${skill.id} select-rate hidden`}>
+            {this.props.renderRewardRates()}
+          </select>
+          <button
+            onClick={this.updateRate}
+            className={`_${skill.id} update-rate hidden`}
+          >Save</button>
+          <button
+            className={`_${skill.id} remove-skill`}
+            onClick={this.handleDelete}
+          >Delete</button>
+        </div>
       </div>
     )
   }
