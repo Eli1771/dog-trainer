@@ -106,8 +106,8 @@ body {
 
 .dog-show {
   display: grid;
-  grid-template-columns: 35% [skills-end log-start] 35% [log-end header-end sidebar-start] 28% auto;
-  grid-template-rows: 13% [header-end body-start] auto;
+  grid-template-columns: 40vw [skills-end log-start] 40vw [log-end header-end sidebar-start] auto;
+  grid-template-rows: 14vh [header-end body-start] auto;
 
   position: relative;
   top: $navbar-height;
@@ -123,6 +123,9 @@ body {
   grid-column-start: 1;
   grid-column-end: skills-end;
   grid-row-start: body-start;
+
+  max-height: 76vh;
+  overflow: scroll;
 }
 
 .notes-container {
@@ -130,8 +133,12 @@ body {
   grid-column-end: log-end;
   grid-row-start: body-start;
 
-  border: 1px solid gray;
+  max-height: 70vh;
+  overflow: scroll;
+  background: white;
+  border-radius: $default-radius;
   text-align: left;
+  padding: 2vw;
 
   h3 {
     text-align: center;
@@ -142,6 +149,10 @@ body {
   grid-column-start: sidebar-start;
   grid-row-start: 1;
   grid-row-end: 3;
+  justify-self: end;
+
+  max-height: 91vh;
+  overflow: scroll;
 
   a {
     text-decoration: none;
@@ -172,6 +183,10 @@ body {
   text-align: left;
   margin: 5%;
   padding: 1vw;
+}
+
+.skill-form-button {
+  overflow: auto;
 }
 
 button {
@@ -206,4 +221,11 @@ button {
     font-size: 3em;
     text-align: center;
   }
+}
+
+#note-form {
+  display: block;
+  position: absolute;
+  bottom: 2vh;
+  margin: auto;
 }

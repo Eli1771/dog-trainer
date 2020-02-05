@@ -74,8 +74,8 @@ body {
 
 .dog-show {
   display: grid;
-  grid-template-columns: 35% [skills-end log-start] 35% [log-end header-end sidebar-start] 28% auto;
-  grid-template-rows: 13% [header-end body-start] auto;
+  grid-template-columns: 40vw [skills-end log-start] 40vw [log-end header-end sidebar-start] auto;
+  grid-template-rows: 14vh [header-end body-start] auto;
   position: relative;
   top: 9vh; }
 
@@ -87,21 +87,30 @@ body {
 .skills-container {
   grid-column-start: 1;
   grid-column-end: skills-end;
-  grid-row-start: body-start; }
+  grid-row-start: body-start;
+  max-height: 76vh;
+  overflow: scroll; }
 
 .notes-container {
   grid-column-start: log-start;
   grid-column-end: log-end;
   grid-row-start: body-start;
-  border: 1px solid gray;
-  text-align: left; }
+  max-height: 70vh;
+  overflow: scroll;
+  background: white;
+  border-radius: 21px;
+  text-align: left;
+  padding: 2vw; }
   .notes-container h3 {
     text-align: center; }
 
 .dogs-sidebar {
   grid-column-start: sidebar-start;
   grid-row-start: 1;
-  grid-row-end: 3; }
+  grid-row-end: 3;
+  justify-self: end;
+  max-height: 91vh;
+  overflow: scroll; }
   .dogs-sidebar a {
     text-decoration: none; }
 
@@ -124,6 +133,9 @@ body {
   text-align: left;
   margin: 5%;
   padding: 1vw; }
+
+.skill-form-button {
+  overflow: auto; }
 
 button {
   border: 1px solid #F0F1F0;
@@ -151,5 +163,11 @@ button {
     float: right;
     font-size: 3em;
     text-align: center; }
+
+#note-form {
+  display: block;
+  position: absolute;
+  bottom: 2vh;
+  margin: auto; }
 
 /*# sourceMappingURL=App.css.map */
