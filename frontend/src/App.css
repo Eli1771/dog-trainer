@@ -108,7 +108,9 @@ body {
   width: 155px;
   height: 263px;
   margin: 11px;
-  color: #21354A; }
+  color: #21354A;
+  cursor: pointer;
+  transition: margin 0.5s ease; }
   .dog-card h3 {
     margin: auto;
     font-size: 1.6em; }
@@ -116,5 +118,25 @@ body {
 .skill {
   text-align: left;
   padding: 2vw; }
+
+button {
+  border: 1px solid #F0F1F0;
+  color: gray; }
+  button:hover {
+    color: #424342;
+    border: 1px solid gray;
+    cursor: pointer; }
+
+#plus-sign {
+  background: #4EB47A;
+  display: block;
+  position: relative;
+  top: 9%;
+  margin: auto;
+  width: 90px;
+  height: 90px;
+  border-radius: 60%;
+  color: white;
+  font-size: 4em; }
 
 /*# sourceMappingURL=App.css.map */
