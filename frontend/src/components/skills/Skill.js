@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 export default class Skill extends Component {
-  rewardRates = ['-','Every Time', 'Every Other Time', 'Every third Time', 'Every Several Times', 'Seldom/Randomly'];
+  rewardRates = ['-','Every Time', 'Every Other Time', 'Every Third Time', 'Every Several Times', 'Seldom/Randomly'];
 
   skillId = this.props.skill.id;
 
@@ -43,7 +43,7 @@ export default class Skill extends Component {
       <div className="skill">
         <h2>{skill.name}</h2>
         <p>{skill.description}</p>
-        <p>{this.rewardRates[skill.reward_rate]}</p>
+        <p>Receives reinforcement {this.rewardRates[skill.reward_rate].toLowerCase()}</p>
         <button
           className='practice-skill'
           onClick={this.handlePractice}

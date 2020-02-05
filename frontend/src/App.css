@@ -116,8 +116,11 @@ body {
     font-size: 1.6em; }
 
 .skill {
+  background: white;
+  border-radius: 21px;
   text-align: left;
-  padding: 2vw; }
+  margin: 5%;
+  padding: 1vw; }
 
 button {
   border: 1px solid #F0F1F0;
