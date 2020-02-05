@@ -5,6 +5,11 @@ $background-gray: #F0F1F0;
 $dark-gray: #424342;
 $blue: #21354A;
 
+// OTHER CONSTANTS
+
+$navbar-height: 9vh;
+$default-radius: 21px;
+
 body {
   background: lightgray;
 }
@@ -24,11 +29,12 @@ body {
 
 #navbar {
   width: 100vw;
-  height: 9vh;
+  height: $navbar-height;
   position: fixed;
   display: flex;
   background: $green;
   color: white;
+  z-index: 1;
 
   a {
     margin: auto;
@@ -89,7 +95,7 @@ body {
 .dog-cards-container {
   position: relative;
   display: flex;
-  top: 9vh;
+  top: $navbar-height;
   flex-flow: wrap;
   justify-content: center;
 
@@ -104,7 +110,7 @@ body {
   grid-template-rows: 13% [header-end body-start] auto;
 
   position: relative;
-  top: 7vh;
+  top: $navbar-height;
 }
 
 .dog-header {
@@ -140,7 +146,7 @@ body {
 
 .dog-card {
   background: white;
-  border-radius: 21px;
+  border-radius: $default-radius;
   width: 155px;
   height: 263px;
   margin: 11px;
@@ -156,7 +162,7 @@ body {
 
 .skill {
   background: white;
-  border-radius: 21px;
+  border-radius: $default-radius;
   text-align: left;
   margin: 5%;
   padding: 1vw;
