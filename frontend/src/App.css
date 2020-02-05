@@ -102,6 +102,8 @@ body {
   grid-column-start: sidebar-start;
   grid-row-start: 1;
   grid-row-end: 3; }
+  .dogs-sidebar a {
+    text-decoration: none; }
 
 .dog-card {
   background: white;
@@ -131,16 +133,23 @@ button {
     border: 1px solid gray;
     cursor: pointer; }
 
-#plus-sign {
+.plus-sign {
   background: #4EB47A;
-  display: block;
+  display: inline-block;
   position: relative;
-  top: 9%;
   margin: auto;
-  width: 90px;
-  height: 90px;
   border-radius: 60%;
-  color: white;
-  font-size: 4em; }
+  color: white; }
+  .plus-sign#add-dog-button {
+    top: 9%;
+    width: 90px;
+    height: 90px;
+    font-size: 4em; }
+  .plus-sign#add-skill-button {
+    width: 4vw;
+    height: 4vw;
+    float: right;
+    font-size: 3em;
+    text-align: center; }
 
 /*# sourceMappingURL=App.css.map */

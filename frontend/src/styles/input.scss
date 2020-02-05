@@ -142,10 +142,15 @@ body {
   grid-column-start: sidebar-start;
   grid-row-start: 1;
   grid-row-end: 3;
+
+  a {
+    text-decoration: none;
+  }
 }
 
 .dog-card {
   background: white;
+  // border: 5px solid $blue;
   border-radius: $default-radius;
   width: 155px;
   height: 263px;
@@ -162,6 +167,7 @@ body {
 
 .skill {
   background: white;
+  // border: 5px solid $blue;
   border-radius: $default-radius;
   text-align: left;
   margin: 5%;
@@ -179,15 +185,25 @@ button {
   }
 }
 
-#plus-sign {
+.plus-sign {
   background: $green;
-  display: block;
+  display: inline-block;
   position: relative;
-  top: 9%;
   margin: auto;
-  width: 90px;
-  height: 90px;
   border-radius: 60%;
   color: white;
-  font-size: 4em;
+
+  &#add-dog-button {
+    top: 9%;
+    width: 90px;
+    height: 90px;
+    font-size: 4em;
+  }
+  &#add-skill-button {
+    width: 4vw;
+    height: 4vw;
+    float: right;
+    font-size: 3em;
+    text-align: center;
+  }
 }
