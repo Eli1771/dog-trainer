@@ -2,6 +2,7 @@
 
 $green: #4EB47A;
 $background-gray: #F0F1F0;
+$blue: #21354A;
 
 body {
   background: lightgray;
@@ -25,7 +26,6 @@ body {
   height: 9vh;
   position: fixed;
   display: flex;
-  border-bottom: 1px solid black;
   background: $green;
   color: white;
 
@@ -91,6 +91,10 @@ body {
   top: 9vh;
   flex-flow: wrap;
   justify-content: center;
+
+  a {
+    text-decoration: none;
+  }
 }
 
 .dog-show {
@@ -135,11 +139,16 @@ body {
 
 .dog-card {
   background: white;
-  border: 1px solid black;
   border-radius: 21px;
   width: 155px;
   height: 263px;
   margin: 11px;
+  color: $blue;
+
+  h3 {
+    margin: auto;
+    font-size: 1.6em;
+  }
 }
 
 .skill {

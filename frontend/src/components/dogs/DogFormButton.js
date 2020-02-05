@@ -7,7 +7,7 @@ const DogFormButton = props => {
 
   return(
     <div className="dog-card" onClick={showForm}>
-      <p>Add New Pet</p>
+      <h4>Add New Pet</h4>
     </div>
   )
 }

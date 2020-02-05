@@ -17,7 +17,6 @@ body {
   height: 9vh;
   position: fixed;
   display: flex;
-  border-bottom: 1px solid black;
   background: #4EB47A;
   color: white; }
   #navbar a {
@@ -69,6 +68,8 @@ body {
   top: 9vh;
   flex-flow: wrap;
   justify-content: center; }
+  .dog-cards-container a {
+    text-decoration: none; }
 
 .dog-show {
   display: grid;
@@ -103,11 +104,14 @@ body {
 
 .dog-card {
   background: white;
-  border: 1px solid black;
   border-radius: 21px;
   width: 155px;
   height: 263px;
-  margin: 11px; }
+  margin: 11px;
+  color: #21354A; }
+  .dog-card h3 {
+    margin: auto;
+    font-size: 1.6em; }
 
 .skill {
   text-align: left;

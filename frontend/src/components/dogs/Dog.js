@@ -18,8 +18,9 @@ const Dog = props => {
   return(
     <Link to={`/dogs/${id}`}>
       <div className="component dog-card">
-        <h1>{name}</h1>
-        <p>{dob} - {breed}</p>
+        <h3>{name}</h3>
+        <h4>{breed}</h4>
+        <p className="light">Born {dob}</p>
         {renderDelete()}
       </div>
     </Link>
