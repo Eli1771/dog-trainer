@@ -92,7 +92,7 @@ body {
   border-left: 5px solid #49596A;
   flex-flow: wrap;
   justify-content: center;
-  align-content: start; }
+  align-content: flex-start; }
   .dog-cards-container a {
     text-decoration: none; }
 

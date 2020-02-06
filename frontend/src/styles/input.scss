@@ -111,7 +111,6 @@ body {
     width: 100%;
     left: 0;
   }
-
 }
 
 .dog-cards-container {
@@ -125,7 +124,7 @@ body {
   border-left: 5px solid $blue;
   flex-flow: wrap;
   justify-content: center;
-  align-content: start;
+  align-content: flex-start;
 
   a {
     text-decoration: none;
