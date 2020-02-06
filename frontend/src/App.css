@@ -94,15 +94,39 @@ body {
 .notes-container {
   grid-column-start: log-start;
   grid-column-end: log-end;
-  grid-row-start: body-start;
-  height: 70vh;
-  overflow: scroll;
-  background: white;
-  border-radius: 21px;
-  text-align: left;
-  padding: 2vw; }
+  grid-row-start: body-start; }
+  .notes-container .notes {
+    height: 56vh;
+    overflow: scroll;
+    background: white;
+    border-radius: 21px;
+    text-align: left;
+    padding: 2vw; }
   .notes-container h3 {
     text-align: center; }
+  .notes-container #note-form {
+    display: block;
+    position: absolute;
+    bottom: 2vh;
+    margin: auto;
+    background: #20344a;
+    color: white;
+    font-size: .9em;
+    padding: 1em;
+    border-radius: 21px;
+    left: 40vw;
+    width: 38vw; }
+    .notes-container #note-form form {
+      display: flex;
+      justify-content: space-between; }
+      .notes-container #note-form form label {
+        flex-grow: 1; }
+      .notes-container #note-form form input[type="text"] {
+        flex-grow: 2; }
+      .notes-container #note-form form input[type="submit"] {
+        flex-grow: 1; }
+      .notes-container #note-form form * {
+        margin: 0 1em; }
 
 .dogs-sidebar {
   grid-column-start: sidebar-start;
@@ -203,11 +227,5 @@ button, input {
     float: right;
     font-size: 3vw;
     text-align: center; }
-
-#note-form {
-  display: block;
-  position: absolute;
-  bottom: 2vh;
-  margin: auto; }
 
 /*# sourceMappingURL=App.css.map */

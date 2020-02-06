@@ -38,6 +38,8 @@ start w/ a light mobile optimization
 
 ** write readme
 
+use computations to style dogsSidebar and the height of the notes container based on both relative + fixed units
+
 FAVORITES:
 
 pawgress

@@ -134,15 +134,47 @@ body {
   grid-column-end: log-end;
   grid-row-start: body-start;
 
-  height: 70vh;
-  overflow: scroll;
-  background: white;
-  border-radius: $default-radius;
-  text-align: left;
-  padding: 2vw;
-
+  .notes {
+    height: 56vh;
+    overflow: scroll;
+    background: white;
+    border-radius: $default-radius;
+    text-align: left;
+    padding: 2vw;
+  }
   h3 {
     text-align: center;
+  }
+  #note-form {
+    display: block;
+    position: absolute;
+    bottom: 2vh;
+    margin: auto;
+    background: #20344a;
+    color: white;
+    font-size: .9em;
+    padding: 1em;
+    border-radius: 21px;
+    left: 40vw;
+    width: 38vw;
+
+    form {
+      display:flex;
+      justify-content: space-between;
+
+      label {
+        flex-grow: 1;
+      }
+      input[type="text"] {
+        flex-grow: 2;
+      }
+      input[type="submit"] {
+        flex-grow: 1;
+      }
+      * {
+        margin: 0 1em;
+      }
+    }
   }
 }
 
@@ -274,11 +306,4 @@ button, input {
     font-size: 3vw;
     text-align: center;
   }
-}
-
-#note-form {
-  display: block;
-  position: absolute;
-  bottom: 2vh;
-  margin: auto;
 }

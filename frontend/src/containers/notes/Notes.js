@@ -22,7 +22,9 @@ class Notes extends Component {
     return(
       <div className="notes-container">
         <h3>Progress Log</h3>
-        {this.renderNotes(this.props.notes)}
+        <div className="notes">
+          {this.renderNotes(this.props.notes)}
+        </div>
         <NoteForm addNote={this.props.addNote} dogId={this.props.dogId} />
       </div>
     );
