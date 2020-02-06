@@ -149,7 +149,8 @@ body {
     border: none;
     color: white;
     font-size: .9em;
-    padding: .5em; }
+    padding: .5em;
+    cursor: pointer; }
     .skill .skill-buttons button.practice-skill {
       background: #21354A;
       border-top-left-radius: 21px;
@@ -164,6 +165,10 @@ body {
       background: #4EB47A;
       border-top-right-radius: 21px;
       border-bottom-right-radius: 21px; }
+  .skill .skill-buttons select {
+    height: 2.9em;
+    top: -.1em;
+    position: relative; }
 
 .skill-form-button {
   overflow: auto; }
@@ -196,7 +201,7 @@ button, input {
     width: 4vw;
     height: 4vw;
     float: right;
-    font-size: 3em;
+    font-size: 3vw;
     text-align: center; }
 
 #note-form {
