@@ -19,14 +19,32 @@ body {
   display: flex;
   background: #4EB47A;
   color: white;
-  z-index: 1; }
+  z-index: 1;
+  justify-content: space-around; }
+  #navbar div {
+    padding-top: 3.3vh; }
   #navbar a {
-    margin: auto;
-    text-decoration: none; }
+    text-decoration: none;
+    font-weight: bold; }
     #navbar a:link {
       color: white; }
     #navbar a:visited {
       color: white; }
+    #navbar a:after {
+      background: none repeat scroll 0 0 transparent;
+      bottom: 0;
+      content: "";
+      display: block;
+      height: 2px;
+      left: 50%;
+      top: .5em;
+      position: relative;
+      background: #fff;
+      transition: width 0.3s ease 0s, left 0.3s ease 0s;
+      width: 0; }
+    #navbar a:hover:after {
+      width: 100%;
+      left: 0; }
 
 .welcome {
   border: 1px solid black;
@@ -96,12 +114,12 @@ body {
   grid-column-end: log-end;
   grid-row-start: body-start; }
   .notes-container .notes {
-    height: 57vh;
+    height: 61vh;
     overflow: scroll;
     background: white;
     border-radius: 21px;
     text-align: left;
-    padding: 2vw; }
+    padding: 1vh 2vw; }
   .notes-container h3 {
     text-align: center; }
   .notes-container #note-form {

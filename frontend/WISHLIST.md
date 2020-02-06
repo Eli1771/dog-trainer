@@ -40,6 +40,8 @@ start w/ a light mobile optimization
 
 use computations to style dogsSidebar and the height of the notes container based on both relative + fixed units
 
+alphebetize dog sidebar
+
 FAVORITES:
 
 pawgress
