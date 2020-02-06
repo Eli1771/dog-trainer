@@ -92,15 +92,17 @@ body {
 
 .dog-show {
   display: grid;
-  grid-template-columns: 40vw [skills-end log-start] 40vw [log-end header-end sidebar-start] auto;
+  grid-template-columns: 44vw [skills-end log-start] 44vw [log-end header-end sidebar-start] auto;
   grid-template-rows: 14vh [header-end body-start] auto;
   position: relative;
   top: 9vh; }
 
 .dog-header {
   grid-column-start: 1;
-  grid-column-end: header-end;
-  grid-row-end: header-end; }
+  grid-column-end: 4;
+  grid-row-end: header-end;
+  background: white;
+  color: #49596A; }
 
 .skills-container {
   grid-column-start: 1;
@@ -127,7 +129,7 @@ body {
     position: absolute;
     bottom: 0;
     margin: auto;
-    background: #20344a;
+    background: #49596A;
     color: white;
     font-size: .9em;
     padding: 1em;
@@ -150,24 +152,22 @@ body {
   grid-column-start: sidebar-start;
   grid-row-start: 2;
   grid-row-end: 3;
-  justify-self: end;
   align-content: center;
   height: 70vh;
-  overflow: scroll;
-  border-left: 1px solid gray;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background: linear-gradient(90deg, #F0F1F0 53%, #49596A 53%);
   padding: 2em; }
   .dogs-sidebar a {
     text-decoration: none; }
   .dogs-sidebar .dog-card {
     position: relative;
-    right: -5em;
-    margin-bottom: -14em;
-    box-shadow: 0px -5px 6px 0px #d2d2d2;
-    transition: margin 0.5s ease-in-out, right 0.5s ease-in-out, box-shadow 0.5s ease-in-out; }
+    margin: 0 0 -13.5em 6vw;
+    box-shadow: 0px -5px 6px 0px #2f2f2f6e;
+    transition: margin 0.5s ease-in-out, box-shadow 0.5s ease-in-out; }
     .dogs-sidebar .dog-card:hover {
-      margin-bottom: 1em;
-      right: 1em;
-      box-shadow: -10px -20px 13px 0px #d2d2d2; }
+      margin: 0 0 1em 0;
+      box-shadow: -10px -20px 13px 0px #2f2f2f6e; }
 
 .dog-card {
   background: white;
@@ -175,7 +175,7 @@ body {
   width: 155px;
   height: 263px;
   margin: 11px;
-  color: #21354A;
+  color: #49596A;
   cursor: pointer;
   transition: margin 0.5s ease; }
   .dog-card h3 {
@@ -195,7 +195,7 @@ body {
     padding: .5em;
     cursor: pointer; }
     .skill .skill-buttons button.practice-skill {
-      background: #21354A;
+      background: #49596A;
       border-top-left-radius: 21px;
       border-bottom-left-radius: 21px; }
     .skill .skill-buttons button.edit-rate {

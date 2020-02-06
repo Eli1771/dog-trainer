@@ -3,7 +3,7 @@
 $green: #4EB47A;
 $background-gray: #F0F1F0;
 $dark-gray: #424342;
-$blue: #21354A;
+$blue: #49596A;
 $red: #AE2D49;
 
 // OTHER CONSTANTS
@@ -128,7 +128,7 @@ body {
 
 .dog-show {
   display: grid;
-  grid-template-columns: 40vw [skills-end log-start] 40vw [log-end header-end sidebar-start] auto;
+  grid-template-columns: 44vw [skills-end log-start] 44vw [log-end header-end sidebar-start] auto;
   grid-template-rows: 14vh [header-end body-start] auto;
 
   position: relative;
@@ -137,8 +137,11 @@ body {
 
 .dog-header {
   grid-column-start: 1;
-  grid-column-end: header-end;
+  grid-column-end: 4;
   grid-row-end: header-end;
+
+  background: white;
+  color: $blue;
 }
 
 .skills-container {
@@ -171,7 +174,7 @@ body {
     position: absolute;
     bottom: 0;
     margin: auto;
-    background: #20344a;
+    background: $blue;
     color: white;
     font-size: .9em;
     padding: 1em;
@@ -203,12 +206,12 @@ body {
   grid-column-start: sidebar-start;
   grid-row-start: 2;
   grid-row-end: 3;
-  justify-self: end;
   align-content: center;
 
   height: 70vh;
-  overflow: scroll;
-  border-left: 1px solid gray;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background: linear-gradient(90deg, #{$background-gray} 53%, #{$blue} 53%);
   padding: 2em;
 
   a {
@@ -216,18 +219,15 @@ body {
   }
   .dog-card {
     position: relative;
-    right: -5em;
-    margin-bottom: -14em;
-    box-shadow: 0px -5px 6px 0px #d2d2d2;
+    margin: 0 0 -13.5em 6vw;
+    box-shadow: 0px -5px 6px 0px #2f2f2f6e;
     transition:
       margin 0.5s ease-in-out,
-      right 0.5s ease-in-out,
       box-shadow 0.5s ease-in-out;
 
     &:hover {
-      margin-bottom: 1em;
-      right: 1em;
-      box-shadow: -10px -20px 13px 0px #d2d2d2;
+      margin: 0 0 1em 0;
+      box-shadow: -10px -20px 13px 0px #2f2f2f6e;
     }
   }
 }
