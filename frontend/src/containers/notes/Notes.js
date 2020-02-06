@@ -12,10 +12,35 @@ class Notes extends Component {
     }
   }
   renderNotes = notes => {
-    const filteredNotes = notes.filter(n => n.dog_id === this.props.dogId)
-    return filteredNotes.map(note => {
-      return <Note key={note.id} note={note} />
-    })
+    const filteredNotes = notes.filter(n => n.dog_id === this.props.dogId);
+
+    let r = [];
+    let firstDate;
+    for (let i = 0; i < filteredNotes.length; i++) {
+      let note = filteredNotes[i];
+      let currentDate = note.timestamp.split(' - ')[0];
+      console.log('current date: ', currentDate);
+      if (currentDate !== firstDate) {
+        //return div w/ datestring and add to results
+        //update firstdate w/ newdate
+        firstDate = currentDate;
+        let dateDiv = (
+          <div key={currentDate} className="light">
+            <br/>
+            <p className="little">{currentDate}</p><hr/>
+          </div>
+        )
+        r.push(dateDiv)
+      }
+      r.push(<Note key={note.id} note={note} />)
+    }
+
+    return r;
+
+
+    // return filteredNotes.map(note => {
+    //   return <Note key={note.id} note={note} />
+    // });
   }
 
   render() {

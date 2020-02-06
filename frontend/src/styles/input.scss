@@ -12,7 +12,8 @@ $navbar-height: 9vh;
 $default-radius: 21px;
 
 body {
-  background: lightgray;
+  background: $background-gray;
+  font-family: Tahoma, Arial, sans-serif;
 }
 
 .App {
@@ -24,9 +25,22 @@ body {
   overflow: scroll;
 }
 
+// SIMPLE STYLING CLASSES
+
 .hidden {
   display: none;
 }
+
+.light {
+  color: gray;
+  font-weight: lighter;
+}
+
+.little {
+  font-size: .7em
+}
+
+//
 
 #navbar {
   width: 100vw;
@@ -80,6 +94,7 @@ body {
 
   h1 {
     font-size: 3.8em;
+    font-weight: 200;
     background: $background-gray;
     color: $green;
     margin: 0;

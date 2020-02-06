@@ -35,12 +35,20 @@ autofill feature when creating skills that other dogs have
 start w/ a light mobile optimization
 
 ** styling!
+  improve notes rendering
+  style notes page
+  add content to all dogs
+  style forms
+  tweak dogCards
+    add some depth? 
+  add image upload??
+  textured background at welcome page
+  animated page transitions
+  random
+    computation-based display values
 
 ** write readme
 
-use computations to style dogsSidebar and the height of the notes container based on both relative + fixed units
-
-alphebetize dog sidebar
 
 FAVORITES:
 
