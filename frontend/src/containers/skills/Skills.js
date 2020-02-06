@@ -54,18 +54,20 @@ class Skills extends Component {
     return(
       <div className="skills-container">
         <h3>Skills</h3>
-        <div className="skill-form-button skill" onClick={this.revealForm}>
-          <span>Add a new skill!<div className="plus-sign" id="add-skill-button">+</div></span>
+        <div className="skills">
+          <div className="skill-form-button skill" onClick={this.revealForm}>
+            <span>Add a new skill!<div className="plus-sign" id="add-skill-button">+</div></span>
+          </div>
+          <div className="skill-form skill hidden">
+            <SkillForm
+              addSkill={this.props.addSkill}
+              dog={dog}
+              renderRewardRates={this.renderRewardRates}
+              hideForm={this.hideForm}
+            />
+          </div>
+          {this.renderSkills(filteredSkills)}
         </div>
-        <div className="skill-form skill hidden">
-          <SkillForm
-            addSkill={this.props.addSkill}
-            dog={dog}
-            renderRewardRates={this.renderRewardRates}
-            hideForm={this.hideForm}
-          />
-        </div>
-        {this.renderSkills(filteredSkills)}
       </div>
     );
   }

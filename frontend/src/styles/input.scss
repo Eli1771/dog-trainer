@@ -117,9 +117,15 @@ body {
 .dog-cards-container {
   position: relative;
   display: flex;
-  top: $navbar-height;
+  width: 63vw;
+  height: 86vh;
+  top: 12vh;
+  left: 31vw;
+  padding: 0 3em;
+  border-left: 5px solid $blue;
   flex-flow: wrap;
   justify-content: center;
+  align-content: start;
 
   a {
     text-decoration: none;
@@ -129,7 +135,7 @@ body {
 .dog-show {
   display: grid;
   grid-template-columns: 44vw [skills-end log-start] 44vw [log-end header-end sidebar-start] auto;
-  grid-template-rows: 14vh [header-end body-start] auto;
+  grid-template-rows: 19vh [header-end body-start] auto;
 
   position: relative;
   top: $navbar-height;
@@ -140,7 +146,9 @@ body {
   grid-column-end: 4;
   grid-row-end: header-end;
 
-  background: white;
+  margin: 3vh;
+  border-top: 5px solid $blue;
+  border-bottom: 5px solid $blue;
   color: $blue;
 }
 
@@ -149,8 +157,10 @@ body {
   grid-column-end: skills-end;
   grid-row-start: body-start;
 
-  height: 76vh;
-  overflow: scroll;
+  .skills {
+    height: 65vh;
+    overflow: scroll;
+  }
 }
 
 .notes-container {
@@ -159,7 +169,7 @@ body {
   grid-row-start: body-start;
 
   .notes {
-    height: 61vh;
+    height: 56vh;
     overflow: scroll;
     background: white;
     border-radius: $default-radius;
@@ -179,8 +189,8 @@ body {
     font-size: .9em;
     padding: 1em;
     border-radius: 21px;
-    left: 40vw;
-    width: 38vw;
+    left: 44vw;
+    width: 42vw;
 
     form {
       display:flex;
@@ -208,7 +218,7 @@ body {
   grid-row-end: 3;
   align-content: center;
 
-  height: 70vh;
+  height: 65vh;
   overflow-x: hidden;
   overflow-y: scroll;
   background: linear-gradient(90deg, #{$background-gray} 53%, #{$blue} 53%);
