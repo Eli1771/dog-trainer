@@ -135,7 +135,7 @@ body {
   grid-row-start: body-start;
 
   .notes {
-    height: 56vh;
+    height: 57vh;
     overflow: scroll;
     background: white;
     border-radius: $default-radius;
@@ -148,7 +148,7 @@ body {
   #note-form {
     display: block;
     position: absolute;
-    bottom: 2vh;
+    bottom: 0;
     margin: auto;
     background: #20344a;
     color: white;
@@ -198,11 +198,15 @@ body {
     right: -5em;
     margin-bottom: -14em;
     box-shadow: 0px -5px 6px 0px #d2d2d2;
-    transition: margin 0.5s ease-in-out, right 0.5s ease-in-out;
+    transition:
+      margin 0.5s ease-in-out,
+      right 0.5s ease-in-out,
+      box-shadow 0.5s ease-in-out;
 
     &:hover {
       margin-bottom: 1em;
       right: 1em;
+      box-shadow: -10px -20px 13px 0px #d2d2d2;
     }
   }
 }
@@ -267,6 +271,7 @@ body {
 
 .skill-form-button {
   overflow: auto;
+  margin-top: 0;
 }
 
 button.light, input.light {
