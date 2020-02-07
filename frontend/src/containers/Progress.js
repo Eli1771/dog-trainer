@@ -64,7 +64,6 @@ class Progress extends Component {
   }
 
   render() {
-    const { notes, dogs } = this.props;
     return(
       <div>
         <NavBar />

@@ -37,7 +37,6 @@ start w/ a light mobile optimization
 default messages to empty content fields
 
 ** styling!
-  add content to all dogs
   style forms
   tweak dogCards
   add image upload??
