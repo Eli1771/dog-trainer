@@ -50,10 +50,18 @@ class Progress extends Component {
     return(
       <div>
         <NavBar />
-        <div>Progress Log</div>
         <div className="note-links-container">
           <div className="notes content-card">
             {this.renderNoteLinks(this.props.notes)}
+          </div>
+        </div>
+        <div className="note-stats-accent">
+          <div className="note-stats">
+            <h3>Pack Progress</h3>
+            <p>stat</p>
+            <p>stat</p>
+            <p>stat</p>
+            <p>stat</p>
           </div>
         </div>
       </div>
