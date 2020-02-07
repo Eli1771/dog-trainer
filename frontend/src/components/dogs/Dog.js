@@ -17,7 +17,7 @@ const Dog = props => {
 
   return(
     <Link to={`/dogs/${id}`}>
-      <div className="component dog-card">
+      <div className="dog-card content-card">
         <h3>{name}</h3>
         <h4>{breed}</h4>
         <p className="light">Born {dob}</p>

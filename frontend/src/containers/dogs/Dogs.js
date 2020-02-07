@@ -46,7 +46,7 @@ class Dogs extends Component {
   render() {
     const { dogs, match } = this.props;
     return(
-      <div className="dogs component">
+      <div className="dogs">
         <NavBar />
 
         <Route exact path={match.url} render={() => {

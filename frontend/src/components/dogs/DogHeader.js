@@ -4,7 +4,7 @@ const DogHeader = props => {
   const { name, breed, dob } = props.dog;
 
   return(
-    <div className="component dog-header">
+    <div className="dog-header">
       <h1>{name}</h1>
       <p>{dob} - {breed}</p>
     </div>

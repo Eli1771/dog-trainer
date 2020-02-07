@@ -31,7 +31,7 @@ export default class NoteForm extends Component {
   render() {
     const { content } = this.state;
     return (
-      <div id="note-form" className="component">
+      <div id="note-form" className="content-card">
         <form onSubmit={this.handleSubmit}>
           <label>Add a note: </label>
           <input

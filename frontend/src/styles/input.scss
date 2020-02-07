@@ -40,6 +40,12 @@ body {
   font-size: .7em
 }
 
+.content-card {
+  background: white;
+  border-radius: $default-radius;
+  box-shadow: -6px -6px 7px 0px #2f2f2f6e;
+}
+
 // NAVBAR
 
 #navbar {
@@ -200,8 +206,6 @@ body {
   .notes {
     height: 56vh;
     overflow: scroll;
-    background: white;
-    border-radius: $default-radius;
     text-align: left;
     padding: 1vh 2vw;
 
@@ -238,7 +242,6 @@ body {
     color: white;
     font-size: .9em;
     padding: 1em;
-    border-radius: 21px;
     left: 44vw;
     width: 42vw;
 
@@ -284,10 +287,10 @@ body {
     margin: 0 0 -13.5em 6vw;
     box-shadow: 0px -5px 6px 0px #2f2f2f6e;
     transition:
-      margin 0.5s ease-in-out,
-      box-shadow 0.5s ease-in-out,
-      height 0.5s ease-in-out,
-      width 0.5s ease-in-out;
+      margin 0.3s ease-in-out,
+      box-shadow 0.3s ease-in-out,
+      height 0.3s ease-in-out,
+      width 0.3s ease-in-out;
 
     &:hover {
       margin: 0 0 1em 0;
@@ -299,9 +302,6 @@ body {
 }
 
 .dog-card {
-  background: white;
-  // border: 5px solid $blue;
-  border-radius: $default-radius;
   width: 155px;
   height: 263px;
   margin: 11px;
@@ -316,9 +316,6 @@ body {
 }
 
 .skill {
-  background: white;
-  // border: 5px solid $blue;
-  border-radius: $default-radius;
   text-align: left;
   margin: 5%;
   padding: 1vw;
@@ -358,7 +355,7 @@ body {
 
 .skill-form-button {
   overflow: auto;
-  margin-top: 0;
+  margin-top: 13px;
 }
 
 button.light, input.light {
@@ -411,18 +408,16 @@ button, input {
   right: 15vw;
   padding: 0 6em;
   border-right: 5px solid $blue;
-  height: 86vh;
+  height: 85vh;
   width: 55vw;
   overflow: scroll;
 
   .notes {
-
-    background: white;
-    border-radius: $default-radius;
     text-align: left;
-    height: 83vh;
+    height: 81vh;
     overflow: scroll;
     padding: 1vw 2vw;
+    margin-top: 13px;
 
     .note {
       overflow: auto;
@@ -442,7 +437,7 @@ button, input {
       }
     }
     .little {
-      margin-top: 1em;
+      margin-top: 1.8em;
     }
     a {
       text-decoration: none;

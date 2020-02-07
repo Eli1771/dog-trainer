@@ -40,7 +40,7 @@ export default class Skill extends Component {
   render() {
     const skill = this.props.skill
     return(
-      <div className="skill">
+      <div className="skill content-card">
         <h2>{skill.name}</h2>
         <p>{skill.description}</p>
         <p>Receives reinforcement {this.rewardRates[skill.reward_rate].toLowerCase()}</p>

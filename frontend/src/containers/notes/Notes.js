@@ -38,7 +38,7 @@ class Notes extends Component {
     return(
       <div className="notes-container">
         <h3>Progress Log</h3>
-        <div className="notes">
+        <div className="notes content-card">
           {this.renderNotes(this.props.notes)}
         </div>
         <NoteForm addNote={this.props.addNote} dogId={this.props.dogId} />

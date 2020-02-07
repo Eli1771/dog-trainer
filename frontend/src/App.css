@@ -20,6 +20,11 @@ body {
 .little {
   font-size: 0.7em; }
 
+.content-card {
+  background: white;
+  border-radius: 21px;
+  box-shadow: -6px -6px 7px 0px #2f2f2f6e; }
+
 #navbar {
   width: 100vw;
   height: 9vh;
@@ -142,8 +147,6 @@ body {
   .notes-container .notes {
     height: 56vh;
     overflow: scroll;
-    background: white;
-    border-radius: 21px;
     text-align: left;
     padding: 1vh 2vw; }
     .notes-container .notes .note {
@@ -172,7 +175,6 @@ body {
     color: white;
     font-size: .9em;
     padding: 1em;
-    border-radius: 21px;
     left: 44vw;
     width: 42vw; }
     .notes-container #note-form form {
@@ -205,7 +207,7 @@ body {
     position: relative;
     margin: 0 0 -13.5em 6vw;
     box-shadow: 0px -5px 6px 0px #2f2f2f6e;
-    transition: margin 0.5s ease-in-out, box-shadow 0.5s ease-in-out, height 0.5s ease-in-out, width 0.5s ease-in-out; }
+    transition: margin 0.3s ease-in-out, box-shadow 0.3s ease-in-out, height 0.3s ease-in-out, width 0.3s ease-in-out; }
     .dogs-sidebar .dog-card:hover {
       margin: 0 0 1em 0;
       box-shadow: -15px -28px 13px 0px #2f2f2f6e;
@@ -213,8 +215,6 @@ body {
       width: 165px; }
 
 .dog-card {
-  background: white;
-  border-radius: 21px;
   width: 155px;
   height: 263px;
   margin: 11px;
@@ -226,8 +226,6 @@ body {
     font-size: 1.6em; }
 
 .skill {
-  background: white;
-  border-radius: 21px;
   text-align: left;
   margin: 5%;
   padding: 1vw; }
@@ -258,7 +256,7 @@ body {
 
 .skill-form-button {
   overflow: auto;
-  margin-top: 0; }
+  margin-top: 13px; }
 
 button.light, input.light {
   border: 1px solid #F0F1F0;
@@ -298,16 +296,15 @@ button, input {
   right: 15vw;
   padding: 0 6em;
   border-right: 5px solid #49596A;
-  height: 86vh;
+  height: 85vh;
   width: 55vw;
   overflow: scroll; }
   .note-links-container .notes {
-    background: white;
-    border-radius: 21px;
     text-align: left;
-    height: 83vh;
+    height: 81vh;
     overflow: scroll;
-    padding: 1vw 2vw; }
+    padding: 1vw 2vw;
+    margin-top: 13px; }
     .note-links-container .notes .note {
       overflow: auto;
       margin: .5em 0 .5em 1em; }
@@ -322,7 +319,7 @@ button, input {
           .note-links-container .notes .note .note-content {
             width: 37vw; } }
     .note-links-container .notes .little {
-      margin-top: 1em; }
+      margin-top: 1.8em; }
     .note-links-container .notes a {
       text-decoration: none; }
       .note-links-container .notes a:link {
