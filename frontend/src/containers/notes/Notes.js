@@ -19,10 +19,7 @@ class Notes extends Component {
     for (let i = 0; i < filteredNotes.length; i++) {
       let note = filteredNotes[i];
       let currentDate = note.timestamp.split(' - ')[0];
-      console.log('current date: ', currentDate);
       if (currentDate !== firstDate) {
-        //return div w/ datestring and add to results
-        //update firstdate w/ newdate
         firstDate = currentDate;
         let dateDiv = (
           <div key={currentDate} className="light">
@@ -35,11 +32,6 @@ class Notes extends Component {
     }
 
     return r;
-
-
-    // return filteredNotes.map(note => {
-    //   return <Note key={note.id} note={note} />
-    // });
   }
 
   render() {
