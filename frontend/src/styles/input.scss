@@ -143,8 +143,8 @@ body {
   position: relative;
   display: flex;
   width: 56vw;
-  height: 85vh;
-  top: 13vh;
+  height: 87vh;
+  top: 11vh;
   left: 31vw;
   padding: 0 6em;
   border-left: 5px solid #49596A;
@@ -439,13 +439,13 @@ button, input {
   right: 15vw;
   padding: 0 6em;
   border-right: 5px solid $blue;
-  height: 85vh;
+  height: 87vh;
   width: 55vw;
   overflow: scroll;
 
   .notes {
     text-align: left;
-    height: 81vh;
+    height: 82vh;
     overflow: scroll;
     padding: 1vw 2vw;
     margin-top: 13px;
@@ -489,7 +489,7 @@ button, input {
 .note-stats-accent {
   display: block;
   position: fixed;
-  background: linear-gradient(90deg, $accent-yellow 80%, $green 81%);
+  background: linear-gradient(90deg, $green 20%, $accent-yellow 21%);
   bottom: 0;
   right: 7.5vw;
   height: 91vh;

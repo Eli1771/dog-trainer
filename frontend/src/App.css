@@ -99,8 +99,8 @@ body {
   position: relative;
   display: flex;
   width: 56vw;
-  height: 85vh;
-  top: 13vh;
+  height: 87vh;
+  top: 11vh;
   left: 31vw;
   padding: 0 6em;
   border-left: 5px solid #49596A;
@@ -320,12 +320,12 @@ button, input {
   right: 15vw;
   padding: 0 6em;
   border-right: 5px solid #49596A;
-  height: 85vh;
+  height: 87vh;
   width: 55vw;
   overflow: scroll; }
   .note-links-container .notes {
     text-align: left;
-    height: 81vh;
+    height: 82vh;
     overflow: scroll;
     padding: 1vw 2vw;
     margin-top: 13px; }
@@ -356,7 +356,7 @@ button, input {
 .note-stats-accent {
   display: block;
   position: fixed;
-  background: linear-gradient(90deg, #F6C876 80%, #4EB47A 81%);
+  background: linear-gradient(90deg, #4EB47A 20%, #F6C876 21%);
   bottom: 0;
   right: 7.5vw;
   height: 91vh;
