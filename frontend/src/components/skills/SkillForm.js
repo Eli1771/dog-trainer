@@ -42,6 +42,18 @@ export default class SkillForm extends Component {
     this.props.hideForm();
   }
 
+  //                          TABLE DIAGRAM
+  //  +---------------------|---------------------|-----------------+
+  //  |      nameLabel      |   nameInput         |                 |
+  //  |---------------------+---------------------+-----------------|
+  //  |   descriptionLabel  |  descriptionInput   |                 |
+  //  |---------------------+---------------------+-----------------|
+  //  |      rateLabel      |     rateSelect      |                 |
+  //  |---------------------+---------------------+-----------------|
+  //  |                     |                     | submit/cancel   |
+  //  +---------------------|---------------------|-----------------+
+  //
+
   render() {
     const { name, description, rewardRate } = this.state;
     return (
