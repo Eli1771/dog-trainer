@@ -5,7 +5,8 @@ const Note = props => {
   console.log('timestring', time)
   return(
     <div className="note">
-      <p><span className="light">{time} - </span>{props.note.content}</p>
+      <span className="light">{time}&emsp;-</span>
+      <div className="note-content">{props.note.content}</div>
     </div>
   )
 }

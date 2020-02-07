@@ -120,6 +120,12 @@ body {
   border-top: 5px solid #49596A;
   border-bottom: 5px solid #49596A;
   color: #49596A; }
+  .dog-header h1 {
+    font-size: 3.2vh;
+    margin: 2.1vh; }
+  .dog-header p {
+    font-size: 1.6vh;
+    margin: 1vh; }
 
 .skills-container {
   grid-column-start: 1;
@@ -140,6 +146,21 @@ body {
     border-radius: 21px;
     text-align: left;
     padding: 1vh 2vw; }
+    .notes-container .notes .note {
+      overflow: auto;
+      margin: .5em 0 .5em 1em; }
+      .notes-container .notes .note span {
+        display: inline;
+        white-space: pre; }
+      .notes-container .notes .note .note-content {
+        display: inline-block;
+        float: right;
+        width: 27vw; }
+        @media (min-width: 1301px) {
+          .notes-container .notes .note .note-content {
+            width: 31vw; } }
+    .notes-container .notes .little {
+      margin-top: 1em; }
   .notes-container h3 {
     text-align: center; }
   .notes-container #note-form {
@@ -179,13 +200,17 @@ body {
   .dogs-sidebar a {
     text-decoration: none; }
   .dogs-sidebar .dog-card {
+    height: 263px;
+    width: 155px;
     position: relative;
     margin: 0 0 -13.5em 6vw;
     box-shadow: 0px -5px 6px 0px #2f2f2f6e;
-    transition: margin 0.5s ease-in-out, box-shadow 0.5s ease-in-out; }
+    transition: margin 0.5s ease-in-out, box-shadow 0.5s ease-in-out, height 0.5s ease-in-out, width 0.5s ease-in-out; }
     .dogs-sidebar .dog-card:hover {
       margin: 0 0 1em 0;
-      box-shadow: -10px -20px 13px 0px #2f2f2f6e; }
+      box-shadow: -15px -28px 13px 0px #2f2f2f6e;
+      height: 285px;
+      width: 165px; }
 
 .dog-card {
   background: white;

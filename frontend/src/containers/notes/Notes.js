@@ -26,7 +26,6 @@ class Notes extends Component {
         firstDate = currentDate;
         let dateDiv = (
           <div key={currentDate} className="light">
-            <br/>
             <p className="little">{currentDate}</p><hr/>
           </div>
         )
