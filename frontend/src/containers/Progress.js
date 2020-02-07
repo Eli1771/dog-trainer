@@ -35,8 +35,10 @@ class Progress extends Component {
       <div>
         <NavBar />
         <div>Progress Log</div>
-        <div className='note-links-container'>
-          {this.renderNoteLinks(this.props.notes)}
+        <div className="note-links-container">
+          <div className="notes">
+            {this.renderNoteLinks(this.props.notes)}
+          </div>
         </div>
       </div>
     );

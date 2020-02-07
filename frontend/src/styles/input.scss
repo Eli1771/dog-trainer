@@ -40,7 +40,7 @@ body {
   font-size: .7em
 }
 
-//
+// NAVBAR
 
 #navbar {
   width: 100vw;
@@ -85,6 +85,8 @@ body {
   }
 }
 
+// WELCOME PAGE
+
 .welcome {
   border: 1px solid black;
   width: 100%;
@@ -128,14 +130,16 @@ body {
   }
 }
 
+// DOGS PAGE
+
 .dog-cards-container {
   position: relative;
   display: flex;
-  width: 63vw;
+  width: 55vw;
   height: 86vh;
   top: 12vh;
   left: 31vw;
-  padding: 0 3em;
+  padding: 0 6em;
   border-left: 5px solid $blue;
   flex-flow: wrap;
   justify-content: center;
@@ -145,6 +149,8 @@ body {
     text-decoration: none;
   }
 }
+
+// DOG SHOW PAGE
 
 .dog-show {
   display: grid;
@@ -391,5 +397,75 @@ button, input {
     float: right;
     font-size: 3vw;
     text-align: center;
+  }
+}
+
+// PROGRESS PAGE
+
+// .dog-cards-container {
+//   position: relative;
+//   display: flex;
+//   width: 55vw;
+//   height: 86vh;
+//   top: 12vh;
+//   left: 31vw;
+//   padding: 0 6em;
+//   border-left: 5px solid $blue;
+//   flex-flow: wrap;
+//   justify-content: center;
+//   align-content: flex-start;
+//
+//   a {
+//     text-decoration: none;
+//   }
+// }
+
+.note-links-container {
+  .notes {
+
+    display: inline-block;
+    position: relative;
+    top: 10vh;
+    right: 13vw;
+    margin: auto;
+    padding: 0 6em;
+    border-right: 5px solid $blue;
+    height: 86vh;
+    width: 55vw;
+    overflow: scroll;
+    background: white;
+    border-radius: $default-radius;
+    text-align: left;
+
+    .note {
+      overflow: auto;
+      margin: .5em 0 .5em 1em;
+
+      span {
+        display: inline;
+        white-space: pre;
+      }
+      .note-content {
+        display: inline-block;
+        float: right;
+        width: 27vw;
+        @media(min-width: 1301px) {
+          width: 31vw;
+        }
+      }
+    }
+    .little {
+      margin-top: 1em;
+    }
+    a {
+      text-decoration: none;
+
+      &:link {
+        color: black;
+      }
+      &:visited {
+        color: black;
+      }
+    }
   }
 }

@@ -34,13 +34,14 @@ autofill feature when creating skills that other dogs have
 
 start w/ a light mobile optimization
 
+default messages to empty content fields
+
 ** styling!
-  improve notes rendering
   style notes page
   add content to all dogs
   style forms
   tweak dogCards
-    add some depth? 
+    add some depth?
   add image upload??
   textured background at welcome page
   animated page transitions
