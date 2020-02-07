@@ -46,7 +46,25 @@ class Progress extends Component {
     return r;
   }
 
+  renderNoteStats = () => {
+    const { notes, dogs } = this.props;
+    const lastTrained = dogs.filter(d => d.id === notes[notes.length -1].dog_id)[0];
+
+    if (!!notes.length && !!dogs.length) {
+      return (
+        <div className="note-stats-accent">
+          <div className="note-stats">
+            <h3>Pack Progress</h3>
+            <p>{notes.length} Actions Logged</p>
+            <p>Your latest training session was with {lastTrained.name}</p>
+          </div>
+        </div>
+      )
+    }
+  }
+
   render() {
+    const { notes, dogs } = this.props;
     return(
       <div>
         <NavBar />
@@ -55,15 +73,7 @@ class Progress extends Component {
             {this.renderNoteLinks(this.props.notes)}
           </div>
         </div>
-        <div className="note-stats-accent">
-          <div className="note-stats">
-            <h3>Pack Progress</h3>
-            <p>stat</p>
-            <p>stat</p>
-            <p>stat</p>
-            <p>stat</p>
-          </div>
-        </div>
+        {this.renderNoteStats()}
       </div>
     );
   }
