@@ -21,13 +21,29 @@ class Progress extends Component {
   renderNoteLinks = notes => {
     const dogIds = this.props.dogs.map(d => d.id);
     const filteredNotes = notes.filter(n => dogIds.includes(n.dog_id));
-    return filteredNotes.map(note => {
-      return(
+
+    let r = [];
+    let firstDate;
+    for (let i = 0; i < filteredNotes.length; i++) {
+      let note = filteredNotes[i];
+      let currentDate = note.timestamp.split(' - ')[0];
+      if (currentDate !== firstDate) {
+        firstDate = currentDate;
+        let dateDiv = (
+          <div key={currentDate} className="light">
+            <p className="little">{currentDate}</p><hr/>
+          </div>
+        )
+        r.push(dateDiv);
+      }
+      r.push(
         <Link key={note.id} to={`/dogs/${note.dog_id}`}>
-          <Note note={note} />
+          <Note key={note.id} note={note} />
         </Link>
-      )
-    });
+      );
+    }
+
+    return r;
   }
 
   render() {
