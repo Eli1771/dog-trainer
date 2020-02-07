@@ -5,7 +5,7 @@ body {
 .App {
   text-align: center;
   display: inline-block;
-  height: 100vh;
+  height: 99.6vh;
   width: 100%;
   background: #F0F1F0;
   overflow: scroll; }
@@ -98,9 +98,9 @@ body {
 .dog-cards-container {
   position: relative;
   display: flex;
-  width: 55vw;
-  height: 86vh;
-  top: 12vh;
+  width: 56vw;
+  height: 85vh;
+  top: 13vh;
   left: 31vw;
   padding: 0 6em;
   border-left: 5px solid #49596A;
@@ -109,6 +109,31 @@ body {
   align-content: flex-start; }
   .dog-cards-container a {
     text-decoration: none; }
+
+.dog-stats {
+  display: inline-block;
+  position: relative;
+  float: left;
+  left: -4vw;
+  top: 4vh;
+  width: 17vw;
+  background: #49596a;
+  color: white;
+  padding: 1em 3em; }
+  .dog-stats h3 {
+    font-size: 2em;
+    margin-top: .5em; }
+  .dog-stats p {
+    font-size: 1em; }
+
+.dog-stats-accent {
+  display: block;
+  position: fixed;
+  background: linear-gradient(90deg, #F6C876 80%, #4EB47A 81%);
+  bottom: 0;
+  left: 7.5vw;
+  height: 88vh;
+  width: 5.5vw; }
 
 .dog-show {
   display: grid;

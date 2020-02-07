@@ -40,7 +40,6 @@ default messages to empty content fields
   add content to all dogs
   style forms
   tweak dogCards
-    add some depth?
   add image upload??
   textured background at welcome page
   animated page transitions
