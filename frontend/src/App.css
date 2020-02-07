@@ -110,30 +110,29 @@ body {
   .dog-cards-container a {
     text-decoration: none; }
 
-.dog-stats {
-  display: inline-block;
-  position: relative;
-  float: left;
-  left: -4vw;
-  top: 4vh;
-  width: 17vw;
-  background: #49596a;
-  color: white;
-  padding: 1em 3em; }
-  .dog-stats h3 {
-    font-size: 2em;
-    margin-top: .5em; }
-  .dog-stats p {
-    font-size: 1em; }
-
 .dog-stats-accent {
   display: block;
   position: fixed;
   background: linear-gradient(90deg, #F6C876 80%, #4EB47A 81%);
   bottom: 0;
   left: 7.5vw;
-  height: 88vh;
+  height: 91vh;
   width: 5.5vw; }
+  .dog-stats-accent .dog-stats {
+    display: inline-block;
+    position: relative;
+    float: left;
+    left: -4vw;
+    top: 6vh;
+    width: 17vw;
+    background: #49596a;
+    color: white;
+    padding: 1em 3em; }
+    .dog-stats-accent .dog-stats h3 {
+      font-size: 2em;
+      margin-top: .5em; }
+    .dog-stats-accent .dog-stats p {
+      font-size: 1em; }
 
 .dog-show {
   display: grid;
@@ -241,7 +240,7 @@ body {
 
 .dog-card {
   width: 155px;
-  height: 263px;
+  height: 234px;
   margin: 11px;
   color: #49596A;
   cursor: pointer;
@@ -353,5 +352,29 @@ button, input {
         color: black; }
       .note-links-container .notes a:hover {
         color: gray; }
+
+.note-stats-accent {
+  display: block;
+  position: fixed;
+  background: linear-gradient(90deg, #F6C876 80%, #4EB47A 81%);
+  bottom: 0;
+  right: 7.5vw;
+  height: 91vh;
+  width: 5.5vw; }
+  .note-stats-accent .note-stats {
+    display: inline-block;
+    position: relative;
+    float: right;
+    right: -4vw;
+    top: 6vh;
+    width: 17vw;
+    background: #49596a;
+    color: white;
+    padding: 1em 3em; }
+    .note-stats-accent .note-stats h3 {
+      font-size: 2em;
+      margin-top: .5em; }
+    .note-stats-accent .note-stats p {
+      font-size: 1em; }
 
 /*# sourceMappingURL=App.css.map */

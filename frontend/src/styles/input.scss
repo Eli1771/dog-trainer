@@ -157,34 +157,34 @@ body {
   }
 }
 
-.dog-stats {
-  display: inline-block;
-    position: relative;
-    float: left;
-    left: -4vw;
-    top: 4vh;
-    width: 17vw;
-    background: #49596a;
-    color: white;
-    padding: 1em 3em;
-
-  h3 {
-    font-size: 2em;
-    margin-top: .5em;
-  }
-  p {
-    font-size: 1em;
-  }
-}
-
 .dog-stats-accent {
   display: block;
   position: fixed;
   background: linear-gradient(90deg, $accent-yellow 80%, $green 81%);
   bottom: 0;
   left: 7.5vw;
-  height: 88vh;
+  height: 91vh;
   width: 5.5vw;
+
+  .dog-stats {
+    display: inline-block;
+    position: relative;
+    float: left;
+    left: -4vw;
+    top: 6vh;
+    width: 17vw;
+    background: #49596a;
+    color: white;
+    padding: 1em 3em;
+
+    h3 {
+      font-size: 2em;
+      margin-top: .5em;
+    }
+    p {
+      font-size: 1em;
+    }
+  }
 }
 
 // DOG SHOW PAGE
@@ -334,7 +334,7 @@ body {
 
 .dog-card {
   width: 155px;
-  height: 263px;
+  height: 234px;
   margin: 11px;
   color: $blue;
   cursor: pointer;
@@ -482,6 +482,36 @@ button, input {
       &:hover {
         color: gray;
       }
+    }
+  }
+}
+
+.note-stats-accent {
+  display: block;
+  position: fixed;
+  background: linear-gradient(90deg, $accent-yellow 80%, $green 81%);
+  bottom: 0;
+  right: 7.5vw;
+  height: 91vh;
+  width: 5.5vw;
+
+  .note-stats {
+    display: inline-block;
+    position: relative;
+    float: right;
+    right: -4vw;
+    top: 6vh;
+    width: 17vw;
+    background: #49596a;
+    color: white;
+    padding: 1em 3em;
+
+    h3 {
+      font-size: 2em;
+      margin-top: .5em;
+    }
+    p {
+      font-size: 1em;
     }
   }
 }
