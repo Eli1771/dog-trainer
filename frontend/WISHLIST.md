@@ -38,12 +38,8 @@ default messages to empty content fields
 
 ** styling!
   style forms
-  tweak dogCards
-  add image upload??
   textured background at welcome page
   animated page transitions
-  random
-    computation-based display values
 
 ** write readme
 

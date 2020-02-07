@@ -45,37 +45,72 @@ export default class SkillForm extends Component {
   render() {
     const { name, description, rewardRate } = this.state;
     return (
-      <div id="skill-form" className="content-card">
+      <div id="skill-form">
         <form onSubmit={this.handleSubmit}>
-          <label>Name</label>
-          <input
-            type="text"
-            name="name"
-            value={name}
-            onChange={this.handleChange}
-          />
+          <table>
+            <tr>
+              <td>
+                <label>Name</label>
+              </td>
 
-          <label>Description</label>
-          <input
-            type="text"
-            name="description"
-            value={description}
-            placeholder="optional"
-            onChange={this.handleChange}
-          />
+              <td>
+                <input
+                  type="text"
+                  name="name"
+                  value={name}
+                  onChange={this.handleChange}
+                />
+              </td>
 
-          <label>Reward Rate</label>
-          <select
-            name="rewardRate"
-            value={rewardRate}
-            onChange={this.handleChange}>
-            {this.props.renderRewardRates()}
-          </select>
+              <td></td>
+            </tr>
 
-          <input type="submit" value="Add Skill"/>
+            <tr>
+              <td>
+                <label>Description</label>&emsp;
+              </td>
 
-          <button onClick={this.handleCancel}>Cancel</button>
+              <td>
+                <input
+                  type="text"
+                  name="description"
+                  value={description}
+                  placeholder="optional"
+                  onChange={this.handleChange}
+                />
+              </td>
 
+              <td></td>
+            </tr>
+
+            <tr>
+              <td>
+                <label>Reward Rate</label>&emsp;
+              </td>
+
+              <td>
+                <select
+                  name="rewardRate"
+                  value={rewardRate}
+                  onChange={this.handleChange}>
+                  {this.props.renderRewardRates()}
+                </select>
+              </td>
+
+              <td></td>
+            </tr>
+
+            <tr>
+              <td></td>
+
+              <td></td>
+
+              <td>
+                <input type="submit" value="Add Skill"/>
+                <button onClick={this.handleCancel}>Cancel</button>
+              </td>
+            </tr>
+          </table>
         </form>
       </div>
     );

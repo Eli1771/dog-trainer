@@ -58,7 +58,7 @@ class Skills extends Component {
           <div className="skill-form-button content-card skill" onClick={this.revealForm}>
             <span>Add a new skill!<div className="plus-sign" id="add-skill-button">+</div></span>
           </div>
-          <div className="skill-form skill hidden">
+          <div className="skill-form skill content-card hidden">
             <SkillForm
               addSkill={this.props.addSkill}
               dog={dog}

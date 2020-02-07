@@ -397,6 +397,18 @@ body {
   margin-top: 13px;
 }
 
+#skill-form {
+  padding: .8em;
+
+  td {
+    width: 30%;
+  }
+  input[type="submit"], button {
+    position: relative;
+    right: 0;
+  }
+}
+
 button.light, input.light {
   border: 1px solid $background-gray;
   color: gray;
