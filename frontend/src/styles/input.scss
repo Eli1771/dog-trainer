@@ -402,40 +402,27 @@ button, input {
 
 // PROGRESS PAGE
 
-// .dog-cards-container {
-//   position: relative;
-//   display: flex;
-//   width: 55vw;
-//   height: 86vh;
-//   top: 12vh;
-//   left: 31vw;
-//   padding: 0 6em;
-//   border-left: 5px solid $blue;
-//   flex-flow: wrap;
-//   justify-content: center;
-//   align-content: flex-start;
-//
-//   a {
-//     text-decoration: none;
-//   }
-// }
+
 
 .note-links-container {
+  display: inline-block;
+  position: relative;
+  top: 10vh;
+  right: 15vw;
+  padding: 0 6em;
+  border-right: 5px solid $blue;
+  height: 86vh;
+  width: 55vw;
+  overflow: scroll;
+
   .notes {
 
-    display: inline-block;
-    position: relative;
-    top: 10vh;
-    right: 13vw;
-    margin: auto;
-    padding: 0 6em;
-    border-right: 5px solid $blue;
-    height: 86vh;
-    width: 55vw;
-    overflow: scroll;
     background: white;
     border-radius: $default-radius;
     text-align: left;
+    height: 83vh;
+    overflow: scroll;
+    padding: 1vw 2vw;
 
     .note {
       overflow: auto;
@@ -450,7 +437,7 @@ button, input {
         float: right;
         width: 27vw;
         @media(min-width: 1301px) {
-          width: 31vw;
+          width: 37vw;
         }
       }
     }
@@ -465,6 +452,9 @@ button, input {
       }
       &:visited {
         color: black;
+      }
+      &:hover {
+        color: gray;
       }
     }
   }

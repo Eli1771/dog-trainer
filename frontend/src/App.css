@@ -291,40 +291,45 @@ button, input {
     font-size: 3vw;
     text-align: center; }
 
-.note-links-container .notes {
+.note-links-container {
   display: inline-block;
   position: relative;
   top: 10vh;
-  right: 13vw;
-  margin: auto;
+  right: 15vw;
   padding: 0 6em;
   border-right: 5px solid #49596A;
   height: 86vh;
   width: 55vw;
-  overflow: scroll;
-  background: white;
-  border-radius: 21px;
-  text-align: left; }
-  .note-links-container .notes .note {
-    overflow: auto;
-    margin: .5em 0 .5em 1em; }
-    .note-links-container .notes .note span {
-      display: inline;
-      white-space: pre; }
-    .note-links-container .notes .note .note-content {
-      display: inline-block;
-      float: right;
-      width: 27vw; }
-      @media (min-width: 1301px) {
-        .note-links-container .notes .note .note-content {
-          width: 31vw; } }
-  .note-links-container .notes .little {
-    margin-top: 1em; }
-  .note-links-container .notes a {
-    text-decoration: none; }
-    .note-links-container .notes a:link {
-      color: black; }
-    .note-links-container .notes a:visited {
-      color: black; }
+  overflow: scroll; }
+  .note-links-container .notes {
+    background: white;
+    border-radius: 21px;
+    text-align: left;
+    height: 83vh;
+    overflow: scroll;
+    padding: 1vw 2vw; }
+    .note-links-container .notes .note {
+      overflow: auto;
+      margin: .5em 0 .5em 1em; }
+      .note-links-container .notes .note span {
+        display: inline;
+        white-space: pre; }
+      .note-links-container .notes .note .note-content {
+        display: inline-block;
+        float: right;
+        width: 27vw; }
+        @media (min-width: 1301px) {
+          .note-links-container .notes .note .note-content {
+            width: 37vw; } }
+    .note-links-container .notes .little {
+      margin-top: 1em; }
+    .note-links-container .notes a {
+      text-decoration: none; }
+      .note-links-container .notes a:link {
+        color: black; }
+      .note-links-container .notes a:visited {
+        color: black; }
+      .note-links-container .notes a:hover {
+        color: gray; }
 
 /*# sourceMappingURL=App.css.map */
