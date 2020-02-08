@@ -65,6 +65,13 @@ body {
   height: 100vh;
   background: #4EB47A;
   color: white; }
+  .welcome .welcome-navs {
+    position: absolute;
+    height: 37vh;
+    width: 100vw;
+    top: 39vh;
+    padding-top: 0vh;
+    background: #4EB47A; }
   .welcome h1 {
     font-size: 3.8em;
     font-weight: 200;

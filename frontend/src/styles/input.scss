@@ -101,6 +101,14 @@ body {
   background: $green;
   color: white;
 
+  .welcome-navs {
+    position: absolute;
+    height: 37vh;
+    width: 100vw;
+    top: 39vh;
+    padding-top: 0vh;
+    background: $green;
+  }
   h1 {
     font-size: 3.8em;
     font-weight: 200;
