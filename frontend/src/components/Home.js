@@ -3,20 +3,20 @@ import { Link } from 'react-router-dom';
 
 export const Home = props => {
   const transitionOut = () => {
-    document.querySelector('h1').classList.add('testing');
+    document.querySelector('.welcome-navs').classList.add('transitioning');
   }
 
   const delay = path => {
     transitionOut();
-    setTimeout(() => {window.location = '/dogs'}, 2000);
+    setTimeout(() => {window.location = path}, 2000);
   }
 
   return(
     <div className="welcome">
       <h1>Workin Dog</h1>
       <div className='welcome-navs'>
-        <Link onClick={delay}>View Your Dogs</Link>
-        <Link to='/log'>View Your Progress</Link>
+        <Link onClick={() => delay('/dogs')}>View Your Dogs</Link>
+        <Link onClick={() => delay('/log')}>View Your Progress</Link>
       </div>
     </div>
   );
