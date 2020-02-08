@@ -48,9 +48,9 @@ class Progress extends Component {
 
   renderNoteStats = () => {
     const { notes, dogs } = this.props;
-    const lastTrained = dogs.filter(d => d.id === notes[notes.length -1].dog_id)[0];
 
     if (!!notes.length && !!dogs.length) {
+      const lastTrained = dogs.filter(d => d.id === notes[notes.length -1].dog_id)[0];
       return (
         <div className="note-stats-accent">
           <div className="note-stats">

@@ -108,6 +108,10 @@ body {
     color: $green;
     margin: 0;
     padding: 2em;
+
+    &.testing {
+      background: blue;
+    }
   }
 
   a, a:link, a:visited, a:hover {

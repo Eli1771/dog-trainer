@@ -37,7 +37,6 @@ start w/ a light mobile optimization
 default messages to empty content fields
 
 ** styling!
-  style forms
   textured background at welcome page
   animated page transitions
 
