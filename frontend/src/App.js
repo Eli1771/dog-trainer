@@ -9,7 +9,7 @@ import './App.css';
 import Dogs from './containers/dogs/Dogs';
 import Progress from './containers/Progress';
 import { fetchDogs } from './actions/dogs';
-import { Home } from './components/Home';
+import Home from './components/Home';
 
 function App() {
 
