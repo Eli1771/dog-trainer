@@ -170,6 +170,17 @@ body {
 
 // DOGS PAGE
 
+// .dogs {
+//   * {
+//     opacity: 1;
+//     transition: opacity 0.8s ease-in;
+//   }
+//
+//   &.preload * {
+//     opacity: 0;
+//   }
+// }
+
 .dog-cards-container {
   position: relative;
   display: flex;
@@ -182,6 +193,18 @@ body {
   flex-flow: wrap;
   justify-content: center;
   align-content: flex-start;
+
+  // ONLOAD ANIMATION CODE
+
+  * {
+    opacity: 1;
+    transition: opacity 0.8s ease-in;
+  }
+  &.preload * {
+    opacity: 0;
+  }
+
+  //
 
   a {
     text-decoration: none;
