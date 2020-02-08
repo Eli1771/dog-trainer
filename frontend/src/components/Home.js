@@ -4,11 +4,12 @@ import { Link } from 'react-router-dom';
 export const Home = props => {
   const transitionOut = () => {
     document.querySelector('.welcome-navs').classList.add('transitioning');
+    document.querySelector('h1').classList.add('transitioning');
   }
 
   const delay = path => {
     transitionOut();
-    setTimeout(() => {window.location = path}, 2000);
+    setTimeout(() => {window.location = path}, 1000);
   }
 
   return(
