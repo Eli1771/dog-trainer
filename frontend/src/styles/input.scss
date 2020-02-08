@@ -397,15 +397,14 @@ body {
   margin-top: 13px;
 }
 
-#skill-form {
-  padding: .8em;
+.skill-form {
+  #skill-form {
+    padding: .8em;
+    transition: opacity 0.4s ease-in-out;
 
-  td {
-    width: 30%;
-  }
-  input[type="submit"], button {
-    position: relative;
-    right: 0;
+    td {
+      width: 30%;
+    }
   }
 }
 

@@ -287,13 +287,11 @@ body {
   overflow: auto;
   margin-top: 13px; }
 
-#skill-form {
-  padding: .8em; }
-  #skill-form td {
+.skill-form #skill-form {
+  padding: .8em;
+  transition: opacity 0.4s ease-in-out; }
+  .skill-form #skill-form td {
     width: 30%; }
-  #skill-form input[type="submit"], #skill-form button {
-    position: relative;
-    right: 0; }
 
 button.light, input.light {
   border: 1px solid #F0F1F0;
