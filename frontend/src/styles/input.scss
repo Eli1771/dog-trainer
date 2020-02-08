@@ -101,13 +101,27 @@ body {
   background: $green;
   color: white;
 
+  //animate lower half up:
+  //  position absolute
+  //  top down
+  //  padding-top up
+
+
   .welcome-navs {
     position: absolute;
-    height: 37vh;
+    height: 45vh;
     width: 100vw;
     top: 39vh;
     padding-top: 0vh;
     background: $green;
+    transition:
+      top 0.6s ease-in-out,
+      padding-top 0.6s ease-in-out;
+
+    &.transitioning {
+      top: 0;
+      padding-top: 39vh;
+    }
   }
   h1 {
     font-size: 3.8em;
