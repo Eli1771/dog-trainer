@@ -21,6 +21,9 @@ class Dogs extends Component {
     if (!this.props.dogs.length) {
       this.props.fetchDogs()
     }
+    setTimeout(() => {
+      document.querySelector('.preload').classList.remove('preload');
+    }, 500)
   }
 
   renderDogs = dogs => {
@@ -61,7 +64,7 @@ class Dogs extends Component {
               </div>
 
 
-              <div className="dog-cards-container">
+              <div className="dog-cards-container preload">
                 {this.renderDogForm()}
                 {this.renderDogs(dogs)}
               </div>
