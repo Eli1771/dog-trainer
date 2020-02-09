@@ -208,9 +208,10 @@ body {
   left: 7.5vw;
   height: 91vh;
   width: 5.5vw;
-  transition: bottom 0.7s ease-in-out;
 
   // ONLOAD ANIMATION CODE
+  transition: bottom 0.7s ease-in-out;
+
   &.preload {
     bottom: -92vh;
   }
@@ -570,6 +571,18 @@ button, input {
   right: 7.5vw;
   height: 91vh;
   width: 5.5vw;
+
+  // ONLOAD ANIMATION CODE
+  transition: bottom 0.7s ease-in-out;
+
+  &.preload {
+    bottom: -92vh;
+  }
+
+  &.preload .note-stats {
+    top: 30vh;
+  }
+  //
 
   .note-stats {
     display: inline-block;

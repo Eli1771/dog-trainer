@@ -10,12 +10,20 @@ import { fetchDogs } from '../actions/dogs';
 class Progress extends Component {
 
   componentDidMount() {
+    let nodes = document.querySelectorAll('.preload')
+
     if (!this.props.notes.length) {
       this.props.fetchNotes();
     }
     if (!this.props.dogs.length) {
       this.props.fetchDogs();
     }
+
+    setTimeout(() => {
+      for (let i = 0; i < nodes.length; i++) {
+        nodes[i].classList.remove('preload');
+      }
+    }, 600)
   }
 
   renderNoteLinks = notes => {
@@ -52,7 +60,7 @@ class Progress extends Component {
     if (!!notes.length && !!dogs.length) {
       const lastTrained = dogs.filter(d => d.id === notes[notes.length -1].dog_id)[0];
       return (
-        <div className="note-stats-accent">
+        <div className="note-stats-accent preload">
           <div className="note-stats">
             <h3>Pack Progress</h3>
             <p>{notes.length} Actions Logged</p>
