@@ -82,7 +82,7 @@ body {
     top: 0;
     font-size: 3.8em;
     font-weight: 200;
-    background: #F0F1F0;
+    background: #ffffff00;
     color: #4EB47A;
     margin: 0;
     padding: 2em;
@@ -111,6 +111,10 @@ body {
   .welcome a:hover:after {
     width: 100%;
     left: 0; }
+
+.header-field img {
+  position: absolute;
+  height: 5vh; }
 
 .dog-cards-container {
   position: relative;

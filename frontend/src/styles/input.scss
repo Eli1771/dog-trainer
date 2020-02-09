@@ -124,7 +124,7 @@ body {
     top: 0;
     font-size: 3.8em;
     font-weight: 200;
-    background: $background-gray;
+    background: #ffffff00;
     color: $green;
     margin: 0;
     padding: 2em;
@@ -160,6 +160,11 @@ body {
     width: 100%;
     left: 0;
   }
+}
+
+.header-field img {
+  position: absolute;
+  height: 5vh;
 }
 
 // DOGS PAGE
