@@ -120,14 +120,15 @@ body {
     }
   }
   h1 {
-    position: relative;
+    position: absolute;
     top: 0;
     font-size: 3.8em;
     font-weight: 200;
     background: #ffffff00;
-    color: $green;
+    color: #4EB47A;
     margin: 0;
-    padding: 2em;
+    width: 100vw;
+    padding: 13vh 0;
     transition: top 0.6s ease-in-out;
 
     &.transitioning {
@@ -163,8 +164,28 @@ body {
 }
 
 .header-field img {
-  position: absolute;
-  height: 5vh;
+  position: relative;
+  width: 50px;
+  margin: 50px 50px;
+  transform: rotate(-40deg);
+
+  &.move-up {
+    animation: bones 3s linear reverse 0s infinite;
+  }
+  &.move-down {
+    animation: bones 3s linear normal 0s infinite;
+  }
+}
+
+@keyframes bones {
+  from {
+    top: 0px;
+    right: 0px;
+  }
+  to {
+    top: 40px;
+    right: 60px;
+  }
 }
 
 // DOGS PAGE

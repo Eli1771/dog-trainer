@@ -13,10 +13,22 @@ export const Home = props => {
     setTimeout(() => {window.location = path}, 830);
   }
 
+  const renderBackground = () => {
+    console.log(window.innerWidth)
+    return(
+      <>
+      <img src={boneOutline} alt="bone-outline" className="move-up"/>
+      <img src={boneOutline} alt="bone-outline" className="move-down"/>
+      <img src={boneOutline} alt="bone-outline" className="move-up"/>
+      <img src={boneOutline} alt="bone-outline" className="move-down"/>
+      </>
+    )
+  }
+
   return(
     <div className="welcome">
       <div className="header-field">
-        <img src={boneOutline} alt="bone-outline"/>
+        {renderBackground()}
         <h1>Workin Dog</h1>
       </div>
       <div className='welcome-navs'>
