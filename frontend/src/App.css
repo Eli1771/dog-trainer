@@ -148,6 +148,8 @@ body {
   transition: bottom 0.7s ease-in-out; }
   .dog-stats-accent.preload {
     bottom: -92vh; }
+  .dog-stats-accent.preload .dog-stats {
+    top: 30vh; }
   .dog-stats-accent .dog-stats {
     display: inline-block;
     position: relative;
@@ -157,7 +159,8 @@ body {
     width: 17vw;
     background: #49596a;
     color: white;
-    padding: 1em 3em; }
+    padding: 1em 3em;
+    transition: top 1s ease-in-out; }
     .dog-stats-accent .dog-stats h3 {
       font-size: 2em;
       margin-top: .5em; }

@@ -101,12 +101,6 @@ body {
   background: $background-gray;
   color: white;
 
-  //animate lower half up:
-  //  position absolute
-  //  top down
-  //  padding-top up
-
-
   .welcome-navs {
     position: absolute;
     height: 61vh;
@@ -170,17 +164,6 @@ body {
 
 // DOGS PAGE
 
-// .dogs {
-//   * {
-//     opacity: 1;
-//     transition: opacity 0.8s ease-in;
-//   }
-//
-//   &.preload * {
-//     opacity: 0;
-//   }
-// }
-
 .dog-cards-container {
   position: relative;
   display: flex;
@@ -231,6 +214,10 @@ body {
   &.preload {
     bottom: -92vh;
   }
+
+  &.preload .dog-stats {
+    top: 30vh;
+  }
   //
 
   .dog-stats {
@@ -243,6 +230,7 @@ body {
     background: #49596a;
     color: white;
     padding: 1em 3em;
+    transition: top 1s ease-in-out;
 
     h3 {
       font-size: 2em;

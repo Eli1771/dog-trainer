@@ -9,7 +9,7 @@ export const Home = props => {
 
   const delay = path => {
     transitionOut();
-    setTimeout(() => {window.location = path}, 1000);
+    setTimeout(() => {window.location = path}, 900);
   }
 
   return(
