@@ -195,11 +195,11 @@ body {
   align-content: flex-start;
 
   // ONLOAD ANIMATION CODE
-  * {
+  &, * {
     opacity: 1;
-    transition: opacity 0.8s ease-in;
+    transition: opacity 0.5s ease-in;
   }
-  &.preload * {
+  &.preload, &.preload * {
     opacity: 0;
   }
   //
@@ -225,6 +225,13 @@ body {
   left: 7.5vw;
   height: 91vh;
   width: 5.5vw;
+  transition: bottom 0.7s ease-in-out;
+
+  // ONLOAD ANIMATION CODE
+  &.preload {
+    bottom: -92vh;
+  }
+  //
 
   .dog-stats {
     display: inline-block;

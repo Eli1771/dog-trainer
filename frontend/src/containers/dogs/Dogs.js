@@ -59,12 +59,12 @@ class Dogs extends Component {
         <Route exact path={match.url} render={() => {
           return(
             <>
-              <div className="dog-stats-accent">
-              <div className="dog-stats">
+              <div className="dog-stats-accent preload">
+                <div className="dog-stats">
 
-                <h3>My Pack</h3>
-                <p>{this.props.dogs.length} Dogs</p>
-              </div>
+                  <h3>My Pack</h3>
+                  <p>{this.props.dogs.length} Dogs</p>
+                </div>
               </div>
 
 

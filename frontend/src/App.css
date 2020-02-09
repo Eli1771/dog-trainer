@@ -124,10 +124,10 @@ body {
   flex-flow: wrap;
   justify-content: center;
   align-content: flex-start; }
-  .dog-cards-container * {
+  .dog-cards-container, .dog-cards-container * {
     opacity: 1;
-    transition: opacity 0.8s ease-in; }
-  .dog-cards-container.preload * {
+    transition: opacity 0.5s ease-in; }
+  .dog-cards-container.preload, .dog-cards-container.preload * {
     opacity: 0; }
   .dog-cards-container a {
     text-decoration: none; }
@@ -144,7 +144,10 @@ body {
   bottom: 0;
   left: 7.5vw;
   height: 91vh;
-  width: 5.5vw; }
+  width: 5.5vw;
+  transition: bottom 0.7s ease-in-out; }
+  .dog-stats-accent.preload {
+    bottom: -92vh; }
   .dog-stats-accent .dog-stats {
     display: inline-block;
     position: relative;
