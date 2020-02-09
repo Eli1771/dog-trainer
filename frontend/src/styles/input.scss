@@ -131,6 +131,8 @@ body {
       width: 50px;
       margin: 50px 50px;
       transform: rotate(-45deg);
+      opacity: 1;
+      transition: opacity 0.4s ease-in;
 
       &.move-up {
         animation: bones 12s linear reverse 0s infinite;
@@ -151,11 +153,16 @@ body {
       width: 100vw;
       padding: 13vh 0;
       transition: top 0.6s ease-in-out;
-
-      &.transitioning {
+    }
+    &.transitioning {
+      h1 {
         top: -20vh;
       }
+      img {
+        opacity: 0;
+      }
     }
+
   }
 
   a, a:link, a:visited, a:hover {

@@ -87,7 +87,9 @@ body {
       position: relative;
       width: 50px;
       margin: 50px 50px;
-      transform: rotate(-45deg); }
+      transform: rotate(-45deg);
+      opacity: 1;
+      transition: opacity 0.4s ease-in; }
       .welcome .header-field img.move-up {
         animation: bones 12s linear reverse 0s infinite; }
       .welcome .header-field img.move-down {
@@ -104,8 +106,10 @@ body {
       width: 100vw;
       padding: 13vh 0;
       transition: top 0.6s ease-in-out; }
-      .welcome .header-field h1.transitioning {
-        top: -20vh; }
+    .welcome .header-field.transitioning h1 {
+      top: -20vh; }
+    .welcome .header-field.transitioning img {
+      opacity: 0; }
   .welcome a, .welcome a:link, .welcome a:visited, .welcome a:hover {
     position: relative;
     font-size: 2vh;

@@ -36,21 +36,15 @@ start w/ a light mobile optimization
 
 default messages to empty content fields
 
-** styling!
-  textured background at welcome page
-  animated page transitions
-
 ** write readme
 
 
 FAVORITES:
 
-pawgress
 attaboy
-good dog
 barkie
 training buddy
 pocket trainer
-sitstay
+sitstayspeak
 pawsitive
 workin dog

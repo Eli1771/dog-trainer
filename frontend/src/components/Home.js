@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import boneOutline from '../images/bone-outline.jpg';
+import boneOutline from '../images/bone-outline.png';
 
 export const Home = props => {
   const transitionOut = () => {
     document.querySelector('.welcome-navs').classList.add('transitioning');
-    document.querySelector('h1').classList.add('transitioning');
+    document.querySelector('.header-field').classList.add('transitioning');
   }
 
   const delay = path => {
@@ -15,7 +15,7 @@ export const Home = props => {
 
   const renderBackground = () => {
     //calculate how many bones will fill the screen across, add one
-    let across = Math.ceil((window.innerWidth / 200) + 4);
+    let across = Math.ceil((window.innerWidth / 200) + 5);
     //calculate height of h1 field by vh
     let height = Math.ceil((window.innerHeight * 0.39));
     let down = Math.ceil((height / 200) + 3);
@@ -25,7 +25,7 @@ export const Home = props => {
     for (let i = 0; i < down; i++) {
       let offset = 0
       //if even number in each row, offset is always 0
-      if (across % 2 === 0) {
+      if (across % 2 === 1) {
         offset = i;
       }
 
