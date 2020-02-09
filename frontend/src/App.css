@@ -96,16 +96,19 @@ body {
         animation: bones 12s linear normal 0s infinite; }
     .welcome .header-field h1 {
       position: absolute;
-      top: 20vh;
+      top: 13vh;
       left: 10vw;
-      font-size: 3.8em;
-      font-weight: 200;
-      background: #ffffff00;
-      color: #4EB47A;
-      margin: 0;
-      width: 100vw;
-      padding: 13vh 0;
-      transition: top 0.6s ease-in-out; }
+      width: 100vw; }
+      .welcome .header-field h1 img#logo {
+        position: relative;
+        display: block;
+        width: 60vh;
+        height: 23vh;
+        background: #ffffff00;
+        margin: auto;
+        padding: 13vh 0;
+        transform: rotate(0deg);
+        transition: top 0.6s ease-in-out; }
     .welcome .header-field.transitioning h1 {
       top: -20vh; }
     .welcome .header-field.transitioning img {

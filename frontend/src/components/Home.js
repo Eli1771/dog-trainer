@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import boneOutline from '../images/bone-outline.png';
+import logo from '../images/attaboy-logo.png';
 
 export const Home = props => {
   const transitionOut = () => {
@@ -46,7 +47,7 @@ export const Home = props => {
     <div className="welcome">
       <div className="header-field">
         {renderBackground()}
-        <h1>Workin Dog</h1>
+        <h1><img src={logo} id="logo" alt="Attaboy!"/></h1>
       </div>
       <div className='welcome-navs'>
         <Link onClick={() => delay('/dogs')}>View Your Dogs</Link>
