@@ -59,14 +59,31 @@ class Progress extends Component {
 
     if (!!notes.length && !!dogs.length) {
       const lastTrained = dogs.filter(d => d.id === notes[notes.length -1].dog_id)[0];
+      const sortedByDog = notes.sort((a, b) => a.dog_id - b.dog_id);
+      let mostTrained;
+
+      let sbdSubarrays = [];
+      let curr_id;
+      for (let i = 0; i < sortedByDog.length; i++) {
+        if (curr_id !== sortedByDog[i].dog_id) {
+          let arr = [sortedByDog[i]];
+          sbdSubarrays.unshift(arr);
+          curr_id = sortedByDog[i].dog_id;
+        } else {
+          sbdSubarrays[0].push(sortedByDog[i]);
+        }
+      }
+      const mostTrainedIdx = sbdSubarrays.sort((a, b) => b.length - a.length)[0][0].dog_id;
+      mostTrained = dogs.find(d => d.id === mostTrainedIdx);
+
       return (
-        <div className="note-stats-accent preload">
           <div className="note-stats">
             <h3>Pack Progress</h3>
             <p>{notes.length} Actions Logged</p>
             <p>Your latest training session was with {lastTrained.name}</p>
+            {!!mostTrained ? <p>{mostTrained.name} has received the most training</p> : null}
           </div>
-        </div>
+
       )
     }
   }
@@ -80,7 +97,9 @@ class Progress extends Component {
             {this.renderNoteLinks(this.props.notes)}
           </div>
         </div>
-        {this.renderNoteStats()}
+        <div className="note-stats-accent preload">
+          {this.renderNoteStats()}
+        </div>
       </div>
     );
   }
