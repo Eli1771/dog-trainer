@@ -119,21 +119,42 @@ body {
       height: 1vh;
     }
   }
-  h1 {
-    position: absolute;
-    top: 20vh;
-    left: 10vw;
-    font-size: 3.8em;
-    font-weight: 200;
-    background: #ffffff00;
-    color: #4EB47A;
-    margin: 0;
-    width: 100vw;
-    padding: 13vh 0;
-    transition: top 0.6s ease-in-out;
+  .header-field {
+    position: relative;
+    left: -10vw;
+    top: -20vh;
+    width: 120vw;
+    height: 80vh;
 
-    &.transitioning {
-      top: -20vh;
+    img {
+      position: relative;
+      width: 50px;
+      margin: 50px 50px;
+      transform: rotate(-45deg);
+
+      &.move-up {
+        animation: bones 2.5s linear reverse 0s infinite;
+      }
+      &.move-down {
+        animation: bones 2.5s linear normal 0s infinite;
+      }
+    }
+    h1 {
+      position: absolute;
+      top: 20vh;
+      left: 10vw;
+      font-size: 3.8em;
+      font-weight: 200;
+      background: #ffffff00;
+      color: #4EB47A;
+      margin: 0;
+      width: 100vw;
+      padding: 13vh 0;
+      transition: top 0.6s ease-in-out;
+
+      &.transitioning {
+        top: -20vh;
+      }
     }
   }
 
@@ -164,36 +185,14 @@ body {
   }
 }
 
-.header-field {
-  position: relative;
-  left: -10vw;
-  top: -20vh;
-  width: 120vw;
-  height: 80vh;
-
-  img {
-    position: relative;
-    width: 50px;
-    margin: 50px 50px;
-    transform: rotate(-40deg);
-
-    &.move-up {
-      animation: bones 3s linear reverse 0s infinite;
-    }
-    &.move-down {
-      animation: bones 3s linear normal 0s infinite;
-    }
-  }
-}
-
 @keyframes bones {
   from {
     top: 0px;
     right: 0px;
   }
   to {
-    top: 40px;
-    right: 60px;
+    top: 122px;
+    right: 149px;
   }
 }
 
@@ -266,7 +265,7 @@ body {
     background: #49596a;
     color: white;
     padding: 1em 3em;
-    transition: top 1s ease-in-out;
+    transition: top 1s ease-out;
 
     h3 {
       font-size: 2em;
@@ -629,6 +628,7 @@ button, input {
     background: #49596a;
     color: white;
     padding: 1em 3em;
+    transition: top 1s ease-out;
 
     h3 {
       font-size: 2em;
