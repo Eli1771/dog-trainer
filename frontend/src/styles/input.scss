@@ -44,7 +44,7 @@ body {
 .content-card {
   background: white;
   border-radius: $default-radius;
-  box-shadow: -6px -6px 7px 0px #2f2f2f6e;
+  box-shadow: -3px -3px 4px 0px #2f2f2f21;
 }
 
 // NAVBAR
@@ -441,7 +441,7 @@ body {
 
 .skill-form-button {
   overflow: auto;
-  margin-top: 13px;
+  margin-top: 7px;
 }
 
 .skill-form {
@@ -509,12 +509,22 @@ button, input {
   width: 55vw;
   overflow: scroll;
 
+  // ONLOAD ANIMATION CODE
+  &, * {
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+  }
+  &.preload, &.preload * {
+    opacity: 0;
+  }
+  //
+
   .notes {
     text-align: left;
     height: 82vh;
     overflow: scroll;
     padding: 1vw 2vw;
-    margin-top: 13px;
+    margin-top: 7px;
 
     .note {
       overflow: auto;

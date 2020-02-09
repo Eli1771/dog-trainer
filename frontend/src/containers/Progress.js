@@ -67,7 +67,7 @@ class Progress extends Component {
     return(
       <div>
         <NavBar />
-        <div className="note-links-container">
+        <div className="note-links-container preload">
           <div className="notes content-card">
             {this.renderNoteLinks(this.props.notes)}
           </div>

@@ -23,7 +23,7 @@ body {
 .content-card {
   background: white;
   border-radius: 21px;
-  box-shadow: -6px -6px 7px 0px #2f2f2f6e; }
+  box-shadow: -3px -3px 4px 0px #2f2f2f21; }
 
 #navbar {
   width: 100vw;
@@ -313,7 +313,7 @@ body {
 
 .skill-form-button {
   overflow: auto;
-  margin-top: 13px; }
+  margin-top: 7px; }
 
 .skill-form #skill-form {
   padding: .8em;
@@ -362,12 +362,17 @@ button, input {
   height: 87vh;
   width: 55vw;
   overflow: scroll; }
+  .note-links-container, .note-links-container * {
+    opacity: 1;
+    transition: opacity 0.5s ease-in; }
+  .note-links-container.preload, .note-links-container.preload * {
+    opacity: 0; }
   .note-links-container .notes {
     text-align: left;
     height: 82vh;
     overflow: scroll;
     padding: 1vw 2vw;
-    margin-top: 13px; }
+    margin-top: 7px; }
     .note-links-container .notes .note {
       overflow: auto;
       margin: .5em 0 .5em 1em; }
