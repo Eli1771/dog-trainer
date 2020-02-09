@@ -15,12 +15,29 @@ export const Home = props => {
 
   const renderBackground = () => {
     console.log(window.innerWidth)
+    //calculate how many bones will fill the screen across, add one
+    //calculate height of h1 field by vh
+    //calculate how many rows of bones will be needed, add one
+
     return(
       <>
-      <img src={boneOutline} alt="bone-outline" className="move-up"/>
-      <img src={boneOutline} alt="bone-outline" className="move-down"/>
-      <img src={boneOutline} alt="bone-outline" className="move-up"/>
-      <img src={boneOutline} alt="bone-outline" className="move-down"/>
+
+        <img src={boneOutline} alt="bone-outline" className="move-up"/>
+        <img src={boneOutline} alt="bone-outline" className="move-down"/>
+        <img src={boneOutline} alt="bone-outline" className="move-up"/>
+        <img src={boneOutline} alt="bone-outline" className="move-down"/>
+        <img src={boneOutline} alt="bone-outline" className="move-up"/>
+        <img src={boneOutline} alt="bone-outline" className="move-down"/>
+        <img src={boneOutline} alt="bone-outline" className="move-up"/>
+        <img src={boneOutline} alt="bone-outline" className="move-down"/>
+        <img src={boneOutline} alt="bone-outline" className="move-up"/>
+        <img src={boneOutline} alt="bone-outline" className="move-down"/>
+        <img src={boneOutline} alt="bone-outline" className="move-up"/>
+        <img src={boneOutline} alt="bone-outline" className="move-down"/>
+        <img src={boneOutline} alt="bone-outline" className="move-up"/>
+        <img src={boneOutline} alt="bone-outline" className="move-down"/>
+        <img src={boneOutline} alt="bone-outline" className="move-up"/>
+        <img src={boneOutline} alt="bone-outline" className="move-down"/>
       </>
     )
   }

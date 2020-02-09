@@ -79,7 +79,8 @@ body {
       height: 1vh; }
   .welcome h1 {
     position: absolute;
-    top: 0;
+    top: 20vh;
+    left: 10vw;
     font-size: 3.8em;
     font-weight: 200;
     background: #ffffff00;
@@ -113,15 +114,21 @@ body {
     width: 100%;
     left: 0; }
 
-.header-field img {
+.header-field {
   position: relative;
-  width: 50px;
-  margin: 50px 50px;
-  transform: rotate(-40deg); }
-  .header-field img.move-up {
-    animation: bones 3s linear reverse 0s infinite; }
-  .header-field img.move-down {
-    animation: bones 3s linear normal 0s infinite; }
+  left: -10vw;
+  top: -20vh;
+  width: 120vw;
+  height: 80vh; }
+  .header-field img {
+    position: relative;
+    width: 50px;
+    margin: 50px 50px;
+    transform: rotate(-40deg); }
+    .header-field img.move-up {
+      animation: bones 3s linear reverse 0s infinite; }
+    .header-field img.move-down {
+      animation: bones 3s linear normal 0s infinite; }
 
 @keyframes bones {
   from {
