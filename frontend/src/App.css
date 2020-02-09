@@ -89,9 +89,9 @@ body {
       margin: 50px 50px;
       transform: rotate(-45deg); }
       .welcome .header-field img.move-up {
-        animation: bones 2.5s linear reverse 0s infinite; }
+        animation: bones 12s linear reverse 0s infinite; }
       .welcome .header-field img.move-down {
-        animation: bones 2.5s linear normal 0s infinite; }
+        animation: bones 12s linear normal 0s infinite; }
     .welcome .header-field h1 {
       position: absolute;
       top: 20vh;
@@ -134,7 +134,7 @@ body {
     top: 0px;
     right: 0px; }
   to {
-    top: 122px;
+    top: 125px;
     right: 149px; } }
 .dog-cards-container {
   position: relative;

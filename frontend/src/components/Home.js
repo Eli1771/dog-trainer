@@ -15,9 +15,9 @@ export const Home = props => {
 
   const renderBackground = () => {
     //calculate how many bones will fill the screen across, add one
-    let across = Math.ceil((window.innerWidth / 200) + 3);
+    let across = Math.ceil((window.innerWidth / 200) + 4);
     //calculate height of h1 field by vh
-    let height = Math.ceil((window.innerHeight*0.39));
+    let height = Math.ceil((window.innerHeight * 0.39));
     let down = Math.ceil((height / 200) + 3);
     //calculate how many rows of bones will be needed, add one
     const upOrDown = ['up', 'down'];
@@ -25,7 +25,7 @@ export const Home = props => {
     for (let i = 0; i < down; i++) {
       let offset = 0
       //if even number in each row, offset is always 0
-      if (across % 2 === 1) {
+      if (across % 2 === 0) {
         offset = i;
       }
 
@@ -34,6 +34,7 @@ export const Home = props => {
         let dir = k > 1 ? upOrDown[k % 2] : upOrDown[k];
         r.push(<img src={boneOutline} alt="bone-outline" className={`move-${dir}`}/>);
       }
+      r.push(<br/>)
     }
 
     return r;

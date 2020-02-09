@@ -133,10 +133,10 @@ body {
       transform: rotate(-45deg);
 
       &.move-up {
-        animation: bones 2.5s linear reverse 0s infinite;
+        animation: bones 12s linear reverse 0s infinite;
       }
       &.move-down {
-        animation: bones 2.5s linear normal 0s infinite;
+        animation: bones 12s linear normal 0s infinite;
       }
     }
     h1 {
@@ -191,7 +191,7 @@ body {
     right: 0px;
   }
   to {
-    top: 122px;
+    top: 125px;
     right: 149px;
   }
 }
