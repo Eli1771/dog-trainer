@@ -10,8 +10,6 @@ import { fetchDogs } from '../actions/dogs';
 class Progress extends Component {
 
   componentDidMount() {
-    let nodes = document.querySelectorAll('.preload')
-
     if (!this.props.notes.length) {
       this.props.fetchNotes();
     }
@@ -19,11 +17,7 @@ class Progress extends Component {
       this.props.fetchDogs();
     }
 
-    setTimeout(() => {
-      for (let i = 0; i < nodes.length; i++) {
-        nodes[i].classList.remove('preload');
-      }
-    }, 600)
+    this.props.animateLoad();
   }
 
   renderNoteLinks = notes => {
@@ -77,13 +71,12 @@ class Progress extends Component {
       mostTrained = dogs.find(d => d.id === mostTrainedIdx);
 
       return (
-          <div className="note-stats">
-            <h3>Pack Progress</h3>
-            <p>{notes.length} Actions Logged</p>
-            <p>Your latest training session was with {lastTrained.name}</p>
-            {!!mostTrained ? <p>{mostTrained.name} has received the most training</p> : null}
-          </div>
-
+        <div className="note-stats">
+          <h3>Pack Progress</h3>
+          <p>{notes.length} Actions Logged</p>
+          {!!lastTrained ? <p>Your latest training session was with {lastTrained.name}</p> : null}
+          {!!mostTrained ? <p>{mostTrained.name} has received the most training</p> : null}
+        </div>
       )
     }
   }

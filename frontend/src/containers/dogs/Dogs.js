@@ -18,16 +18,14 @@ import { NavBar } from '../../components/NavBar';
 class Dogs extends Component {
 
   componentDidMount() {
-    let nodes = document.querySelectorAll('.preload')
-
     if (!this.props.dogs.length) {
       this.props.fetchDogs()
     }
-    setTimeout(() => {
-      for (let i = 0; i < nodes.length; i++) {
-        nodes[i].classList.remove('preload');
-      }
-    }, 600)
+    this.props.animateLoad();
+  }
+
+  componentDidUpdate() {
+    this.props.animateLoad();
   }
 
   renderDogs = dogs => {

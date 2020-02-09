@@ -12,13 +12,21 @@ import { fetchDogs } from './actions/dogs';
 import { Home } from './components/Home';
 
 function App() {
+  const animateLoad = () => {
+    let nodes = document.querySelectorAll('.preload');
+    setTimeout(() => {
+      for (let i = 0; i < nodes.length; i++) {
+        nodes[i].classList.remove('preload');
+      }
+    }, 600);
+  }
 
   return (
     <Router>
       <div className="App">
         <Route exact path='/' component={Home} />
-        <Route path='/dogs' render={routerProps => <Dogs {...routerProps}/>} />
-        <Route path='/log' render={routerProps => <Progress/>} />
+        <Route path='/dogs' render={routerProps => <Dogs {...routerProps} animateLoad={animateLoad}/>} />
+        <Route path='/log' render={() => <Progress animateLoad={animateLoad}/>} />
       </div>
     </ Router>
   );
