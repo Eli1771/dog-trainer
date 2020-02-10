@@ -64,7 +64,8 @@ body {
   width: 100%;
   height: 100vh;
   background: #F0F1F0;
-  color: white; }
+  color: white;
+  overflow: hidden; }
   .welcome .welcome-navs {
     position: absolute;
     height: 61vh;
