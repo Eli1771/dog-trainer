@@ -8,7 +8,7 @@ Attaboy! is the fitness-style app for all things dog training. The interface is 
 
 ### `To Start:`
 
-- Fork and clone this repository
+- Fork and clone this repository `cd dog-trainer/frontend`
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
