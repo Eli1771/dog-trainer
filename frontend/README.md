@@ -1,14 +1,20 @@
 ### `Welcome to Attaboy!`
 
 Attaboy! is the fitness-style app for all things dog training. The interface is simple because - at it's core - reinforcement-based dog training is simple. With this SPA you can:
-  - manage your pack by adding and removing dogs
-  - manage each dog by adding and removing skills
-    - manage each skill by configuring the 'reward rate'. This is the number of times your pet must correctly execute each command before receiving reinforcement. The better they understand the skill, the less reinforcement is needed.
-  - keep track of your overall progress with the easy and "AI"-assisted note-taking system.
+- manage your pack by adding and removing dogs
+- manage each dog by adding and removing skills
+  - manage each skill by configuring the 'reward rate'. This is the number of times your pet must correctly execute each command before receiving reinforcement. The better they understand the skill, the less reinforcement is needed.
+- keep track of your overall progress with the easy and "AI"-assisted note-taking system.
 
 ### `To Start:`
 
-- Fork and clone this repository
+- Fork and clone this repository. Navigate to the frontend with `cd dog-trainer/fronted`.
+- Run `npm install`.
+- Navigate to the backend: `cd ../backend`.
+- Run the following:
+  - `bundle install`
+  - `rails db:migrate`
+  - **There is a seed file, but it's only for development purposes**
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
