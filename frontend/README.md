@@ -1,12 +1,16 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### `rake start`
 
-In the project directory, you can run:
+Run from the 'backend' directory. Runs full app with foreman in a development build.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+Client server is running on [http://localhost:3000](http://localhost:3000) and proxying requests to the Rails API on [http://localhost:3001](http://localhost:3001).
+Exit with ctr-c.
 
 ### `npm start`
 
-Runs the app in the development mode.<br />
+All npm commands run from the root directory Runs the client-side server in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.<br />
@@ -37,8 +41,25 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+### `RAILS`
 
+All rails processes should be run from the 'backend' directory
+
+### `rails s`
+
+Boot the rails server by itself on [http://localhost:3001](http://localhost:3001).
+
+### `rails c`
+
+Enter the rails console to interact with API data. Dog, Skill or Note resources can be cleared and reset with `[resource].all.each {|r| r.delete}`
+
+
+
+-----------------
+
+
+## Learn More
+s
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
