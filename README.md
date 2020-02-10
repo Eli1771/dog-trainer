@@ -15,6 +15,15 @@ Attaboy! is the fitness-style app for all things dog training. The interface is 
   - `bundle install`
   - `rails db:migrate`
   - **There is a seed file, but it's only for development purposes**
+- Launch the app with `rake start`. The Rails API will exist on port 3001, while the client server will be available on port 3000 (goto [http://localhost:3000](http://localhost:3000) if it doesn't launch automatically). Both servers are being managed simoultaneously with the foreman gem.
+
+### `Making backend changes:`
+
+Enter the rails console to interact with API data by running `rails s` from the `backend` directory. Dog, Skill or Note resources can be cleared and reset with `[resource].all.each {|r| r.delete}`.
+
+### `Making frontend changes:`
+
+If you would prefer to write in Sass over CSS, first navigate to `frontend/src` and run `sass --watch styles/input.scss:App.css` to allow styles to be mapped your page live.
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
