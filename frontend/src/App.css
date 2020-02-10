@@ -74,7 +74,7 @@ body {
     background: #4EB47A;
     transition: top 0.6s ease-in-out, padding-top 0.6s ease-in-out, height 0.9s ease-in-out; }
     .welcome .welcome-navs.transitioning {
-      top: -31vh;
+      top: -32.5vh;
       padding-top: 39vh;
       height: 1vh; }
   .welcome .header-field {

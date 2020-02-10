@@ -38,6 +38,8 @@ default messages to empty content fields
 
 ** write readme
 
+** fix page transition to align nav height
+
 
 FAVORITES:
 

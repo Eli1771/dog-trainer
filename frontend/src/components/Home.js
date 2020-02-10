@@ -16,7 +16,8 @@ export const Home = props => {
 
   const renderBackground = () => {
     //calculate how many bones will fill the screen across, add one
-    let across = Math.ceil((window.innerWidth / 200) + 5);
+    console.log('width: ', window.innerWidth);
+    let across = window.innerWidth === 1440 ? 11 : Math.ceil((window.innerWidth / 200) + 5);
     //calculate height of h1 field by vh
     let height = Math.ceil((window.innerHeight * 0.39));
     let down = Math.ceil((height / 200) + 3);
