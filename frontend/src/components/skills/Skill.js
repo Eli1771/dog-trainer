@@ -19,7 +19,6 @@ export default class Skill extends Component {
     document.querySelector(`._${this.skillId}.remove-skill`).classList.remove('hidden');
 
     const newRate = document.querySelector(`._${this.skillId}.select-rate`).value;
-    console.log('current rate: ', this.props.skill.reward_rate.toString());
     if (newRate !== '0' && newRate !== this.props.skill.reward_rate.toString()) {
       const rateString = this.rewardRates[newRate];
       this.props.editSkill(this.props.skill, newRate, this.props.dog, rateString);
@@ -39,6 +38,7 @@ export default class Skill extends Component {
 
   render() {
     const skill = this.props.skill
+    console.log('obj from db: ', skill)
     return(
       <div className="skill content-card">
         <h2>{skill.name}</h2>

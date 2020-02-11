@@ -62,7 +62,7 @@ export default class DogForm extends Component {
           <input
             type="text"
             name="dob"
-            placeholder="mm-dd-yyyy"
+            placeholder="mon d, yyyy"
             value={dob}
             onChange={this.handleChange}
           />

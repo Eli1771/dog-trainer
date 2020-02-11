@@ -21,11 +21,12 @@ export default class SkillForm extends Component {
   handleSubmit = e => {
     e.preventDefault();
     const { name, description, rewardRate } = this.state;
+    const validateRR = rewardRate === '' ? 1 : rewardRate;
     this.props.addSkill(
       {
         name: name,
         description: description,
-        reward_rate: rewardRate,
+        reward_rate: validateRR,
         dog_id: this.props.dog.id
       }, this.props.dog
     );
@@ -60,6 +61,7 @@ export default class SkillForm extends Component {
       <div id="skill-form">
         <form onSubmit={this.handleSubmit}>
           <table>
+          <tbody>
             <tr>
               <td>
                 <label>Name</label>
@@ -122,6 +124,7 @@ export default class SkillForm extends Component {
                 <button onClick={this.handleCancel}>Cancel</button>
               </td>
             </tr>
+          </tbody>
           </table>
         </form>
       </div>
